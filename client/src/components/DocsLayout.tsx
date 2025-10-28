@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Download, Share2, Menu, X, BookOpen } from "lucide-react";
+import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins } from "lucide-react";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -24,6 +24,16 @@ export function DocsLayout({ children }: DocsLayoutProps) {
         { id: "section-7", title: "5. Sacred Economics", href: "/docs/manifesto#section-7" },
         { id: "section-8", title: "6. Roadmap", href: "/docs/manifesto#section-8" },
         { id: "section-9", title: "7. Conclusion & Epilogue", href: "/docs/manifesto#section-9" },
+      ],
+    },
+    {
+      id: "merit-economy",
+      title: "Merit Economy",
+      icon: Coins,
+      children: [
+        { id: "dao", title: "The Awakened DAO", href: "/docs/manifesto#section-4-4" },
+        { id: "tokenomics", title: "Mandala Tokenomics", href: "/docs/manifesto#section-5-2" },
+        { id: "unraveling", title: "Path of Unraveling", href: "/docs/manifesto#section-6" },
       ],
     },
     {
