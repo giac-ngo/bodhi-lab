@@ -32,7 +32,7 @@ export default function Manifesto() {
 
         {/* Abstract */}
         <section className="space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-center text-foreground" data-testid="heading-abstract">
+          <h2 id="abstract" className="font-serif text-2xl font-bold text-center text-foreground" data-testid="heading-abstract">
             Abstract
           </h2>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">

@@ -13,10 +13,17 @@ export function DocsLayout({ children }: DocsLayoutProps) {
   const navigation = [
     {
       id: "manifesto",
-      title: "Manifesto",
+      title: "The Manifesto",
       icon: BookOpen,
       children: [
-        { id: "manifesto", title: "The Manifesto", href: "/docs/manifesto" },
+        { id: "abstract", title: "Abstract", href: "/docs/manifesto#abstract" },
+        { id: "section-1", title: "1. The Sickness of the Digital Age", href: "/docs/manifesto#section-1" },
+        { id: "section-2", title: "2. Merit vs. Worldly Blessing", href: "/docs/manifesto#section-2" },
+        { id: "section-3", title: "3. Prior Landscape", href: "/docs/manifesto#section-3" },
+        { id: "section-4", title: "4. Architecture of Awakened Technology", href: "/docs/manifesto#section-4" },
+        { id: "section-7", title: "5. Sacred Economics", href: "/docs/manifesto#section-7" },
+        { id: "section-8", title: "6. Roadmap", href: "/docs/manifesto#section-8" },
+        { id: "section-9", title: "7. Conclusion & Epilogue", href: "/docs/manifesto#section-9" },
       ],
     },
     {
