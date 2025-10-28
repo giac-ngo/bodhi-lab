@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link } from "wouter";
-import { ChevronDown, Menu, X, Search, Sparkles, DollarSign, BookOpen, Zap } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import { ChevronDown, Search, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
 interface NavSection {
   id: string;
@@ -13,11 +12,10 @@ interface NavSection {
 
 interface DocsNavProps {
   navigation: NavSection[];
-  activeSection: string;
-  onSectionClick: (id: string) => void;
 }
 
-export function DocsNav({ navigation, activeSection, onSectionClick }: DocsNavProps) {
+export function DocsNav({ navigation }: DocsNavProps) {
+  const [location] = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedSections, setExpandedSections] = useState<string[]>(
     navigation.map(section => section.id)
@@ -39,7 +37,7 @@ export function DocsNav({ navigation, activeSection, onSectionClick }: DocsNavPr
   return (
     <div className="h-full flex flex-col">
       <div className="p-4 border-b space-y-4">
-        <Link href="/">
+        <Link href="/docs/overview">
           <div className="flex items-center gap-2 group cursor-pointer" data-testid="link-home">
             <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover-elevate transition-all">
               <Sparkles className="w-4 h-4 text-primary" />
@@ -82,18 +80,18 @@ export function DocsNav({ navigation, activeSection, onSectionClick }: DocsNavPr
             {expandedSections.includes(section.id) && (
               <div className="ml-6 mt-1 space-y-1 border-l-2 border-border pl-3">
                 {section.children.map((child) => (
-                  <button
-                    key={child.id}
-                    onClick={() => onSectionClick(child.id)}
-                    className={`w-full text-left px-3 py-1.5 rounded-lg font-serif text-sm transition-all ${
-                      activeSection === child.id
-                        ? "bg-primary text-primary-foreground font-medium"
-                        : "text-foreground hover-elevate"
-                    }`}
-                    data-testid={`button-nav-${child.id}`}
-                  >
-                    {child.title}
-                  </button>
+                  <Link key={child.id} href={child.href}>
+                    <div
+                      className={`w-full text-left px-3 py-1.5 rounded-lg font-serif text-sm transition-all cursor-pointer ${
+                        location === child.href
+                          ? "bg-primary text-primary-foreground font-medium"
+                          : "text-foreground hover-elevate"
+                      }`}
+                      data-testid={`link-nav-${child.id}`}
+                    >
+                      {child.title}
+                    </div>
+                  </Link>
                 ))}
               </div>
             )}

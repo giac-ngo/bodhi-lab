@@ -1,0 +1,75 @@
+import { useState } from "react";
+import { DocsNav } from "@/components/DocsNav";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Download, Share2, Menu, X } from "lucide-react";
+
+interface DocsLayoutProps {
+  children: React.ReactNode;
+}
+
+export function DocsLayout({ children }: DocsLayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const navigation = [
+    {
+      id: "agents",
+      title: "Agents",
+      icon: Sparkles,
+      children: [
+        { id: "overview", title: "Overview", href: "/docs/overview" },
+        { id: "models", title: "Agent Models", href: "/docs/models" },
+        { id: "quick-start", title: "Quick Start", href: "/docs/quick-start" },
+        { id: "pricing", title: "Token Pricing", href: "/docs/pricing" },
+      ],
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <header className="fixed top-0 left-0 right-0 z-40 bg-card border-b shadow-sm">
+        <div className="flex items-center justify-between px-4 py-3">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="lg:hidden p-2 hover-elevate rounded-lg transition-all"
+              data-testid="button-sidebar-toggle"
+            >
+              {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-primary" />
+              <span className="font-serif text-lg font-bold text-primary">Buddhist Agents</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button variant="secondary" size="sm" className="hidden sm:flex" data-testid="button-download">
+              <Download className="w-3.5 h-3.5 mr-2" />
+              <span>Export PDF</span>
+            </Button>
+            <Button size="sm" data-testid="button-share">
+              <Share2 className="w-3.5 h-3.5 mr-2" />
+              <span>Share</span>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <div className="flex pt-[57px]">
+        <aside className={`fixed top-[57px] left-0 h-[calc(100vh-57px)] w-80 bg-sidebar border-r overflow-y-auto z-30 lg:block ${sidebarOpen ? 'block' : 'hidden lg:block'}`}>
+          <DocsNav navigation={navigation} />
+        </aside>
+
+        {sidebarOpen && (
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-20 lg:hidden"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
+        <main className="flex-1 lg:ml-80">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
+}
