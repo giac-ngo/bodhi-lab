@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Download, Share2, Menu, X } from "lucide-react";
+import { Sparkles, Download, Share2, Menu, X, BookOpen } from "lucide-react";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -11,6 +11,14 @@ export function DocsLayout({ children }: DocsLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navigation = [
+    {
+      id: "manifesto",
+      title: "Manifesto",
+      icon: BookOpen,
+      children: [
+        { id: "manifesto", title: "The Manifesto", href: "/docs/manifesto" },
+      ],
+    },
     {
       id: "agents",
       title: "Agents",
