@@ -210,6 +210,14 @@ export default function Manifesto() {
               4.2. The Threefold AI Vehicle
             </h3>
             <p>
+              The Buddhist Agentic Network provides specialized AI assistants grounded in authentic dharma wisdom:
+            </p>
+            <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
+              <li><strong>Tâm An (Peaceful Mind):</strong> Provides fundamental, introductory answers to sow the seeds of affinity</li>
+              <li><strong>Giác Ngộ (Awakening):</strong> Offers deeper, more nuanced guidance, pulling from scriptures and the direct teachings of Sư Tam Vô and other awakened masters</li>
+              <li><strong>Đốn Ngộ (Sudden Awakening):</strong> An exclusive transmission for those who have ripened auspicious conditions; gives direct, unfiltered pointing to the Unborn</li>
+            </ul>
+            <p>
               The Buddhist Agentic Network provides specialized AI assistants grounded in authentic dharma wisdom, organized by spiritual capacity (<em>căn tánh</em>):
             </p>
             <ul className="list-disc pl-8 space-y-3 text-muted-foreground">
