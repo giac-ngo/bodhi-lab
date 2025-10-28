@@ -11,14 +11,14 @@ export default function Manifesto() {
             An Agentic Social Network for Collective Awakening
           </p>
           <div className="space-y-1 pt-4">
-            <p className="font-serif text-base text-foreground" data-testid="text-organization">
+            <p className="font-serif text-base text-foreground font-semibold" data-testid="text-organization">
               Giác Ngộ Initiative
             </p>
-            <p className="font-serif text-base text-foreground" data-testid="text-lab">
+            <p className="font-serif text-base text-muted-foreground" data-testid="text-lab">
               Dharma Technology Lab
             </p>
           </div>
-          <p className="font-serif text-base text-foreground pt-2" data-testid="text-date">
+          <p className="font-serif text-base text-muted-foreground pt-2" data-testid="text-date">
             January 2025
           </p>
         </header>
