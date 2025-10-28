@@ -51,6 +51,16 @@ export default function Manifesto() {
           </div>
         </section>
 
+        {/* Keywords */}
+        <section className="space-y-4" data-testid="section-keywords">
+          <h2 className="font-serif text-base font-semibold text-foreground">
+            Keywords
+          </h2>
+          <p className="font-serif text-base leading-relaxed text-foreground italic">
+            Spiritual Technology, Merit Economy, Agentic AI, Decentralized Governance, Dharma-Ending Age, Collective Awakening, Sacred Economics
+          </p>
+        </section>
+
         {/* Table of Contents */}
         <section className="space-y-4 pb-8 border-b border-border" data-testid="section-contents">
           <h2 className="font-serif text-2xl font-bold text-center text-foreground">
