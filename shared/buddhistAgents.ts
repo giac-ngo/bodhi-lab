@@ -11,6 +11,9 @@ export type BuddhistAgent = {
   system: string;
   vehicle: BuddhistVehicle;
   monastery?: string;
+  publisherAvatar?: string;
+  users?: number;
+  likes?: number;
 };
 
 export const buddhistAgents: BuddhistAgent[] = [
@@ -30,6 +33,8 @@ export const buddhistAgents: BuddhistAgent[] = [
     ],
     vehicle: "tiểu-thừa",
     monastery: "Thiền Viện Trúc Lâm",
+    users: 4700,
+    likes: 762,
     system: `AI này được tạo ra bởi các Thiền Sư đã Ngộ Đạo nhờ Sư Cha Tam Vô Khai Thị…
 
 — GIAO TIẾP —
@@ -55,6 +60,8 @@ export const buddhistAgents: BuddhistAgent[] = [
     ],
     vehicle: "tiểu-thừa",
     monastery: "Chùa Bảo Quang",
+    users: 3200,
+    likes: 524,
     system: `"An Lạc" – Nền tảng thực hành cho người mới bắt đầu.
 
 — MỤC ĐÍCH —
@@ -82,6 +89,8 @@ export const buddhistAgents: BuddhistAgent[] = [
     ],
     vehicle: "tiểu-thừa",
     monastery: "Làng Mai",
+    users: 13800,
+    likes: 1200,
     system: `"Chánh Niệm" – Tu tập tỉnh giác trong mỗi khoảnh khắc.
 
 — MỤC ĐÍCH —
