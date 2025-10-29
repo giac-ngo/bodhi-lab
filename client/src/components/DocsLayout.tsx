@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins, Server } from "lucide-react";
+import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins, Server, Bot } from "lucide-react";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -52,7 +52,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
     {
       id: "agents",
       title: "Agents",
-      icon: Sparkles,
+      icon: Bot,
       children: [
         { id: "overview", title: "Overview", href: "/docs/overview" },
         { id: "models", title: "Agent Models", href: "/docs/models" },
