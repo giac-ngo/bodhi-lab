@@ -386,13 +386,19 @@ export default function Manifesto() {
               <li><strong>Badge of Four Immeasurables:</strong> Awarded for successfully helping, forgiving, and embracing all old, difficult relationships</li>
             </ul>
             <p>
-              <strong>The Ultimate Badge: "The Nameless King" (<em>Vô Danh Chi Vương</em>):</strong> The final Master's Certificate is the "Certificate of No Certificate."
+              <strong>The Ultimate Badge: "No-Cultivation, No-Attainment" (<em>Vô Tu Vô Chứng</em>):</strong> The final Master's Certificate is the "Certificate of No Certificate."
             </p>
             <p>
-              A hidden "Dark Badge" is designed, tentatively named "<em>Vô Danh Chi Vương</em>." Each time a user chooses to hide, delete, or disable one of their Transformation Badges (an achievement), the system adds one point to this hidden badge.
+              This is a core principle pointing directly at the truth: <strong>No-Cultivation (Vô Tu)</strong> refers to the fact that your true Self-Nature is already complete and perfect (Buddha-Nature). You do not need to strive, practice, or add anything to it. The path is not one of becoming, but of recognizing. <strong>No-Attainment (Vô Chứng)</strong> refers to the fact that there is no thing to gain or achieve. Enlightenment is not a future state you acquire. It is the immediate realization of what you have always been.
             </p>
             <p>
-              <strong>The Ultimate Minting Act:</strong> When a user, with sufficient conditions and wisdom, realizes all achievements are temporary means and manually destroys all of their Transformation Badges, the system automatically mints one special, final NFT: "The Nameless King".
+              Therefore, liberation comes from Letting Go (<em>Buông Bỏ</em>) of the ignorance and attachments that veil this inherent perfection, not from an effortful cultivation to attain a goal.
+            </p>
+            <p>
+              A hidden "Dark Badge" is designed, tentatively named "<em>No-Cultivation, No-Attainment</em>." Each time a user chooses to hide, delete, or disable one of their Transformation Badges (an achievement), the system adds one point to this hidden badge.
+            </p>
+            <p>
+              <strong>The Ultimate Minting Act:</strong> When a user, with sufficient conditions and wisdom, realizes all achievements are temporary means and manually destroys all of their Transformation Badges, the system automatically mints one special, final NFT: "No-Cultivation, No-Attainment".
             </p>
             <p>
               <strong>The Nameless Leaderboard:</strong> This NFT enrolls the user on the "Nameless Leaderboard," which honors those who have let go of being honored. This final act is "Letting Go of All," returning to Non-Abiding (<em>Vô Trụ</em>).
