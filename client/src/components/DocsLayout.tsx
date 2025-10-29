@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins } from "lucide-react";
+import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins, Server } from "lucide-react";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -34,6 +34,19 @@ export function DocsLayout({ children }: DocsLayoutProps) {
         { id: "dao", title: "The Mandala of Merit", href: "/docs/manifesto#section-4-4" },
         { id: "tokenomics", title: "Merit Tokenomics", href: "/docs/manifesto#section-5-2" },
         { id: "unraveling", title: "Path of Unraveling", href: "/docs/manifesto#section-6" },
+      ],
+    },
+    {
+      id: "tech-stack",
+      title: "Tech Stack",
+      icon: Server,
+      children: [
+        { id: "vision", title: "Vision & Mission", href: "/docs/tech-stack#vision-mission" },
+        { id: "compute", title: "Collective Compute Mandala", href: "/docs/tech-stack#compute-mandala" },
+        { id: "ledger", title: "The Mandala Ledger", href: "/docs/tech-stack#mandala-ledger" },
+        { id: "protocol", title: "Merit Attribution Protocol", href: "/docs/tech-stack#merit-protocol" },
+        { id: "primitives", title: "Universal Primitives", href: "/docs/tech-stack#primitives" },
+        { id: "privacy", title: "Privacy by Dharma", href: "/docs/tech-stack#privacy-dharma" },
       ],
     },
     {

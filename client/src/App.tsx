@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DocsLayout } from "@/components/DocsLayout";
 import Manifesto from "@/pages/Manifesto";
+import TechStack from "@/pages/TechStack";
 import Overview from "@/pages/Overview";
 import AgentModels from "@/pages/AgentModels";
 import QuickStart from "@/pages/QuickStart";
@@ -20,6 +21,11 @@ function Router() {
       <Route path="/docs/manifesto">
         <DocsLayout>
           <Manifesto />
+        </DocsLayout>
+      </Route>
+      <Route path="/docs/tech-stack">
+        <DocsLayout>
+          <TechStack />
         </DocsLayout>
       </Route>
       <Route path="/docs/overview">
