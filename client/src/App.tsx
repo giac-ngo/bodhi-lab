@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DocsLayout } from "@/components/DocsLayout";
 import Manifesto from "@/pages/Manifesto";
+import MandalaMerit from "@/pages/MandalaMerit";
+import MeritTokenomics from "@/pages/MeritTokenomics";
+import PathOfUnraveling from "@/pages/PathOfUnraveling";
 import TechStack from "@/pages/TechStack";
 import Overview from "@/pages/Overview";
 import AgentModels from "@/pages/AgentModels";
@@ -21,6 +24,21 @@ function Router() {
       <Route path="/docs/manifesto">
         <DocsLayout>
           <Manifesto />
+        </DocsLayout>
+      </Route>
+      <Route path="/docs/mandala-merit">
+        <DocsLayout>
+          <MandalaMerit />
+        </DocsLayout>
+      </Route>
+      <Route path="/docs/merit-tokenomics">
+        <DocsLayout>
+          <MeritTokenomics />
+        </DocsLayout>
+      </Route>
+      <Route path="/docs/path-of-unraveling">
+        <DocsLayout>
+          <PathOfUnraveling />
         </DocsLayout>
       </Route>
       <Route path="/docs/tech-stack">
