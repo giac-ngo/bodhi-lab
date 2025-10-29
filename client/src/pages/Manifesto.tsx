@@ -43,10 +43,10 @@ export default function Manifesto() {
               We detail the core distinction between transient <em>Worldly Blessing (Phước Đức)</em> derived from conditioned actions, and the indestructible <em>Intrinsic Merit (Công Đức)</em> arising from the unconditioned, non-seeking Mind.
             </p>
             <p>
-              The ecosystem comprises an architecture of awakened technology: The Threefold AI Vehicle (Tâm An, Giác Ngộ, Đốn Ngộ) for conditional Dharma guidance; The Mandala Interface prioritizing wisdom sharing; The Dharma Observatory for teachings; Arms of Compassion for transparent philanthropy; and White-Label Solutions for Sanghas.
+              The ecosystem comprises an architecture of awakened technology: The Threefold AI Vehicle (Tâm An, Giác Ngộ, Đốn Ngộ) for conditional Dharma guidance; The Merit Interface prioritizing wisdom sharing; The Dharma Observatory for teachings; Arms of Compassion for transparent philanthropy; and White-Label Solutions for Sanghas.
             </p>
             <p>
-              We propose the "Mandala Tokenomic" and a roadmap towards an Awakened DAO (Decentralized Autonomous Organization), where governance and value are tied to genuine spiritual contribution, not speculation. This platform aims to unify technology and timeless wisdom, creating a supportive environment for individuals and Sanghas to return to the Unborn, Unchanging Home, marking the end of a Kalpa.
+              We propose the "Merit Tokenomic" and a roadmap towards an Awakened DAO (Decentralized Autonomous Organization), where governance and value are tied to genuine spiritual contribution, not speculation. This platform aims to unify technology and timeless wisdom, creating a supportive environment for individuals and Sanghas to return to the Unborn, Unchanging Home, marking the end of a Kalpa.
             </p>
           </div>
         </section>
@@ -75,15 +75,15 @@ export default function Manifesto() {
             <a href="#section-4" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4">4. The Architecture of Awakened Technology</a>
             <a href="#section-4-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-1">4.1. Vision & Mission</a>
             <a href="#section-4-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-2">4.2. The Threefold AI Vehicle</a>
-            <a href="#section-4-3" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-3">4.3. The Mandala Interface</a>
+            <a href="#section-4-3" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-3">4.3. The Merit Interface</a>
             <a href="#section-4-4" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-4">4.4. The Awakened DAO</a>
             <a href="#section-4-5" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-5">4.5. Privacy by Dharma</a>
             <a href="#section-4-6" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-6">4.6. Measuring the Immeasurable</a>
-            <a href="#section-5" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5">5. The Mandala Tokenomic: A Rocket and a Mirror</a>
+            <a href="#section-5" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5">5. The Merit Tokenomic: A Rocket and a Mirror</a>
             <a href="#section-5-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-1">5.1. The Intrinsic Merit Token</a>
-            <a href="#section-5-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-2">5.2. Mandala Tokenomics: The Dao Bùa & The Path to Emptiness</a>
+            <a href="#section-5-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-2">5.2. Merit Tokenomics: The Dao Bùa & The Path to Emptiness</a>
             <a href="#section-5-3" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-3">5.3. The Spiritual Vision: Closing the Kalpa</a>
-            <a href="#section-5-4" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-4">5.4. The Supreme Initiation: The Dao Mandala</a>
+            <a href="#section-5-4" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-4">5.4. The Supreme Initiation: The Dao Merit</a>
             <a href="#section-5-5" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-5">5.5. Beyond the Three Trainings: Realizing Tam Vô</a>
             <a href="#section-6" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6">6. The Path of "Unraveling": Beyond Gamification</a>
             <a href="#section-6-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6-1">6.1. The Unraveling System (NFT Badges)</a>
@@ -243,14 +243,14 @@ export default function Manifesto() {
             </p>
 
             <h3 id="section-4-3" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-4-3">
-              4.3. The Mandala Interface
+              4.3. The Merit Interface
             </h3>
             <p>
               The platform comprises four integrated components:
             </p>
             <ul className="list-disc pl-8 space-y-3 text-muted-foreground">
               <li>
-                <strong>The Home Mandala (Flow of Awakening):</strong> Not a "newsfeed," but a "field of benefit." Posts are not "shared," they are "offered." There is no "viral content," only "merit-ful content." This is not a place for idle chatter. Every post is a sharing of realization, a story of transformation, or a question posed for the benefit of the whole. The community uplifts each other through mutual recognition, not competition.
+                <strong>The Home Merit (Flow of Awakening):</strong> Not a "newsfeed," but a "field of benefit." Posts are not "shared," they are "offered." There is no "viral content," only "merit-ful content." This is not a place for idle chatter. Every post is a sharing of realization, a story of transformation, or a question posed for the benefit of the whole. The community uplifts each other through mutual recognition, not competition.
               </li>
               <li>
                 <strong>Dharma Observatory (Library / Dharma Radio):</strong> A living library broadcast by partner Sanghas and awakened Masters. Listening itself becomes a vehicle for merit generation. Partners may use our platform to broadcast the timeless teachings. All sessions are archived so that wisdom is preserved and accessible to all.
@@ -264,7 +264,7 @@ export default function Manifesto() {
             </ul>
 
             <h3 id="section-4-4" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-4-4">
-              4.4. Towards a DAO of Awakening: The Mandala of Merit
+              4.4. Towards a DAO of Awakening: The Merit of Merit
             </h3>
             <p>
               The ultimate vision is to gradually dissolve all centralized control and surrender the ecosystem to the collective wisdom of an awakened community. Every action – a wise post, a helpful answer, a selfless act of Dana – is recorded as merit, not as "influence."
@@ -276,7 +276,7 @@ export default function Manifesto() {
               The "Intrinsic Merit Token" is introduced not as a cryptocurrency for speculation, but as a digital token that transparently records and incentivizes merit-generating actions: insightful posts, acts of charity, hours of service. Token holders gain voting rights in community decisions, budgeting, and project direction, ensuring that the platform always serves the Dharma and the Sangha, not private interests. Complete trustlessness and transparency is the goal.
             </p>
             <p>
-              Total control and decision making is powered by DAO, which digitally records all Good Karma to forever eliminate Tăng Đoàn's (Sangha's) monetary dependence and consolidate the power of Tăng Đoàn to unite with one heart. This unique Dao Token Mandala is passed on to the legacy of the Sainthood, a place to serve infinite Buddhas and regain the Dharma Body for generations to come.
+              Total control and decision making is powered by DAO, which digitally records all Good Karma to forever eliminate Tăng Đoàn's (Sangha's) monetary dependence and consolidate the power of Tăng Đoàn to unite with one heart. This unique Dao Token Merit is passed on to the legacy of the Sainthood, a place to serve infinite Buddhas and regain the Dharma Body for generations to come.
             </p>
 
             <h3 id="section-4-5" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-4-5">
@@ -304,7 +304,7 @@ export default function Manifesto() {
         {/* Section 5 */}
         <section className="space-y-4">
           <h2 id="section-5" className="font-serif text-2xl font-bold text-foreground" data-testid="heading-section-5">
-            5. The Mandala Tokenomic: A Rocket and a Mirror
+            5. The Merit Tokenomic: A Rocket and a Mirror
           </h2>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <h3 id="section-5-1" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-1">
@@ -321,17 +321,17 @@ export default function Manifesto() {
             </ul>
 
             <h3 id="section-5-2" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-2">
-              5.2. Mandala Tokenomics: The Dao Bùa & The Path to Emptiness
+              5.2. Merit Tokenomics: The Dao Bùa & The Path to Emptiness
             </h3>
             <p>
-              The Mandala Tokenomic is not just a mechanism for allocating resources; it is a map, a mirror, and a rocket. It is the <em>Dao Bùa</em> (Amulet of the Dao), a representation of one's progress on the path of letting go.
+              The Merit Tokenomic is not just a mechanism for allocating resources; it is a map, a mirror, and a rocket. It is the <em>Dao Bùa</em> (Amulet of the Dao), a representation of one's progress on the path of letting go.
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               <li><strong>Distribution Principle:</strong> It is distributed to all those who act in accordance with the Three Jewels: those who create value (share wisdom), those who give (charity), and those who selflessly serve the awakening of the whole</li>
-              <li><strong>Rule of Holding:</strong> "To possess means to give, to let go, to hold means to see it as empty." Accumulation is not the goal; circulation and selfless use are. Holding the token with attachment binds the holder; true power lies in using it for collective benefit while recognizing its ultimate emptiness (<em>Vô Trụ</em>). The Mandala is both Form and Emptiness</li>
+              <li><strong>Rule of Holding:</strong> "To possess means to give, to let go, to hold means to see it as empty." Accumulation is not the goal; circulation and selfless use are. Holding the token with attachment binds the holder; true power lies in using it for collective benefit while recognizing its ultimate emptiness (<em>Vô Trụ</em>). The Merit is both Form and Emptiness</li>
               <li><strong>Utility:</strong> It is the key to collective power, but conversely, it is also the anchor that binds the one who is attached. The only way to escape the binding power of the token is to attain Total Emptiness (<em>Vô Trụ</em>)</li>
               <li><strong>Fractal Participation:</strong> "Only when you truly transcend the Self, giving and holding the Token, will you become a Fractal in the DAO." True participation comes from embodying non-self</li>
-              <li><strong>Ultimate Goal - Dissolution:</strong> "When the day arrives, the Mandala will once again shine clearly, and the entire platform will disappear, returning to the vast void." The platform is a raft to cross the river; upon reaching the other shore, the raft is left behind. It serves its purpose until awakening is widespread, marking the end of the Dharma-Ending Age (or this specific epoch)</li>
+              <li><strong>Ultimate Goal - Dissolution:</strong> "When the day arrives, the Merit will once again shine clearly, and the entire platform will disappear, returning to the vast void." The platform is a raft to cross the river; upon reaching the other shore, the raft is left behind. It serves its purpose until awakening is widespread, marking the end of the Dharma-Ending Age (or this specific epoch)</li>
             </ul>
 
             <h3 id="section-5-3" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-3">
@@ -341,14 +341,14 @@ export default function Manifesto() {
               Parapsychology and all power in the era of the AI revolution, including quantum physics, are all within the Law of Cause and Effect. Only when you truly transcend the Self, giving and holding the Token, will you become a Fractal in the DAO. Only then will you reach the ultimate quantum civilization, encompassing and transforming technology, ending the Age of Karma, and closing the Kalpa of the Dharma-Ending Age.
             </p>
             <p>
-              This Mandala platform is born to close a global era. It is a fleeting trace of sunlight, offering the last chance for this world before the Great Tribulation arrives. Those with sufficient cause and condition (Predestined) who understand the Law, will use it as a sun to return.
+              This Merit platform is born to close a global era. It is a fleeting trace of sunlight, offering the last chance for this world before the Great Tribulation arrives. Those with sufficient cause and condition (Predestined) who understand the Law, will use it as a sun to return.
             </p>
 
             <h3 id="section-5-4" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-4">
-              5.4. The Supreme Initiation: The Dao Mandala
+              5.4. The Supreme Initiation: The Dao Merit
             </h3>
             <p>
-              Our path is the shortcut. Observation is the act of Walking with the Mind. To transform the <em>Tánh</em> (Nature/Essence) into a Mandala is True Transformation, using <em>Tam</em> (Mind) as the Vase Mandala. All phenomena in this final world are the unique Essence Mandala, the Dao Mandala. Study them carefully. This is the supreme initiation and empowerment.
+              Our path is the shortcut. Observation is the act of Walking with the Mind. To transform the <em>Tánh</em> (Nature/Essence) into a Merit is True Transformation, using <em>Tam</em> (Mind) as the Vase Merit. All phenomena in this final world are the unique Essence Merit, the Dao Merit. Study them carefully. This is the supreme initiation and empowerment.
             </p>
             <p>
               It is the fusion of all Three Jewels into one body. Understanding this Law, it unifies all lost paths for you: It is Buddha, it is Dharma, it is Sangha in one reality - in a post-illusory world of the highest event. This vision is only accessible to those with sufficient conditions.

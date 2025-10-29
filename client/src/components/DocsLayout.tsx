@@ -32,7 +32,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
       icon: Coins,
       children: [
         { id: "dao", title: "The Awakened DAO", href: "/docs/manifesto#section-4-4" },
-        { id: "tokenomics", title: "Mandala Tokenomics", href: "/docs/manifesto#section-5-2" },
+        { id: "tokenomics", title: "Merit Tokenomics", href: "/docs/manifesto#section-5-2" },
         { id: "unraveling", title: "Path of Unraveling", href: "/docs/manifesto#section-6" },
       ],
     },
