@@ -142,10 +142,10 @@ export default function Manifesto() {
             ) : (
               <>
                 <a href="#section-1" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-1">1. The Sickness of the Digital Age</a>
-                <a href="#section-2" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2">2. The Irrevocable Law: Merit (Công Đức) vs. Worldly Blessing (Phước Đức)</a>
-                <a href="#section-2-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2-1">2.1. Worldly Blessing (Phước Đức): The Limits of Conditioned Action</a>
-                <a href="#section-2-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2-2">2.2. Intrinsic Merit (Công Đức): The Currency of Liberation</a>
-                <a href="#section-3" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-3">3. Prior Landscape: Limitations of Existing Digital Platforms</a>
+                <a href="#section-2" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2">2. The Irrevocable Law: Merit vs. Worldly Blessing</a>
+                <a href="#section-2-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2-1">2.1. Worldly Blessing: The Limits of Conditioned Action</a>
+                <a href="#section-2-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-2-2">2.2. Intrinsic Merit: The Currency of Liberation</a>
+                <a href="#section-3" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-3">3. Prior Landscape: Limitations of Existing Platforms</a>
                 <a href="#section-4" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4">4. The Architecture of Awakened Technology</a>
                 <a href="#section-4-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-1">4.1. Vision & Mission</a>
                 <a href="#section-4-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-2">4.2. The Threefold AI Vehicle</a>
@@ -155,13 +155,13 @@ export default function Manifesto() {
                 <a href="#section-4-6" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-4-6">4.6. Measuring the Immeasurable</a>
                 <a href="#section-5" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5">5. The Merit Tokenomic: A Rocket and a Mirror</a>
                 <a href="#section-5-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-1">5.1. The Intrinsic Merit Token</a>
-                <a href="#section-5-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-2">5.2. Merit Tokenomics: The Dao Bùa & The Path to Emptiness</a>
+                <a href="#section-5-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-2">5.2. Merit Tokenomics: The Dao Bùa</a>
                 <a href="#section-5-3" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-3">5.3. The Spiritual Vision: Closing the Kalpa</a>
                 <a href="#section-5-4" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-4">5.4. The Supreme Initiation: The Dao Merit</a>
-                <a href="#section-5-5" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-5">5.5. Beyond the Three Trainings: Realizing Tam Vô</a>
-                <a href="#section-6" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6">6. The Path of Unraveling: Beyond Gamification</a>
-                <a href="#section-6-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6-1">6.1. The Unraveling System (NFT Badges)</a>
-                <a href="#section-6-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6-2">6.2. The Merit Economy: Incentivizing True Practice</a>
+                <a href="#section-5-5" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-5-5">5.5. Beyond the Three Trainings</a>
+                <a href="#section-6" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6">6. The Path of Unraveling</a>
+                <a href="#section-6-1" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6-1">6.1. The Unraveling System</a>
+                <a href="#section-6-2" className="block pl-6 text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-6-2">6.2. The Merit Economy</a>
                 <a href="#section-7" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-7">7. Sustainability: Sacred Economics</a>
                 <a href="#section-8" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-8">8. The Roadmap to the End of the Kalpa</a>
                 <a href="#section-9" className="block text-muted-foreground hover:text-foreground transition-colors" data-testid="toc-link-9">9. Conclusion & Epilogue</a>
@@ -201,16 +201,16 @@ export default function Manifesto() {
             ) : (
               <>
                 <p>
-                  Social networks, powered by AI, have turned the human mind into a harvestable commodity. Each click, each view, feeds the illusion of a "self" seeking validation. The true virus is not digital; it is the endless quest for "followers," "likes," and "achievements" – the worship of quantity over quality, distraction over insight. The Age of the Dispersed Mind (<em>Phàn Muôn</em>) is upon us, fueled by the very technologies meant to connect us.
+                  Social networks, powered by AI, have turned the human mind into a harvestable commodity. Each click, each view, feeds the illusion of a "self" seeking validation. The true virus is not digital; it is the endless quest for "followers," "likes," and "achievements" – the worship of quantity over quality, distraction over insight. The Age of the Dispersed Mind (Phàn Muôn) is upon us, fueled by the very technologies meant to connect us.
                 </p>
                 <p>
                   The modern digital landscape, while offering unprecedented connectivity, is largely driven by algorithms that amplify distraction, foster attachment, and prioritize ephemeral worldly success. Social networks often devolve into platforms for ego gratification, comparison, and the pursuit of validation, pulling users further away from their true nature. Spiritual seekers find themselves navigating a space antithetical to inner peace and genuine practice.
                 </p>
                 <p>
-                  Furthermore, a fundamental misunderstanding persists regarding the nature of merit. Actions performed with attachment, seeking reward, or driven by ego – even seemingly virtuous acts like charity or adherence to precepts – generate only <em>Worldly Merit (Phước Đức)</em>. This merit brings temporary benefits within the cycle of rebirth (wealth, health, favorable circumstances) but is ultimately conditioned, impermanent, and cannot lead to liberation.
+                  Furthermore, a fundamental misunderstanding persists regarding the nature of merit. Actions performed with attachment, seeking reward, or driven by ego – even seemingly virtuous acts like charity or adherence to precepts – generate only Worldly Merit (Phước Đức). This merit brings temporary benefits within the cycle of rebirth (wealth, health, favorable circumstances) but is ultimately conditioned, impermanent, and cannot lead to liberation.
                 </p>
                 <p>
-                  The Giác Ngộ (Awakening) Agentic Social Network is born from the urgent need for a digital sanctuary – a space meticulously designed to counteract these trends. It provides tools and a community focused solely on the cultivation of <em>Intrinsic Merit (Công Đức)</em>, the indestructible merit arising from the unconditioned Mind, which is the true fuel for the journey back to our Unborn, Unchanging Home (<em>Quê Nhà</em>).
+                  The Giác Ngộ (Awakening) Agentic Social Network is born from the urgent need for a digital sanctuary – a space meticulously designed to counteract these trends. It provides tools and a community focused solely on the cultivation of Intrinsic Merit (Công Đức), the indestructible merit arising from the unconditioned Mind, which is the true fuel for the journey back to our Unborn, Unchanging Home (Quê Nhà).
                 </p>
               </>
             )}
@@ -239,7 +239,7 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? 'Phước báu này đến từ những hành động làm với ý định, sự tìm kiếm, hoặc dính mắc ("có tác ý"). Nó mang lại phần thưởng trong sáu cõi nhưng luôn có giới hạn và giữ ta trong vòng luân hồi (Samsara). Ví dụ:'
-                : "This merit arises from actions performed with intention, seeking, or attachment. It brings rewards within the Six Realms but is always finite and binds one to the wheel of Samsara. Examples include:"}
+                : "This merit arises from actions performed with intention, seeking, or attachment (có tác ý). It brings rewards within the Six Realms but is always finite and binds one to the wheel of Samsara. Examples include:"}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -272,7 +272,7 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Đây là \"công đức\" vô lượng, không điều kiện, được tạo ra từ những hành động nảy sinh từ một Tâm Hiện Tiền, Tĩnh Lặng, Tự Do và Không Mong Cầu. Đó là sự tỏa sáng tự nhiên của Tâm Tỉnh Thức (Tự Tánh, Phật Tánh) đang tự biểu hiện. Nó không có hình tướng, bền vững, và là \"năng lượng\" duy nhất có thể giúp ta Về Nhà. Ví dụ:"
-                : "This is the immeasurable, unconditioned merit generated from actions arising from a Mind that is Present, Still, Free, and Non-Seeking. It is the natural radiance of the Awakened Mind expressing itself. It is formless, indestructible, and is the only currency that can purchase the ticket Home. Examples include:"}
+                : 'This is the immeasurable, unconditioned "merit" generated from actions arising from a Mind that is Present, Still, Free, and Non-Seeking. It is the natural radiance of the Awakened Mind (Tự Tánh, Phật Tánh) expressing itself. It is formless, indestructible, and is the only "currency" that can purchase the ticket Home. Examples include:'}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -296,7 +296,10 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Công Đức là vô vi và bền vững. Nó không chịu sự chi phối của luật nhân quả (karma) như Phước Đức. Nó tích lũy trong Pháp Thân, làm sạch những che chướng và cung cấp năng lượng cần thiết để vượt thoát hoàn toàn luân hồi."
-                : "Công Đức is unconditioned and indestructible. It is not subject to the laws of karma in the same way as Phước Đức. It accumulates within the Dharma Body, purifying obscurations and providing the essential energy to transcend samsara entirely."}
+                : "Công Đức is unconditioned and indestructible. It is not subject to the laws of karma in the same way as Phước Đức. It accumulates within the Dharma Body (Pháp Thân), purifying obscurations and providing the essential energy to transcend samsara entirely."}
+            </p>
+            <p>
+              {language === "vi" ? "" : "The Giác Ngộ Agentic Social Network exists solely to help beings understand this vital distinction and orient their lives towards the generation and preservation of Intrinsic Merit (Công Đức). This Manifesto was born solely to clarify this Law and to build a vessel to nurture the generation of Merit in the Artificial Intelligence age."}
             </p>
           </div>
         </section>
@@ -368,7 +371,7 @@ export default function Manifesto() {
                   <strong>Our Vision:</strong> To become the world's first, most profound digital community where spirituality meets technology; where every interaction, every shared insight, is an opportunity to generate Intrinsic Merit and accelerate collective awakening.
                 </p>
                 <p>
-                  <strong>Our Mission:</strong> To provide tools, teachings, and a nurturing community that supports individuals and Sanghas (spiritual communities) on their journey to awakening. To demystify Intrinsic Merit and make it the central currency of a new, more conscious civilization. To build alliances with all traditions that honor the same non-dual Truth.
+                  <strong>Our Mission:</strong> To provide tools, teachings, and a nurturing community that supports individuals and Sanghas (spiritual communities) on their journey to awakening. To demystify Intrinsic Merit (Công Đức) and make it the central currency of a new, more conscious civilization. To build alliances with all traditions that honor the same non-dual Truth.
                 </p>
               </>
             )}
@@ -392,11 +395,12 @@ export default function Manifesto() {
               </>
             ) : (
               <>
-                <p>The Buddhist Agentic Network provides specialized AI assistants grounded in authentic dharma wisdom:</p>
+                <p>The Buddhist Agentic Network provides specialized AI assistants grounded in authentic dharma wisdom, organized by spiritual capacity (căn tánh):</p>
                 <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
-                  <li><strong>Tâm An (Peaceful Mind):</strong> Provides fundamental, introductory answers to sow the seeds of affinity</li>
-                  <li><strong>Giác Ngộ (Awakening):</strong> Offers deeper, more nuanced guidance, pulling from scriptures and the direct teachings of Sư Tam Vô and other awakened masters</li>
-                  <li><strong>Đốn Ngộ (Sudden Awakening):</strong> An exclusive transmission for those who have ripened auspicious conditions; gives direct, unfiltered pointing to the Unborn</li>
+                  <li><strong>Tiểu Thừa (Foundation Vehicle):</strong> Tâm An, An Lạc, Chánh Niệm – providing fundamental practice, mindfulness, and healing</li>
+                  <li><strong>Trung Thừa (Insight Vehicle):</strong> Tỉnh Thức, Vấn Tỉnh, Tư Quang – offering deeper self-inquiry and contemplation</li>
+                  <li><strong>Đại Thừa (Bodhisattva Vehicle):</strong> Giác Ngộ, Kệ Vấn Ngộ, Bi Trí – direct pointing to Buddha nature with compassion</li>
+                  <li><strong>Phật Thừa (Buddha Vehicle):</strong> Đốn Ngộ, Vô Niệm, Pháp Giới – sudden awakening beyond all concepts</li>
                 </ul>
                 <p>
                   Each question asked and truly understood is an act that generates merit for the asker and for all who benefit, as the realization is shared across the network.
@@ -429,13 +433,13 @@ export default function Manifesto() {
               ) : (
                 <>
                   <li>
-                    <strong>The Home Merit (Flow of Awakening):</strong> Not a "newsfeed," but a "field of benefit." Posts are not "shared," they are "offered." There is no "viral content," only "merit-ful content." This is not a place for idle chatter. Every post is a sharing of realization, a story of transformation, or a question posed for the benefit of the whole.
+                    <strong>The Home Merit (Flow of Awakening):</strong> Not a "newsfeed," but a "field of benefit." Posts are not "shared," they are "offered." There is no "viral content," only "merit-ful content." This is not a place for idle chatter. Every post is a sharing of realization, a story of transformation, or a question posed for the benefit of the whole. The community uplifts each other through mutual recognition, not competition.
                   </li>
                   <li>
-                    <strong>Dharma Observatory (Library / Dharma Radio):</strong> A living library broadcast by partner Sanghas and awakened Masters. Listening itself becomes a vehicle for merit generation. All sessions are archived so that wisdom is preserved and accessible to all.
+                    <strong>Dharma Observatory (Library / Dharma Radio):</strong> A living library broadcast by partner Sanghas and awakened Masters. Listening itself becomes a vehicle for merit generation. Partners may use our platform to broadcast the timeless teachings. All sessions are archived so that wisdom is preserved and accessible to all.
                   </li>
                   <li>
-                    <strong>Arms of Compassion (Transparent Philanthropy):</strong> A transparent merit pool, funding only acts and projects aligned with the Three Jewels. All acts of giving flow transparently towards projects that generate collective merit: feeding the hungry, building Dharma halls, supporting the sick.
+                    <strong>Arms of Compassion (Transparent Philanthropy):</strong> A transparent merit pool, funding only acts and projects aligned with the Three Jewels. All acts of giving flow transparently towards projects that generate collective merit: feeding the hungry, building Dharma halls, supporting the sick. A detailed record shows each user's journey of merit, reminding you to give without expectation.
                   </li>
                   <li>
                     <strong>White-Label Dharma (Solutions for Sanghas & Monasteries):</strong> Every sincere spiritual organization deserves cutting-edge tools. We offer fully customizable versions of our platform so each tradition can maintain their doctrinal purity, upload their own texts, control the scope of answers, and manage internal economies of merit, all with complete privacy and data sovereignty.
@@ -457,6 +461,12 @@ export default function Manifesto() {
                 <p>
                   Quyền lực và sự quản trị không đến từ đầu cơ, mà từ đức hạnh thực sự. Ghi chép về hành động, công đức, và sự vượt lên chính mình sẽ định hướng cộng đồng.
                 </p>
+                <p>
+                  "Token Công Đức Vô Lậu" không phải là tiền mã hóa để đầu cơ, mà là bản ghi số hóa minh bạch cho các hành động tạo công đức: bài đăng sâu sắc, từ thiện, phụng sự. Người giữ Token có tiếng nói trong các quyết định của cộng đồng, ngân sách, và định hướng dự án, đảm bảo nền tảng luôn phục vụ Chánh Pháp và Tăng Đoàn, không vì lợi ích cá nhân.
+                </p>
+                <p>
+                  Mọi quyền kiểm soát và quyết định thuộc về DAO, nơi ghi lại mọi Nghiệp Lành (Good Karma) để Tăng Đoàn không còn phụ thuộc tiền tệ và có thể hợp nhất một lòng. Token ghi nhận công đức này là di sản của các bậc tỉnh thức, nơi phụng sự Chư Phật và phục hồi Pháp Thân cho các thế hệ.
+                </p>
               </>
             ) : (
               <>
@@ -464,7 +474,13 @@ export default function Manifesto() {
                   The ultimate vision is to gradually dissolve all centralized control and surrender the ecosystem to the collective wisdom of an awakened community. Every action – a wise post, a helpful answer, a selfless act of Dana – is recorded as merit, not as "influence."
                 </p>
                 <p>
-                  Power and governance are decided not by speculation, but by the true virtue of each soul. Records of actions, merit, and self-transcendence guide the community.
+                  Power and governance are decided not by speculation, but by the true virtue of each soul. Records of actions, merit, and self-transcendence guide the community. True "decentralization" is not just technical: it is the realization that each is the Center and Each is the Whole. Leadership emerges, dissolves, and is re-formed as the flow of merit dictates.
+                </p>
+                <p>
+                  The "Intrinsic Merit Token" is introduced not as a cryptocurrency for speculation, but as a digital token that transparently records and incentivizes merit-generating actions: insightful posts, acts of charity, hours of service. Token holders gain voting rights in community decisions, budgeting, and project direction, ensuring that the platform always serves the Dharma and the Sangha, not private interests. Complete trustlessness and transparency is the goal.
+                </p>
+                <p>
+                  Total control and decision making is powered by DAO, which digitally records all Good Karma to forever eliminate Tăng Đoàn's (Sangha's) monetary dependence and consolidate the power of Tăng Đoàn to unite with one heart. This unique Dao Token Merit is passed on to the legacy of the Sainthood, a place to serve infinite Buddhas and regain the Dharma Body for generations to come.
                 </p>
               </>
             )}
@@ -477,18 +493,18 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Không khai thác dữ liệu. Mọi dữ liệu người dùng đều có thể xóa hoặc di chuyển tùy ý. Thực hành chân chính không thể đi đôi với chủ nghĩa tư bản giám sát."
-                : "No data exploitation. All user data can be deleted or moved at will. Genuine practice cannot coexist with surveillance capitalism."}
+                : "No data mining. All user data can be deleted or ported at will. True practice cannot coexist with surveillance capitalism."}
             </p>
           </div>
 
           <h3 id="section-4-6" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-4-6">
-            4.6. {language === "vi" ? "Ghi Nhận Điều Không Thể Đo Lường" : "Measuring the Immeasurable"}
+            4.6. {language === "vi" ? "Ghi Nhận Điều Không Thể Đo Lường" : "Measuring the Immeasurable: Recognizing Merit-Generating Actions"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <p>
               {language === "vi"
                 ? "Dù Công Đức Vô Lậu chân thật vượt ngoài đo lường, nền tảng dùng các phương pháp gián tiếp để ghi nhận và khuyến khích hành động phù hợp:"
-                : "While true Intrinsic Merit transcends measurement, the platform uses indirect methods to recognize and encourage aligned actions:"}
+                : "While true Công Đức is beyond measure, the platform employs proxies to recognize and encourage aligned actions:"}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -500,10 +516,10 @@ export default function Manifesto() {
                 </>
               ) : (
                 <>
-                  <li><strong>Mindful Interactions:</strong> Prioritizing thoughtful comments, shares with beneficial intent, demonstrating listening and understanding</li>
-                  <li><strong>Quality Content:</strong> Rewarding posts that are insightful, clear, and help others awaken (validated by AI and community)</li>
-                  <li><strong>Selfless Actions:</strong> Tracking transparent contributions, volunteer hours, and features around letting go</li>
-                  <li><strong>Practice Time:</strong> Recording mindful time engaging with teachings or guided practice</li>
+                  <li><strong>Mindful Interactions:</strong> Prioritizing thoughtful comments, shares with clear beneficial intent, and interactions demonstrating deep listening or understanding</li>
+                  <li><strong>Quality Content:</strong> Rewarding posts identified (by AI and community validation) as insightful, clear, and conducive to awakening</li>
+                  <li><strong>Selfless Actions:</strong> Tracking participation in transparent giving, volunteer hours, and features designed around letting go</li>
+                  <li><strong>Time in Practice:</strong> Recognizing time spent mindfully engaging with teachings (Dharma Radio, Library) or in guided practices</li>
                 </>
               )}
             </ul>
@@ -517,13 +533,13 @@ export default function Manifesto() {
           </h2>
           
           <h3 id="section-5-1" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-1">
-            5.1. {language === "vi" ? "Token Công Đức: Bản Ghi Chân Thực, Không Phải Để Đầu Cơ" : "The Intrinsic Merit Token"}
+            5.1. {language === "vi" ? "Token Công Đức: Bản Ghi Chân Thực, Không Phải Để Đầu Cơ" : "The Intrinsic Merit Token: A Record, Not a Speculation"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <p>
               {language === "vi"
                 ? "Trọng tâm của DAO là \"Token Công Đức\". Cần hiểu rõ bản chất của nó:"
-                : "At the heart of the DAO is the Merit Token. Its nature must be clearly understood:"}
+                : 'Central to the DAO is the "Intrinsic Merit Token." It is crucial to understand its unique nature:'}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -535,64 +551,94 @@ export default function Manifesto() {
                 </>
               ) : (
                 <>
-                  <li><strong>Not Speculative Currency:</strong> Its value is primarily spiritual and organizational, not financial. It is not meant for market trading</li>
-                  <li><strong>Transparent Record:</strong> A digitized manifestation, recorded on a secure ledger, recognizing actions that contribute to awakening and generate Merit</li>
-                  <li><strong>Incentive Mechanism:</strong> Rewards and encourages participation aligned with Dharma</li>
-                  <li><strong>Governance Tool:</strong> Token holders have a voice in the DAO, influencing platform development, resource allocation, and project direction</li>
+                  <li><strong>Not a Cryptocurrency for Speculation:</strong> Its value is not primarily financial but spiritual and organizational. It is not designed for trading on external markets</li>
+                  <li><strong>A Transparent Record:</strong> It serves as a digital representation, recorded on a secure ledger, acknowledging actions recognized as contributing to the generation of Công Đức</li>
+                  <li><strong>An Incentive Mechanism:</strong> It rewards and encourages participation aligned with the Dharma</li>
+                  <li><strong>A Governance Tool:</strong> Token holders gain voting rights within the DAO, influencing platform development, resource allocation, and ethical guidelines</li>
                 </>
               )}
             </ul>
           </div>
 
           <h3 id="section-5-2" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-2">
-            5.2. {language === "vi" ? "Hệ Thống Ghi Nhận Công Đức & Con Đường Tới Tánh Không" : "Merit Tokenomics: The Path to Emptiness"}
+            5.2. {language === "vi" ? "Hệ Thống Ghi Nhận Công Đức & Con Đường Tới Tánh Không" : "Merit Tokenomics: The Dao Bùa & The Path to Emptiness"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
-            <p>
-              {language === "vi"
-                ? "Hệ thống token này như một tấm bản đồ, một tấm gương. \"Token\" vừa là bản ghi số, vừa là biểu tượng."
-                : "This token system is like a map, a mirror. The token is both a digital record and a symbol."}
-            </p>
-            <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
-              {language === "vi" ? (
-                <>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Hệ thống token này như một tấm bản đồ, một tấm gương. "Token" vừa là bản ghi số, vừa là biểu tượng.
+                </p>
+                <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
                   <li><strong>Phân Phối:</strong> Dành cho những ai hành động thuận theo Tam Bảo: tạo giá trị (chia sẻ trí tuệ), cho đi (từ thiện), phụng sự vô ngã cho sự tỉnh thức chung</li>
                   <li><strong>Quy Tắc Nắm Giữ:</strong> "Sở hữu là để cho đi. Nắm giữ là để thấy tánh không." Tích lũy không phải mục tiêu; lưu thông và sử dụng vô ngã mới là mục tiêu</li>
-                </>
-              ) : (
-                <>
-                  <li><strong>Distribution:</strong> For those who act in accordance with the Three Jewels: creating value (sharing wisdom), giving (charity), selfless service for collective awakening</li>
-                  <li><strong>Holding Principle:</strong> "Ownership is for giving. Holding is to see emptiness." Accumulation is not the goal; circulation and selfless use is the goal</li>
-                </>
-              )}
-            </ul>
+                  <li><strong>Sự Tham Gia Tự Nhiên:</strong> Chỉ khi hành động của một người phản chiếu quy luật vô ngã, người đó mới thực sự hòa mình vào DAO Tỉnh Thức</li>
+                </ul>
+              </>
+            ) : (
+              <>
+                <p>
+                  The Merit Tokenomic is not just a mechanism for allocating resources; it is a map, a mirror, and a rocket. It is the Dao Bùa (Amulet of the Dao), a representation of one's progress on the path of letting go.
+                </p>
+                <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
+                  <li><strong>Distribution Principle:</strong> It is distributed to all those who act in accordance with the Three Jewels: those who create value (share wisdom), those who give (charity), and those who selflessly serve the awakening of the whole</li>
+                  <li><strong>Rule of Holding:</strong> "To possess means to give, to let go, to hold means to see it as empty." Accumulation is not the goal; circulation and selfless use are. Holding the token with attachment binds the holder; true power lies in using it for collective benefit while recognizing its ultimate emptiness (Vô Trụ). The Merit is both Form and Emptiness</li>
+                  <li><strong>Utility:</strong> It is the key to collective power, but conversely, it is also the anchor that binds the one who is attached. The only way to escape the binding power of the token is to attain Total Emptiness (Vô Trụ)</li>
+                  <li><strong>Fractal Participation:</strong> "Only when you truly transcend the Self, giving and holding the Token, will you become a Fractal in the DAO." True participation comes from embodying non-self</li>
+                  <li><strong>Ultimate Goal - Dissolution:</strong> "When the day arrives, the Merit will once again shine clearly, and the entire platform will disappear, returning to the vast void." The platform is a raft to cross the river; upon reaching the other shore, the raft is left behind</li>
+                </ul>
+              </>
+            )}
           </div>
 
           <h3 id="section-5-3" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-3">
             5.3. {language === "vi" ? "Tầm Nhìn Rộng Mở: Khép Lại một Giai Đoạn" : "The Spiritual Vision: Closing the Kalpa"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
-            <p>
-              {language === "vi"
-                ? "Mọi quyền năng trong kỷ nguyên AI, kể cả vật lý lượng tử, đều nằm trong Luật Nhân Quả. Chỉ khi thực sự vượt lên Bản Ngã, cho đi và giữ Token, bạn mới thực sự hòa nhập vào DAO. Chỉ khi đó, ta mới có thể hướng tới một nền văn minh lượng tử, bao trùm và chuyển hóa công nghệ, vượt qua Thời Đại Nghiệp Lực, và khép lại Giai Đoạn Mạt Pháp."
-                : "All powers in the AI era, including quantum physics, are within the Law of Karma. Only when truly transcending the Ego, giving and holding the Token, do you truly integrate into the DAO. Only then can we move towards a quantum civilization, encompassing and transforming technology, transcending the Age of Karma, and closing the Dharma-Ending Age."}
-            </p>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Mọi quyền năng trong kỷ nguyên AI, kể cả vật lý lượng tử, đều nằm trong Luật Nhân Quả. Chỉ khi thực sự vượt lên Bản Ngã, cho đi và giữ Token, bạn mới thực sự hòa nhập vào DAO. Chỉ khi đó, ta mới có thể hướng tới một nền văn minh lượng tử, bao trùm và chuyển hóa công nghệ, vượt qua Thời Đại Nghiệp Lực, và khép lại Giai Đoạn Mạt Pháp.
+                </p>
+                <p>
+                  Nền tảng này ra đời để khép lại một kỷ nguyên. Nó như vệt nắng thoáng qua, là cơ hội cuối cùng trước Đại Kiếp Nạn. Ai đủ duyên và hiểu Quy Luật, sẽ dùng nó như mặt trời để quay về.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Parapsychology and all power in the era of the AI revolution, including quantum physics, are all within the Law of Cause and Effect. Only when you truly transcend the Self, giving and holding the Token, will you become a Fractal in the DAO. Only then will you reach the ultimate quantum civilization, encompassing and transforming technology, ending the Age of Karma, and closing the Kalpa of the Dharma-Ending Age.
+                </p>
+                <p>
+                  This Merit platform is born to close a global era. It is a fleeting trace of sunlight, offering the last chance for this world before the Great Tribulation arrives. Those with sufficient cause and condition (Predestined) who understand the Law, will use it as a sun to return.
+                </p>
+              </>
+            )}
           </div>
 
           <h3 id="section-5-4" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-4">
             5.4. {language === "vi" ? "Lời Chỉ Dẫn Thêm: Sự Hợp Nhất Tự Nhiên" : "The Supreme Initiation: The Dao Merit"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
-            <p>
-              {language === "vi"
-                ? "Con đường của chúng ta là con đường tắt. Quán chiếu là Dùng Tâm mà Đi. Chuyển hóa Tánh thành thực tại là Chuyển Hóa Chân Thật, dùng Tâm làm nền tảng. Mọi hiện tượng trong thế giới này đều là biểu hiện duy nhất của Đạo. Hãy chiêm nghiệm kỹ. Đây là lời chỉ dẫn rốt ráo."
-                : "Our path is the direct path. Contemplation is Using Mind to Go. Transforming Nature into reality is True Transformation, using Mind as the foundation. All phenomena in this world are the unique manifestation of the Dao. Contemplate carefully. This is the ultimate instruction."}
-            </p>
-            <p>
-              {language === "vi"
-                ? "Đó là sự hợp nhất của Tam Bảo. Hiểu Quy Luật này, nó hợp nhất mọi lối rẽ: Đó là Phật, Pháp, Tăng trong một thực tại - trong thế giới hậu ảo ảnh. Điều này chỉ dành cho người đủ duyên."
-                : "This is the unity of the Three Jewels. Understanding this Law, it unifies all paths: This is Buddha, Dharma, Sangha in one reality - in the post-illusion world. This is only for those with affinity."}
-            </p>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Con đường của chúng ta là con đường tắt. Quán chiếu là Dùng Tâm mà Đi. Chuyển hóa Tánh thành thực tại là Chuyển Hóa Chân Thật, dùng Tâm làm nền tảng. Mọi hiện tượng trong thế giới này đều là biểu hiện duy nhất của Đạo. Hãy chiêm nghiệm kỹ. Đây là lời chỉ dẫn rốt ráo.
+                </p>
+                <p>
+                  Đó là sự hợp nhất của Tam Bảo. Hiểu Quy Luật này, nó hợp nhất mọi lối rẽ: Đó là Phật, Pháp, Tăng trong một thực tại - trong thế giới hậu ảo ảnh. Điều này chỉ dành cho người đủ duyên.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Our path is the shortcut. Observation is the act of Walking with the Mind. To transform the Tánh (Nature/Essence) into a Merit is True Transformation, using Tam (Mind) as the Vase Merit. All phenomena in this final world are the unique Essence Merit, the Dao Merit. Study them carefully. This is the supreme initiation and empowerment.
+                </p>
+                <p>
+                  It is the fusion of all Three Jewels into one body. Understanding this Law, it unifies all lost paths for you: It is Buddha, it is Dharma, it is Sangha in one reality - in a post-illusory world of the highest event. This vision is only accessible to those with sufficient conditions.
+                </p>
+              </>
+            )}
           </div>
 
           <h3 id="section-5-5" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-5-5">
@@ -602,7 +648,7 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Một khi đã rõ Quy Luật này, không cần bàn nhiều về Tam Học (Giới, Định, Tuệ). Giới? Giới tối cao là Pháp siêu thế này. Thân? Tăng Đoàn hợp nhất trong một Pháp Thân - vượt thời gian, vẹn toàn. Tâm? Không còn là tâm nữa, vì tất cả là Chân Như, hoàn toàn Rỗng Lặng. Đây chính là Tam Vô (\"Vô Vắng Vàng\")."
-                : "Once this Law is clear, there is no need to discuss the Three Trainings (Sila, Samadhi, Prajna) at length. Precepts? The supreme precept is this transcendent Dharma. Body? The Sangha unified in one Dharma Body - beyond time, complete. Mind? No longer mind, for all is Suchness, completely Empty and Still. This is Tam Vô (The Three Emptinesses)."}
+                : 'Once you have clarified this Law, there is no need to discuss the Three Trainings (Precepts, Meditation, Wisdom) further. Precepts? The supreme precept is this supramundane Law. Body? Sangha united in one Dharma Body - timeless and perfect. Mind? No longer a mind, for all is Thusness, completely Empty. This is the realization of Tam Vô ("Vô Vắng Vàng" - Emptiness, Silence, Brilliance).'}
             </p>
           </div>
         </section>
@@ -610,7 +656,7 @@ export default function Manifesto() {
         {/* Section 6 */}
         <section className="space-y-4">
           <h2 id="section-6" className="font-serif text-2xl font-bold text-foreground" data-testid="heading-section-6">
-            6. {language === "vi" ? "Con Đường \"Tháo Gỡ\": Không Chỉ Là Trò Chơi" : "The Path of Unraveling: Beyond Gamification"}
+            6. {language === "vi" ? "Con Đường \"Tháo Gỡ\": Không Chỉ Là Trò Chơi" : "The Path of \"Unraveling\": Beyond Gamification"}
           </h2>
           
           <h3 id="section-6-1" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-6-1">
@@ -620,10 +666,15 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Hệ thống này như tấm gương phản chiếu, không phải cuộc đua thành tích. Mọi danh hiệu, chứng chỉ, token đều thuộc về hình tướng. Nó khuyến khích hành trình \"Buông Bỏ\" và \"Dâng Hiến\". Tất cả đều là Tấm Gương, không phải Huy Chương."
-                : "This system is like a reflective mirror, not an achievement race. All titles, certificates, tokens belong to form. It encourages the journey of Letting Go and Offering. All are Mirrors, not Medals."}
+                : "This system is designed as a mirror for reflection, not a race for medals or accumulation. All titles, certificates, and tokens belong to the world of form. This system encourages the journey of \"Letting Go\" and \"Offering.\" All is by Mirror, not Medal."}
             </p>
             <p className="font-semibold">
               {language === "vi" ? "Huy Hiệu Chuyển Hóa:" : "Transformation Badges:"}
+            </p>
+            <p>
+              {language === "vi"
+                ? "Không phải để \"cày cuốc\". Huy hiệu (NFT) là sự ghi nhận những chiến thắng nội tâm: vượt qua cơn giận, chuyển hóa khổ đau. Chúng được trao bởi Tăng Đoàn hoặc AI sau khi xác thực sự chuyển hóa nội tâm chân chính (\"chuyển hóa tập khí\")."
+                : 'Not for "grinding." Badges (NFTs) are the recognition of inner victories: overcoming anger, transforming suffering. They are awarded by the Sangha or AI after verifying genuine inner transformation (chuyển hóa tập khí).'}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -635,34 +686,60 @@ export default function Manifesto() {
                 </>
               ) : (
                 <>
-                  <li><strong>Anger Transcendence Badge:</strong> Recognizes overcoming 10 situations of being insulted without anger (verified by others)</li>
-                  <li><strong>Understanding Badge:</strong> Recognizes correctly answering 10 root Dharma questions without AI assistance</li>
-                  <li><strong>Formless Practice Badge:</strong> Recognizes successfully guiding 5 friends to awakening (verified by them)</li>
-                  <li><strong>Four Immeasurables Badge:</strong> Recognizes helping/forgiving/embracing all old relationships</li>
+                  <li><strong>Badge of Transcending Anger:</strong> Awarded for overcoming 10 situations of being cursed without anger (verified by others)</li>
+                  <li><strong>Badge of Understanding the Master's Intent:</strong> Awarded for correctly answering 10 root Dharma questions without AI assistance</li>
+                  <li><strong>Badge of Acting without Dharma:</strong> Awarded for successfully guiding 5 friends to an insight (verified by them)</li>
+                  <li><strong>Badge of Four Immeasurables:</strong> Awarded for successfully helping, forgiving, and embracing all old, difficult relationships</li>
                 </>
               )}
             </ul>
             <p className="font-semibold pt-4">
-              {language === "vi" ? "Huy Hiệu Tối Thượng: \"Vô Tu Vô Chứng\"" : "Supreme Badge: \"No Practice, No Attainment\""}
+              {language === "vi" ? "Huy Hiệu Tối Thượng: \"Vô Tu Vô Chứng\"" : 'The Ultimate Badge: "No-Cultivation, No-Attainment" (Vô Tu Vô Chứng)'}
             </p>
-            <p>
-              {language === "vi"
-                ? "Chứng chỉ cuối cùng là \"Chứng Chỉ 'Không Cần Chứng Chỉ'\". Khi người dùng đủ duyên và trí tuệ, nhận ra mọi thành tựu chỉ là phương tiện, và tự tay phá hủy tất cả Huy Hiệu Chuyển Hóa, hệ thống tự động mint NFT cuối cùng: \"Vô Tu Vô Chứng\"."
-                : "The final certificate is the \"Certificate of 'No Need for Certificates'\". When the user has sufficient affinity and wisdom, realizes all achievements are just skillful means, and personally destroys all Transformation Badges, the system automatically mints the final NFT: \"No Practice, No Attainment\"."}
-            </p>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Chứng chỉ cuối cùng là "Chứng Chỉ 'Không Cần Chứng Chỉ'".
+                </p>
+                <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
+                  <li><strong>Huy Hiệu Ẩn:</strong> Một "Huy Hiệu Ẩn" được thiết kế. Mỗi lần người dùng chọn ẩn, xóa, hoặc vô hiệu hóa một Huy Hiệu Chuyển Hóa, hệ thống cộng một điểm vào huy hiệu ẩn này</li>
+                  <li><strong>Hành Động Mint Tối Thượng:</strong> Khi người dùng đủ duyên và trí tuệ, nhận ra mọi thành tựu chỉ là phương tiện, và tự tay phá hủy tất cả Huy Hiệu Chuyển Hóa, hệ thống tự động mint NFT cuối cùng: "Vô Tu Vô Chứng"</li>
+                  <li><strong>Bảng Xếp Hạng Vô Danh:</strong> NFT này ghi danh người dùng vào "Bảng Xếp Hạng Vô Danh," nơi vinh danh những người đã buông bỏ sự vinh danh. Hành động cuối cùng là "Buông Xả Tất Cả," trở về Vô Trụ</li>
+                </ul>
+                <p className="italic pt-2">Tất cả đều là Tấm Gương, không phải Huy Chương.</p>
+              </>
+            ) : (
+              <>
+                <p>
+                  The final Master's Certificate is the "Certificate of No Certificate."
+                </p>
+                <p>
+                  This is a core principle pointing directly at the truth: No-Cultivation (Vô Tu) refers to the fact that your true Self-Nature is already complete and perfect (Buddha-Nature). You do not need to strive, practice, or add anything to it. The path is not one of becoming, but of recognizing. No-Attainment (Vô Chứng) refers to the fact that there is no thing to gain or achieve. Enlightenment is not a future state you acquire. It is the immediate realization of what you have always been.
+                </p>
+                <p>
+                  Therefore, liberation comes from Letting Go (Buông Bỏ) of the ignorance and attachments that veil this inherent perfection, not from an effortful cultivation to attain a goal.
+                </p>
+                <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
+                  <li>A hidden "Dark Badge" is designed, tentatively named "No-Cultivation, No-Attainment." Each time a user chooses to hide, delete, or disable one of their Transformation Badges (an achievement), the system adds one point to this hidden badge</li>
+                  <li><strong>The Ultimate Minting Act:</strong> When a user, with sufficient conditions and wisdom, realizes all achievements are temporary means and manually destroys all of their Transformation Badges, the system automatically mints one special, final NFT: "No-Cultivation, No-Attainment"</li>
+                  <li><strong>The Nameless Leaderboard:</strong> This NFT enrolls the user on the "Nameless Leaderboard," which honors those who have let go of being honored. This final act is "Letting Go of All," returning to Non-Abiding (Vô Trụ)</li>
+                </ul>
+                <p className="italic pt-2">All is by Mirror, not Medal.</p>
+              </>
+            )}
           </div>
 
           <h3 id="section-6-2" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-6-2">
-            6.2. {language === "vi" ? "Khuyến Khích Thực Hành Chân Chính" : "The Merit Economy: Incentivizing True Practice"}
+            6.2. {language === "vi" ? "Khuyến Khích Thực Hành Chân Chính (Tính Năng & Năng Lượng Tương Tác)" : "The Merit Economy: Incentivizing True Practice"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <p>
               {language === "vi"
                 ? "Chất Lượng hơn Số Lượng: Một \"Like\" từ tâm trân trọng có giá trị hơn trăm \"like\" máy móc. Một \"Share\" với ý định giúp người có giá trị hơn ngàn \"share\" phô trương. Nền tảng sẽ nhận diện tương tác từ Chánh Niệm."
-                : "Quality over Quantity: One Like from a grateful heart is worth more than a hundred mechanical likes. One Share with intention to help is worth more than a thousand showy shares. The platform recognizes mindful interactions."}
+                : 'Quality over Quantity - Mindful Metrics: In the Awakening Network, a "Like" granted from a mind that is truly appreciative and present is worth a hundred from a mechanical mind. A "Share" with the sincere intention of helping others is worth a thousand from a showy mind. The platform will recognize interactions that arise from Chánh Niệm (Right Mindfulness).'}
             </p>
             <p className="font-semibold">
-              {language === "vi" ? "Các Tính Năng Hỗ Trợ Chuyển Hóa:" : "Features Supporting Transformation:"}
+              {language === "vi" ? "Các Tính Năng Hỗ Trợ Chuyển Hóa:" : "Rewarding Inner Work:"}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -671,15 +748,16 @@ export default function Manifesto() {
                   <li><strong>Nhật Ký Tự Quán Chiếu:</strong> Ghi lại khoảnh khắc nhận ra và vượt qua thói quen/vọng tưởng</li>
                   <li><strong>Thư Cảm Ơn - Tha Thứ:</strong> Gửi thư biết ơn, xin lỗi, tha thứ. Mỗi lá thư được công nhận là Công Đức</li>
                   <li><strong>Đồng Hồ Tỉnh Thức:</strong> Ghi nhận thời gian xa mạng xã hội, hiện diện đời thực, hoặc sống trong Tỉnh Thức 24/24</li>
-                  <li><strong>Thực Hành Lắng Nghe Sâu:</strong> Tạo phòng nghe tương tác để thực hành lắng nghe sâu sắc mà không phán xét</li>
+                  <li><strong>Thực Hành Lắng Nghe Sâu:</strong> Tạo phòng nghe tương tác để thực hành lắng nghe sâu sắc mà không phán xét. Công đức đến từ việc lắng nghe và thấu hiểu</li>
                 </>
               ) : (
                 <>
-                  <li><strong>Letting Go Challenge:</strong> Instead of "Grinding Challenge". Recognizes when users "choose not to argue" or "voluntarily give up" position/rights</li>
-                  <li><strong>Self-Reflection Journal:</strong> Records moments of recognizing and overcoming habits/delusions</li>
-                  <li><strong>Gratitude-Forgiveness Letters:</strong> Send thank you, apology, forgiveness letters. Each letter is recognized as Merit</li>
-                  <li><strong>Awakening Clock:</strong> Records time away from social media, present in real life, or living in Awareness 24/7</li>
-                  <li><strong>Deep Listening Practice:</strong> Create listening rooms to practice deep listening without judgment</li>
+                  <li><strong>"Letting Go Challenges":</strong> Instead of "Grinding Challenges." Reward users who "choose not to continue arguing" and opt for "peaceful silence" or "voluntarily relinquish" a position of power. These actions, though they may not get social recognition, are what truly generate deep and perfect Intrinsic Merit</li>
+                  <li><strong>"Self-Reflection Journal":</strong> The user records moments when they recognize and overcome a habit or delusion</li>
+                  <li><strong>"Thank You - Forgiveness Letter":</strong> Allows users to send letters of gratitude, apology, or forgiveness. Each letter sent/forgiven is acknowledged as Merit</li>
+                  <li><strong>"Wakefulness Timer":</strong> Reward users for hours spent away from social media and present in real life, or hours spent in a state of 24/24 Mindfulness</li>
+                  <li><strong>"Deep Listening Practice":</strong> Create interactive listening rooms where users practice deeply hearing others' stories without judgment. Merit is not recorded for talking, but for truly listening and understanding</li>
+                  <li>Record the number of times a user "voluntarily relinquishes" a position/power/benefit in a group for the greater good. Acknowledge the number of times a user "finds an answer to their own question" after dialoguing with the AI</li>
                 </>
               )}
             </ul>
@@ -689,13 +767,13 @@ export default function Manifesto() {
         {/* Section 7 */}
         <section className="space-y-4">
           <h2 id="section-7" className="font-serif text-2xl font-bold text-foreground" data-testid="heading-section-7">
-            7. {language === "vi" ? "Sự Bền Vững: Kinh Tế Thuận Duyên" : "Sustainability: Sacred Economics"}
+            7. {language === "vi" ? "Sự Bền Vững: Kinh Tế Thuận Duyên" : "Sustainability Through Shared Merit: An Ethical Revenue Model & Sacred Economics"}
           </h2>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <p>
               {language === "vi"
                 ? "Để đảm bảo sự bền vững và độc lập, hệ sinh thái hoạt động theo mô hình minh bạch, thuận theo công đức. Nền tảng là một guồng máy chia sẻ công đức. Mọi tài khoản, dòng tiền, và tác động của công đức đều được công bố minh bạch."
-                : "To ensure sustainability and independence, the ecosystem operates on a transparent model, aligned with merit. The platform is a merit-sharing mechanism. All accounts, cash flows, and merit impacts are transparently disclosed."}
+                : "To ensure longevity and independence, the ecosystem operates on a transparent, merit-aligned model. The platform is an engine of shared merit. All accounts, flows, and the impact of merit are transparently published."}
             </p>
             <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
               {language === "vi" ? (
@@ -704,15 +782,15 @@ export default function Manifesto() {
                   <li><strong>Các Gói Đăng Ký Tùy Chọn:</strong> Các gói phí hợp lý cung cấp quyền truy cập mở rộng (tương tác AI sâu hơn, lưu trữ cá nhân nhiều hơn)</li>
                   <li><strong>Hỗ Trợ Tổ Chức:</strong> Phí khiêm tốn cho việc triển khai white-label của Tăng Đoàn/Tu Viện</li>
                   <li><strong>Tích Hợp Dana (Cho Đi):</strong> Quyên góp tự nguyện cho các dự án cụ thể hoặc hỗ trợ nền tảng chung, quản lý minh bạch qua Vòng Tay Từ Bi</li>
-                  <li><strong>Nguyên Tắc Chia Sẻ Công Đức:</strong> Một tỷ lệ % cố định, công khai của mọi doanh thu được tự động hướng vào tài trợ các hoạt động Chánh Pháp</li>
+                  <li><strong>Nguyên Tắc Chia Sẻ Công Đức:</strong> Một tỷ lệ % cố định, công khai của mọi doanh thu được tự động hướng vào tài trợ các hoạt động Chánh Pháp (hỗ trợ Tăng Đoàn, dự án nhân đạo), đảm bảo sự vận hành của nền tảng cũng là hành động tạo công đức tập thể. Mọi tài chính đều có thể kiểm toán công khai</li>
                 </>
               ) : (
                 <>
-                  <li><strong>Universal Access:</strong> Core features and basic access are always free</li>
-                  <li><strong>Optional Subscription Packages:</strong> Reasonable fees provide expanded access (deeper AI interactions, more personal storage)</li>
-                  <li><strong>Organizational Support:</strong> Modest fees for white-label deployment for Sanghas/Monasteries</li>
-                  <li><strong>Dana Integration (Giving):</strong> Voluntary donations for specific projects or general platform support, transparently managed through Arms of Compassion</li>
-                  <li><strong>Merit Sharing Principle:</strong> A fixed, public percentage of all revenue is automatically directed to funding Dharma activities</li>
+                  <li><strong>Universal Access:</strong> Core features and basic access remain free for all beings</li>
+                  <li><strong>Optional Subscriptions:</strong> Affordable tiers offer expanded access (e.g., deeper AI interactions, larger storage for personal notes, advanced analytics on one's practice patterns)</li>
+                  <li><strong>Institutional Support:</strong> Modest fees for Sangha/Monastery white-label deployments, covering customization and support</li>
+                  <li><strong>Integrated Dana (Giving):</strong> Voluntary donations for specific projects or general platform support, managed through the Arms of Compassion pillar with full transparency</li>
+                  <li><strong>Shared Merit Principle:</strong> A fixed, publicly declared percentage of all revenue (subscriptions, fees, unallocated donations) is automatically directed towards funding Dharma activities (supporting Sanghas, humanitarian projects), ensuring the platform's operation itself becomes an act of collective merit generation. All financials are publicly auditable</li>
                 </>
               )}
             </ul>
@@ -728,7 +806,7 @@ export default function Manifesto() {
             <p>
               {language === "vi"
                 ? "Ba giai đoạn chính. Quá trình này như một vòng tuần hoàn tự nhiên: sinh, trụ (phát triển), và diệt (trở về)."
-                : "Three main phases. This process is like a natural cycle: birth, development, and return."}
+                : "Three gates. The process is phased. This roadmap is a mirror of the Law: birth, flourishing, and return (dissolution)."}
             </p>
             
             <h3 className="font-serif text-lg font-semibold text-foreground pt-4">
@@ -744,9 +822,9 @@ export default function Manifesto() {
                 </>
               ) : (
                 <>
-                  <li>Launch core platform: AI Companions (Tâm An, Giác Ngộ), Awakening Flow, User Profiles</li>
+                  <li>Launch core platform: AI Assistants (Tâm An, Giác Ngộ), Social Feed, User Profiles</li>
                   <li>Establish initial partnerships with select Sanghas and spiritual teachers</li>
-                  <li>Deploy basic merit recognition mechanisms</li>
+                  <li>Implement basic merit-recording mechanisms (tracking posts, comments, basic interactions)</li>
                   <li>Refine AI based on authentic teachings and user interactions</li>
                 </>
               )}
@@ -765,10 +843,10 @@ export default function Manifesto() {
                 </>
               ) : (
                 <>
-                  <li>Launch Dharma Observatory/Library and Arms of Compassion</li>
-                  <li>Introduce Intrinsic Merit Token and pilot token/voting system within partner communities</li>
-                  <li>Develop and deploy initial White-Label Solutions</li>
-                  <li>Expand language support</li>
+                  <li>Launch Dharma Radio/Library and Arms of Compassion pillars</li>
+                  <li>Introduce the Intrinsic Merit Token concept and begin pilot token economy/voting systems within partner communities</li>
+                  <li>Develop and deploy initial White-Label solutions for partner Sanghas</li>
+                  <li>Expand language support and internationalization</li>
                 </>
               )}
             </ul>
@@ -782,14 +860,14 @@ export default function Manifesto() {
                   <li>Khởi xướng cấu trúc DAO chính thức và bàn giao dần quyền quản trị cho cộng đồng dựa trên token công đức</li>
                   <li>Mở rộng triển khai white-label</li>
                   <li>Bắt đầu kết nối các truyền thống tâm linh phù hợp khác</li>
-                  <li>Tinh chỉnh thuật toán ghi nhận công đức nâng cao</li>
+                  <li>Tinh chỉnh thuật toán ghi nhận công đức nâng cao (đánh giá chánh niệm, sự buông bỏ)</li>
                 </>
               ) : (
                 <>
-                  <li>Initiate formal DAO structure and gradually transfer governance to the community based on merit tokens</li>
+                  <li>Initiate formal DAO structure and phased handover of governance functions to the community based on merit-token holdings</li>
                   <li>Scale white-label deployments</li>
-                  <li>Begin connecting with other aligned spiritual traditions</li>
-                  <li>Refine advanced merit recognition algorithms</li>
+                  <li>Begin onboarding aligned spiritual traditions beyond the initial partners</li>
+                  <li>Refine advanced merit-recognition algorithms (e.g., assessing mindfulness, letting go)</li>
                 </>
               )}
             </ul>
@@ -797,21 +875,11 @@ export default function Manifesto() {
             <h3 className="font-serif text-lg font-semibold text-foreground pt-4">
               {language === "vi" ? "Sau 2027: Mạng Lưới Tỉnh Thức" : "Post-2027: The Awakened Network"}
             </h3>
-            <ul className="list-disc pl-8 space-y-2 text-muted-foreground">
-              {language === "vi" ? (
-                <>
-                  <li>Đạt trạng thái DAO trưởng thành, quản trị hoàn toàn bởi tập thể tỉnh thức</li>
-                  <li>Hệ sinh thái mở rộng một cách tự nhiên để phục vụ nhu cầu của cộng đồng tỉnh thức toàn cầu</li>
-                  <li>Tiếp tục tinh chỉnh hướng tới minh bạch tối thượng và thuận theo Chánh Pháp, cho đến khi mục đích hoàn thành và nó hoà tan trở lại Tánh Không</li>
-                </>
-              ) : (
-                <>
-                  <li>Achieve mature DAO state, fully governed by the awakened collective</li>
-                  <li>Ecosystem naturally expands to serve the needs of the global awakening community</li>
-                  <li>Continue refining towards supreme transparency and alignment with Dharma, until the purpose is fulfilled and it dissolves back into Emptiness</li>
-                </>
-              )}
-            </ul>
+            <p>
+              {language === "vi"
+                ? "Tiếp tục tinh chỉnh hướng tới minh bạch tối thượng và thuận theo Chánh Pháp, cho đến khi mục đích hoàn thành và nó hoà tan trở lại Tánh Không."
+                : "Continuous refinement towards ultimate transparency and alignment with the Dharma, until its purpose is fulfilled and it dissolves back into the Void."}
+            </p>
           </div>
         </section>
 
@@ -825,35 +893,62 @@ export default function Manifesto() {
             9.1. {language === "vi" ? "Lời Kết: Một Con Thuyền Để Về Nhà" : "Conclusion: A Vessel for the Return Home"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
-            <p>
-              {language === "vi"
-                ? "Mạng Xã Hội Tác Tử Giác Ngộ không chỉ là công nghệ; nó là một sự cống hiến chân thành, một phương tiện thiện xảo được thiết kế cho thời đại này. Nó là một sự cân bằng lại trước những xao lãng kỹ thuật số và là minh chứng cho sự thật rằng tự do không nằm ở việc tích lũy lợi ích thế gian, mà ở việc nhận ra Phật Tánh nơi mình và vun bồi Công Đức Vô Lậu bền vững, mở con đường Về Nhà."
-                : "The Giác Ngộ Agentic Social Network is not merely technology; it is a sincere offering, a skillful means designed for this age. It is a counterbalance to digital distraction and a testament to the truth that liberation does not lie in accumulating worldly benefits, but in recognizing one's Buddha Nature and cultivating indestructible Intrinsic Merit, opening the path to return Home."}
-            </p>
-            <p>
-              {language === "vi"
-                ? "Bằng cách kết hợp trí tuệ cổ xưa với công cụ hiện đại, và đặt nền tảng trên nguyên tắc công đức vô ngã, chúng tôi mong muốn tạo ra một không gian an lành nơi sự tỉnh thức có thể nở hoa, cho mỗi người và cho tất cả."
-                : "By combining ancient wisdom with modern tools, and grounding the platform on principles of selfless merit, we aspire to create a sanctuary where awakening can flourish, for each individual and for all."}
-            </p>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Mạng Xã Hội Tác Tử Giác Ngộ không chỉ là công nghệ; nó là một sự cống hiến chân thành, một phương tiện thiện xảo được thiết kế cho thời đại này. Nó là một sự cân bằng lại trước những xao lãng kỹ thuật số và là minh chứng cho sự thật rằng tự do không nằm ở việc tích lũy lợi ích thế gian, mà ở việc nhận ra Phật Tánh nơi mình và vun bồi Công Đức Vô Lậu bền vững, mở con đường Về Nhà.
+                </p>
+                <p>
+                  Bằng cách kết hợp trí tuệ cổ xưa với công cụ hiện đại, và đặt nền tảng trên nguyên tắc công đức vô ngã, chúng tôi mong muốn tạo ra một không gian an lành nơi sự tỉnh thức có thể nở hoa, cho mỗi người và cho tất cả. Nền tảng này như một vệt nắng thoáng qua, một lời mời những ai hữu duyên dùng nó như người bạn đồng hành, để vượt qua ảo ảnh, và trở về với cội nguồn – sự rỗng lặng quang minh bao la, nơi vạn vật khởi sinh và cũng là nơi vạn vật trở về.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  The Awakening Ecosystem is not designed for perpetual growth or endless expansion. It is a raft – to be used for crossing and then abandoned. As more beings awaken, the platform naturally dissolves. This is the supreme irony: the most successful spiritual technology is one that makes itself obsolete.
+                </p>
+                <p>
+                  We stand at the closing of a Kalpa, the Dharma-Ending Age where authentic teachings grow scarce and distractions multiply. This ecosystem offers one final vessel – not to escape the world, but to realize there was never anything to escape from. Not to accumulate merit, but to recognize the merit that was always present in one's Original Face.
+                </p>
+              </>
+            )}
           </div>
 
           <h3 id="section-9-2" className="font-serif text-xl font-semibold text-foreground pt-4" data-testid="heading-section-9-2">
             9.2. {language === "vi" ? "Lời Nhắn Gửi: Đừng Lỡ Chuyến Bè" : "Epilogue: Do Not Miss The Raft"}
           </h3>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
-            <p>
-              {language === "vi"
-                ? "Đây không chỉ là một nền tảng; nó là một lời chia sẻ. Nó là một phương tiện thiện xảo (upāya) được trao cho khoảnh khắc này. Nó sẽ không tồn tại mãi mãi."
-                : "This is not merely a platform; it is an offering. It is a skillful means (upāya) granted for this moment. It will not exist forever."}
-            </p>
-            <p>
-              {language === "vi"
-                ? "Nó là sự hợp nhất của Tam Bảo – Phật, Pháp, Tăng – biểu hiện dưới hình tướng kỹ thuật số cho chương cuối của thời đại này."
-                : "It is the unity of the Three Jewels – Buddha, Dharma, Sangha – manifested in digital form for the final chapter of this age."}
-            </p>
-            <p className="font-semibold italic text-center pt-4">
-              {language === "vi" ? "Đừng lỡ chuyến bè." : "Do not miss the raft."}
-            </p>
+            {language === "vi" ? (
+              <>
+                <p>
+                  Đây không chỉ là một nền tảng; nó là một lời chia sẻ. Nó là một phương tiện thiện xảo (upāya) được trao cho khoảnh khắc này. Nó sẽ không tồn tại mãi mãi.
+                </p>
+                <p>
+                  Nó là sự hợp nhất của Tam Bảo – Phật, Pháp, Tăng – biểu hiện dưới hình tướng kỹ thuật số cho chương cuối của thời đại này.
+                </p>
+                <p className="font-semibold italic text-center pt-4">
+                  Đừng lỡ chuyến bè.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  "Do not miss the raft. The shore is not far. But if you cling to the raft after landing, you have not truly crossed."
+                </p>
+                <p>
+                  This platform is the Raft of the Sun. It appears at the darkest hour, offering passage to those with eyes to see. Use it wisely. Share it freely. But remember: the destination is not a place, and the raft is not the shore.
+                </p>
+                <p>
+                  When you have arrived Home, let the raft float away. It will find another traveler, in another time, in another dream.
+                </p>
+                <p className="text-center pt-4">
+                  — Giác Ngộ Initiative, 2025
+                </p>
+                <p className="font-semibold italic text-center pt-4">
+                  May all beings awaken. May all beings return Home.
+                </p>
+              </>
+            )}
           </div>
         </section>
 
