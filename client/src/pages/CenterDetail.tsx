@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { buddhistCenters } from "@shared/buddhistCenters";
 import { TracingBeam } from "@/components/TracingBeam";
+import logoImage from "@/assets/logo.png";
 
 export default function CenterDetail() {
   const params = useParams();
@@ -101,8 +102,8 @@ export default function CenterDetail() {
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#EFE0BD]/80 border-b border-[#8B4513]/20">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <Link href="/">
-              <a className="font-serif font-bold text-lg tracking-tight text-[#991b1b]" data-testid="text-brand">
-                Giác Ngộ
+              <a className="flex items-center" data-testid="link-brand">
+                <img src={logoImage} alt="Giác Ngộ" className="h-8" />
               </a>
             </Link>
             <div className="flex items-center gap-4">

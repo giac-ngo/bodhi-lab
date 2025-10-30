@@ -3,6 +3,7 @@ import { Search, ArrowRight, Sparkles, Users, Heart } from "lucide-react";
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
+import logoImage from "@/assets/logo.png";
 
 function AnimatedPlaceholder({ texts }: { texts: string[] }) {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -114,9 +115,11 @@ export default function Landing() {
       <div className="relative z-10">
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#EFE0BD]/80 border-b border-[#8B4513]/20">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <span className="font-serif font-bold text-lg tracking-tight text-[#991b1b]" data-testid="text-brand">
-              Giác Ngộ
-            </span>
+            <Link href="/">
+              <a className="flex items-center" data-testid="link-brand">
+                <img src={logoImage} alt="Giác Ngộ" className="h-8" />
+              </a>
+            </Link>
             <div className="flex items-center gap-4">
               <Link href="/docs/models">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-agents">
