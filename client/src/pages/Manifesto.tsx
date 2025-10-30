@@ -27,8 +27,8 @@ export default function Manifesto() {
           </h1>
           <p className="font-serif text-lg md:text-xl text-foreground italic pt-2 !text-center" data-testid="text-manifesto-subtitle">
             {language === "vi" 
-              ? "Một Không Gian Tương Tác vì Sự Tỉnh Thức Chung" 
-              : "An Agentic Social Network for Collective Awakening"}
+              ? "Công Nghệ Tỉnh Thức cho Thời Đại Mạt Pháp" 
+              : "Awaken Technology for the Dharma‑Ending Age"}
           </p>
           <div className="space-y-1 pt-4 text-center">
             <p className="font-serif text-base text-foreground font-semibold !text-center" data-testid="text-organization">
