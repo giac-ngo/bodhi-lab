@@ -291,9 +291,14 @@ export default function Discovery() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/docs/models">
-                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-agents">
-                  Agent Models
+              <Link href="/">
+                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-platform">
+                  Platform
+                </a>
+              </Link>
+              <Link href="/">
+                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-services">
+                  Services
                 </a>
               </Link>
               <Link href="/discovery">
@@ -301,7 +306,7 @@ export default function Discovery() {
                   Discovery
                 </a>
               </Link>
-              <Link href="/docs/manifesto">
+              <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
                   Docs
                 </a>
@@ -385,9 +390,14 @@ export default function Discovery() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <span className="font-serif font-bold text-[#991b1b]">Bodhi Lab</span>
               <div className="flex gap-6">
-                <Link href="/docs/models">
+                <Link href="/">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Agent Models
+                    Platform
+                  </a>
+                </Link>
+                <Link href="/">
+                  <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
+                    Services
                   </a>
                 </Link>
                 <Link href="/discovery">
@@ -395,7 +405,7 @@ export default function Discovery() {
                     Discovery
                   </a>
                 </Link>
-                <Link href="/docs/manifesto">
+                <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
                     Docs
                   </a>

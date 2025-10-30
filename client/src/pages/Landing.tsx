@@ -773,24 +773,12 @@ export default function Landing() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/docs/models">
-                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-agents">
-                  Agent Models
-                </a>
-              </Link>
               <a 
-                href="#awaken-feed" 
+                href="#capabilities" 
                 className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
-                data-testid="link-awaken-feed"
+                data-testid="link-platform"
               >
-                Awaken Feed
-              </a>
-              <a 
-                href="#dharma-radio" 
-                className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
-                data-testid="link-dharma-radio"
-              >
-                Dharma Radio
+                Platform
               </a>
               <a 
                 href="#services" 
@@ -804,7 +792,7 @@ export default function Landing() {
                   Discovery
                 </a>
               </Link>
-              <Link href="/docs/manifesto">
+              <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
                   Docs
                 </a>
@@ -1601,14 +1589,14 @@ export default function Landing() {
                 >
                   Services
                 </a>
-                <Link href="/docs/manifesto">
+                <Link href="/discovery">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Manifesto
+                    Discovery
                   </a>
                 </Link>
-                <Link href="/docs/tech-stack">
+                <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Tech Stack
+                    Docs
                   </a>
                 </Link>
               </div>
