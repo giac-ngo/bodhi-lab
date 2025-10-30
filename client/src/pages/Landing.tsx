@@ -332,9 +332,11 @@ function SocialNetworkSection() {
 
               <div className="divide-y divide-[#8B4513]/10">
                 <div className="flex items-start gap-3 p-4 bg-[#EFE0BD]/20">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B4513] to-[#991b1b] flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
+                  <img 
+                    src={avatar8} 
+                    alt="Thanh Hương" 
+                    className="w-10 h-10 rounded-full object-cover border-2 border-[#8B4513] flex-shrink-0"
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-[#2c2c2c]">
                       <span className="font-semibold">Thanh Hương</span>{" "}
@@ -347,9 +349,11 @@ function SocialNetworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3 p-4 bg-[#EFE0BD]/20">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#991b1b] to-[#d4af37] flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
+                  <img 
+                    src={avatar11} 
+                    alt="Tuệ Minh" 
+                    className="w-10 h-10 rounded-full object-cover border-2 border-[#991b1b] flex-shrink-0"
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-[#2c2c2c]">
                       <span className="font-semibold">Tuệ Minh</span>{" "}
@@ -362,9 +366,11 @@ function SocialNetworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3 p-4 bg-[#EFE0BD]/20">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
+                  <img 
+                    src={avatar6} 
+                    alt="An Nhiên" 
+                    className="w-10 h-10 rounded-full object-cover border-2 border-[#d4af37] flex-shrink-0"
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-[#2c2c2c]">
                       <span className="font-semibold">An Nhiên</span>{" "}
@@ -377,9 +383,11 @@ function SocialNetworkSection() {
                 </div>
 
                 <div className="flex items-start gap-3 p-4">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B4513] to-[#991b1b] flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-white" />
-                  </div>
+                  <img 
+                    src={avatar2} 
+                    alt="Minh Đức" 
+                    className="w-10 h-10 rounded-full object-cover border-2 border-[#8B4513] flex-shrink-0"
+                  />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-[#2c2c2c]">
                       <span className="font-semibold">Minh Đức</span>{" "}
@@ -399,9 +407,11 @@ function SocialNetworkSection() {
               {/* Post 1 */}
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-social-post-1">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
+                  <img 
+                    src={avatar3} 
+                    alt="Minh Tâm" 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-serif font-bold text-[#2c2c2c]">Minh Tâm</span>
@@ -450,9 +460,11 @@ function SocialNetworkSection() {
               {/* Post 2 */}
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-social-post-2">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#8B4513] to-[#991b1b] flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
+                  <img 
+                    src={avatar11} 
+                    alt="Tuệ Minh" 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-[#8B4513]"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-serif font-bold text-[#2c2c2c]">Tuệ Minh</span>
@@ -1059,9 +1071,11 @@ export default function Landing() {
                   </p>
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
+                    <img 
+                      src={avatar13} 
+                      alt="Thầy Minh Tuệ" 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-[#d4af37]"
+                    />
                     <div>
                       <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Minh Tuệ</p>
                       <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
@@ -1098,9 +1112,11 @@ export default function Landing() {
                   </p>
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#991b1b] to-[#d4af37] flex items-center justify-center">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
+                    <img 
+                      src={avatar8} 
+                      alt="Cô Thanh Hương" 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-[#991b1b]"
+                    />
                     <div>
                       <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Cô Thanh Hương</p>
                       <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
@@ -1145,9 +1161,11 @@ export default function Landing() {
                   </p>
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B4513] to-[#991b1b] flex items-center justify-center">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
+                    <img 
+                      src={avatar11} 
+                      alt="Thầy Giác Minh" 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-[#8B4513]"
+                    />
                     <div>
                       <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Giác Minh</p>
                       <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
@@ -1183,9 +1201,11 @@ export default function Landing() {
                   </p>
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
-                      <Users className="w-5 h-5 text-white" />
-                    </div>
+                    <img 
+                      src={avatar13} 
+                      alt="Thầy Minh Tuệ" 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-[#d4af37]"
+                    />
                     <div>
                       <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Minh Tuệ</p>
                       <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
