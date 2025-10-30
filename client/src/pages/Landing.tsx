@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart, Check, Repeat2, MoreVertical, Home, User, Bell, Hash } from "lucide-react";
+import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart, Check, Repeat2, MoreVertical, Home, User, Bell, Hash, Radio, Clock } from "lucide-react";
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
@@ -970,6 +970,178 @@ export default function Landing() {
         </section>
 
         <SocialNetworkSection />
+
+        {/* Dharma Radio Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Radio className="w-8 h-8 text-[#991b1b]" />
+                <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-radio-title">
+                  Dharma Radio
+                </h2>
+              </div>
+              <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
+                Tham gia các buổi thảo luận trực tiếp về Phật pháp
+              </p>
+            </div>
+
+            {/* Live Now Section */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                <h3 className="font-serif text-2xl font-bold text-[#991b1b]">Đang Phát Trực Tiếp</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Live Radio 1 */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-radio-live-1">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-red-500 text-white rounded-full text-xs font-semibold">
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                      LIVE
+                    </div>
+                    <div className="flex items-center gap-1 text-[#8B4513]/60">
+                      <Users className="w-4 h-4" />
+                      <span className="text-sm font-semibold">234</span>
+                    </div>
+                  </div>
+
+                  <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Thiền Định và Tâm An</h4>
+                  <p className="font-serif text-sm text-[#8B4513]/70 mb-4">
+                    Thảo luận về thực hành thiền định hàng ngày
+                  </p>
+
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Minh Tuệ</p>
+                      <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Thiền</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Tâm An</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Thực Hành</span>
+                  </div>
+                </div>
+
+                {/* Live Radio 2 */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-radio-live-2">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-red-500 text-white rounded-full text-xs font-semibold">
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                      LIVE
+                    </div>
+                    <div className="flex items-center gap-1 text-[#8B4513]/60">
+                      <Users className="w-4 h-4" />
+                      <span className="text-sm font-semibold">156</span>
+                    </div>
+                  </div>
+
+                  <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Kinh Kim Cương - Giảng Giải</h4>
+                  <p className="font-serif text-sm text-[#8B4513]/70 mb-4">
+                    Giảng giải chi tiết về Kinh Kim Cương
+                  </p>
+
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#991b1b] to-[#d4af37] flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Cô Thanh Hương</p>
+                      <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Kinh Điển</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Giảng Giải</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Scheduled Section */}
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <Clock className="w-6 h-6 text-[#8B4513]" />
+                <h3 className="font-serif text-2xl font-bold text-[#8B4513]">Sắp Diễn Ra</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Scheduled Radio 1 */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-radio-scheduled-1">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-[#8B4513]/20 text-[#2c2c2c] rounded-full text-xs font-semibold">
+                      <Clock className="w-3 h-3" />
+                      1h 59m
+                    </div>
+                    <div className="flex items-center gap-1 text-[#8B4513]/60">
+                      <Users className="w-4 h-4" />
+                      <span className="text-sm font-semibold">0</span>
+                    </div>
+                  </div>
+
+                  <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Vô Ngã và Giải Thoát</h4>
+                  <p className="font-serif text-sm text-[#8B4513]/70 mb-4">
+                    Khám phá khái niệm vô ngã trong Phật giáo
+                  </p>
+
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B4513] to-[#991b1b] flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Giác Minh</p>
+                      <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Vô Ngã</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Triết Học</span>
+                  </div>
+                </div>
+
+                {/* Scheduled Radio 2 */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-radio-scheduled-2">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2 px-3 py-1 bg-[#8B4513]/20 text-[#2c2c2c] rounded-full text-xs font-semibold">
+                      <Clock className="w-3 h-3" />
+                      2h 59m
+                    </div>
+                    <div className="flex items-center gap-1 text-[#8B4513]/60">
+                      <Users className="w-4 h-4" />
+                      <span className="text-sm font-semibold">0</span>
+                    </div>
+                  </div>
+
+                  <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Niệm Phật A Di Đà</h4>
+                  <p className="font-serif text-sm text-[#8B4513]/70 mb-4">
+                    Hướng dẫn thực hành niệm Phật
+                  </p>
+
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-serif text-sm font-semibold text-[#2c2c2c]">Thầy Minh Tuệ</p>
+                      <p className="font-serif text-xs text-[#8B4513]/60">Host</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Niệm Phật</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">#Tịnh Độ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Pricing Section */}
         <section className="py-16 px-4">
