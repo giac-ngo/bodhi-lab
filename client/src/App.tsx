@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DocsLayout } from "@/components/DocsLayout";
 import Landing from "@/pages/Landing";
+import Discovery from "@/pages/Discovery";
 import Manifesto from "@/pages/Manifesto";
 import MandalaMerit from "@/pages/MandalaMerit";
 import MeritTokenomics from "@/pages/MeritTokenomics";
@@ -20,6 +21,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Landing} />
+      <Route path="/discovery" component={Discovery} />
       <Route path="/docs/manifesto">
         <DocsLayout>
           <Manifesto />
