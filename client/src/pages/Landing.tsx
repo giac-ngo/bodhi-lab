@@ -21,7 +21,7 @@ function SocialNetworkSection() {
   };
 
   return (
-    <section className="py-16 px-4 bg-[#EFE0BD]/50">
+    <section id="awaken-feed" className="py-16 px-4 bg-[#EFE0BD]/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-social-title">
@@ -722,6 +722,27 @@ export default function Landing() {
                   Agent Models
                 </a>
               </Link>
+              <a 
+                href="#awaken-feed" 
+                className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
+                data-testid="link-awaken-feed"
+              >
+                Awaken Feed
+              </a>
+              <a 
+                href="#dharma-radio" 
+                className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
+                data-testid="link-dharma-radio"
+              >
+                Dharma Radio
+              </a>
+              <a 
+                href="#pricing" 
+                className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
+                data-testid="link-pricing"
+              >
+                Pricing
+              </a>
               <Link href="/discovery">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-discovery">
                   Discovery
@@ -973,7 +994,7 @@ export default function Landing() {
         <SocialNetworkSection />
 
         {/* Dharma Radio Section */}
-        <section className="py-16 px-4">
+        <section id="dharma-radio" className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-3 mb-4">
@@ -1301,7 +1322,7 @@ export default function Landing() {
         )}
 
         {/* Pricing Section */}
-        <section className="py-16 px-4">
+        <section id="pricing" className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-pricing-title">
@@ -1457,6 +1478,24 @@ export default function Landing() {
                     Agent Models
                   </a>
                 </Link>
+                <a 
+                  href="#awaken-feed" 
+                  className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors"
+                >
+                  Awaken Feed
+                </a>
+                <a 
+                  href="#dharma-radio" 
+                  className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors"
+                >
+                  Dharma Radio
+                </a>
+                <a 
+                  href="#pricing" 
+                  className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors"
+                >
+                  Pricing
+                </a>
                 <Link href="/discovery">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
                     Discovery
