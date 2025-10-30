@@ -669,7 +669,7 @@ export default function Landing() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <img src={logoImage} alt="Bodhi Lab" className="h-8" />
+                  <img src={logoImage} alt="Bodhi Technology Lab" className="h-8" />
                 </a>
               </Link>
               
