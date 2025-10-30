@@ -482,19 +482,19 @@ export default function Landing() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <span className="font-serif font-bold text-[#991b1b]">Giác Ngộ Initiative</span>
               <div className="flex gap-6">
-                <Link href="/docs/manifesto">
-                  <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Manifesto
-                  </a>
-                </Link>
                 <Link href="/docs/models">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
                     Agent Models
                   </a>
                 </Link>
-                <Link href="/docs/quick-start">
+                <Link href="/discovery">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Quick Start
+                    Discovery
+                  </a>
+                </Link>
+                <Link href="/docs/manifesto">
+                  <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
+                    Docs
                   </a>
                 </Link>
               </div>
