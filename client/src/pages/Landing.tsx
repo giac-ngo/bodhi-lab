@@ -63,8 +63,11 @@ function SocialNetworkSection() {
           <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
             White-label community platform to connect your practitioners, share Dharma talks, and foster mindful discussions
           </p>
-          <p className="font-serif text-sm text-[#8B4513]/60 max-w-2xl mx-auto italic">
-            Interactive demo below shows how your temple's custom-branded community will look and function for your sangha
+          <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic mb-2">
+            The interactive demo below shows the member experience within your temple's custom-branded platform—featuring your branding, your AI agents (like "Giác Ngộ" shown here), and your sangha's conversations
+          </p>
+          <p className="font-serif text-xs text-[#8B4513]/50 max-w-2xl mx-auto italic">
+            (Demo content in Vietnamese represents sample temple community interactions)
           </p>
         </div>
 
@@ -76,7 +79,7 @@ function SocialNetworkSection() {
               className={`flex items-center justify-center w-12 h-12 rounded-2xl border-2 border-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset] transition-colors ${
                 activeView === "feed" ? "bg-[#d4af37] text-[#2c2c2c]" : "bg-[#f3ead7] text-[#1f1f1f] hover:bg-[#efe2c9]"
               }`}
-              title="Trang chủ - Xem tất cả bài viết"
+              title="Community Feed - Sangha Announcements"
               data-testid="button-social-home"
             >
               <Home className="w-5 h-5" />
@@ -87,7 +90,7 @@ function SocialNetworkSection() {
               className={`flex items-center justify-center w-12 h-12 rounded-2xl border-2 border-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset] transition-colors ${
                 activeView === "search" ? "bg-[#d4af37] text-[#2c2c2c]" : "bg-[#f3ead7] text-[#1f1f1f] hover:bg-[#efe2c9]"
               }`}
-              title="Tìm kiếm người dùng hoặc chủ đề"
+              title="Search Members & Topics"
               data-testid="button-social-search"
             >
               <Search className="w-5 h-5" />
@@ -98,7 +101,7 @@ function SocialNetworkSection() {
               className={`flex items-center justify-center w-12 h-12 rounded-2xl border-2 border-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset] transition-colors ${
                 activeView === "profile" ? "bg-[#d4af37] text-[#2c2c2c]" : "bg-[#f3ead7] text-[#1f1f1f] hover:bg-[#efe2c9]"
               }`}
-              title="Trang cá nhân - Xem bài viết của bạn"
+              title="Member Profile - Practitioner View"
               data-testid="button-social-profile"
             >
               <User className="w-5 h-5" />
@@ -109,7 +112,7 @@ function SocialNetworkSection() {
               className={`relative flex items-center justify-center w-12 h-12 rounded-2xl border-2 border-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset] transition-colors ${
                 activeView === "notifications" ? "bg-[#d4af37] text-[#2c2c2c]" : "bg-[#f3ead7] text-[#1f1f1f] hover:bg-[#efe2c9]"
               }`}
-              title="Thông báo"
+              title="Event & Announcement Notifications"
               data-testid="button-social-notifications"
             >
               <Bell className="w-5 h-5" />
@@ -126,7 +129,7 @@ function SocialNetworkSection() {
             <div className="space-y-6">
               <input
                 type="text"
-                placeholder="Tìm kiếm người dùng hoặc chủ đề..."
+                placeholder="Search temple members, topics, or teachings..."
                 className="w-full px-4 py-3 bg-white/50 backdrop-blur-md text-[#2c2c2c] placeholder-[#8B4513]/50 font-serif rounded-2xl border-2 border-[#8B4513]/20 focus:outline-none focus:border-[#991b1b]/40 transition-colors"
                 data-testid="input-social-search"
               />
@@ -209,7 +212,7 @@ function SocialNetworkSection() {
                     </div>
                   </div>
                   <button className="px-5 py-2 bg-white border-2 border-[#2c2c2c] rounded-xl text-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset] hover:bg-[#efe2c9] transition-colors text-sm font-semibold">
-                    Chỉnh sửa
+                    Edit Profile
                   </button>
                 </div>
 
@@ -791,11 +794,11 @@ export default function Landing() {
                 Dharma Radio
               </a>
               <a 
-                href="#pricing" 
+                href="#services" 
                 className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
-                data-testid="link-pricing"
+                data-testid="link-services"
               >
-                Pricing
+                Services
               </a>
               <Link href="/discovery">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-discovery">
