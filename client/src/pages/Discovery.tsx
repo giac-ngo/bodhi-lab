@@ -68,12 +68,14 @@ export default function Discovery() {
     };
 
     return (
-      <motion.div
-        whileHover={{ scale: 1.02 }}
-        className="bg-white/50 backdrop-blur-md border border-[#8B4513]/30 rounded-2xl overflow-hidden
-          shadow-md hover:shadow-lg transition-all cursor-pointer h-full"
-        data-testid={`card-discovery-center-${center.id}`}
-      >
+      <Link href={`/center/${center.id}`}>
+        <a>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="bg-white/50 backdrop-blur-md border border-[#8B4513]/30 rounded-2xl overflow-hidden
+              shadow-md hover:shadow-lg transition-all cursor-pointer h-full"
+            data-testid={`card-discovery-center-${center.id}`}
+          >
         <div
           className="relative h-40 overflow-hidden"
           style={{
@@ -154,7 +156,9 @@ export default function Discovery() {
             </button>
           </div>
         </div>
-      </motion.div>
+          </motion.div>
+        </a>
+      </Link>
     );
   };
 
