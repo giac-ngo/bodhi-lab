@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Sparkles, Users, Zap } from "lucide-react";
-import { buddhistAgents } from "@shared/buddhistAgents";
+import { Search, MapPin, Users, Star, Sparkles } from "lucide-react";
+import { buddhistCenters } from "@shared/buddhistCenters";
 import { Link } from "wouter";
 import { TracingBeam } from "@/components/TracingBeam";
 
@@ -17,112 +17,144 @@ export default function Discovery() {
     { id: "retreat-center", label: "Trung Tâm Tu Tập", icon: "🌄" },
   ];
 
-  const getCenterCategory = (monastery: string | undefined): string => {
-    if (!monastery) return "meditation-center";
-    const lower = monastery.toLowerCase();
-    if (lower.includes("chùa") || lower.includes("tự")) {
-      return "monastery";
-    }
-    if (lower.includes("thiền viện") || lower.includes("thiền tông")) {
-      return "meditation-center";
-    }
-    if (lower.includes("đền") || lower.includes("tháp")) {
-      return "temple";
-    }
-    if (lower.includes("trung tâm") || lower.includes("center")) {
-      return "retreat-center";
-    }
-    return "meditation-center";
-  };
-
-  const filteredAgents = buddhistAgents.filter((agent) => {
+  const filteredCenters = buddhistCenters.filter((center) => {
     const matchesSearch =
-      agent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      agent.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      agent.purpose.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (agent.monastery && agent.monastery.toLowerCase().includes(searchQuery.toLowerCase()));
+      center.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      center.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      center.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      center.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      center.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
-    const centerCategory = getCenterCategory(agent.monastery);
-    const matchesCategory = selectedCategory === "all" || centerCategory === selectedCategory;
+    const matchesCategory = selectedCategory === "all" || center.type === selectedCategory;
 
     return matchesSearch && matchesCategory;
   });
 
-  const AgentCard = ({ agent }: { agent: typeof buddhistAgents[0] }) => {
-    const category = getCenterCategory(agent.monastery);
-    const categoryLabel = categories.find((c) => c.id === category)?.label || "Khác";
-    const categoryIcon = categories.find((c) => c.id === category)?.icon || "🏛️";
+  const CenterCard = ({ center }: { center: typeof buddhistCenters[0] }) => {
+    const categoryLabel = categories.find((c) => c.id === center.type)?.label || "Khác";
+    const categoryIcon = categories.find((c) => c.id === center.type)?.icon || "🏛️";
+
+    const getStatusBadge = () => {
+      switch (center.status) {
+        case "open":
+          return (
+            <div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 text-green-700 rounded-lg text-xs font-semibold">
+              <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+              Đang mở
+            </div>
+          );
+        case "closed":
+          return (
+            <div className="flex items-center gap-1 px-2 py-1 bg-red-500/20 text-red-700 rounded-lg text-xs font-semibold">
+              <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+              Đóng cửa
+            </div>
+          );
+        case "retreat":
+          return (
+            <div className="flex items-center gap-1 px-2 py-1 bg-[#991b1b]/20 text-[#991b1b] rounded-lg text-xs font-semibold">
+              <div className="w-1.5 h-1.5 bg-[#991b1b] rounded-full" />
+              Đang tu tập
+            </div>
+          );
+        case "by-appointment":
+          return (
+            <div className="flex items-center gap-1 px-2 py-1 bg-[#2c2c2c]/20 text-[#2c2c2c] rounded-lg text-xs font-semibold">
+              <div className="w-1.5 h-1.5 bg-[#2c2c2c] rounded-full" />
+              Theo lịch hẹn
+            </div>
+          );
+      }
+    };
 
     return (
-      <Link href="/docs/models">
-        <a>
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="bg-[#f3ead7] border-2 border-[#2c2c2c] rounded-2xl overflow-hidden
-              shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset]
-              hover:shadow-[0_3px_0_#00000040,0_0_0_3px_#00000015_inset] transition-all cursor-pointer h-full"
-            data-testid={`card-discovery-agent-${agent.id}`}
-          >
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className="bg-white/50 backdrop-blur-md border border-[#8B4513]/30 rounded-2xl overflow-hidden
+          shadow-md hover:shadow-lg transition-all cursor-pointer h-full"
+        data-testid={`card-discovery-center-${center.id}`}
+      >
+        <div
+          className="relative h-40 overflow-hidden"
+          style={{
+            background: `linear-gradient(135deg, ${center.accentColor}40 0%, ${center.accentColor}60 100%)`,
+          }}
+        >
+          <div className="absolute top-3 left-3">
+            <div className="bg-[#991b1b] text-white px-3 py-1 rounded-full text-xs font-bold">
+              #{center.rank}
+            </div>
+          </div>
+          <div className="absolute top-3 right-3">
+            {getStatusBadge()}
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
             <div
-              className="relative h-32 overflow-hidden"
+              className="w-24 h-24 rounded-full flex items-center justify-center text-5xl border-4 border-white shadow-lg"
+              style={{ backgroundColor: center.accentColor }}
+            >
+              {categoryIcon}
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6">
+          <h3 className="text-xl font-serif font-bold text-[#2c2c2c] mb-2">{center.name}</h3>
+          <p className="text-sm font-serif text-[#8B4513]/70 mb-4 line-clamp-2">{center.description}</p>
+
+          <div className="space-y-2 mb-4">
+            <div className="flex items-center gap-2 text-[#2c2c2c]/70">
+              <MapPin className="w-4 h-4" />
+              <span className="text-xs font-serif">{center.location}, {center.country}</span>
+            </div>
+            <div className="flex items-center gap-3 text-[#2c2c2c]/70">
+              <div className="flex items-center gap-1">
+                <Users className="w-4 h-4" />
+                <span className="text-xs font-serif">{center.members.toLocaleString()}</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <Star className="w-4 h-4 fill-[#d4af37] text-[#d4af37]" />
+                <span className="text-xs font-serif font-semibold">{center.rating}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2 mb-4">
+            {center.tags.slice(0, 3).map((tag, index) => (
+              <span
+                key={index}
+                className="px-2 py-1 rounded-lg text-xs font-serif font-semibold"
+                style={{
+                  backgroundColor: `${center.accentColor}20`,
+                  color: center.accentColor,
+                }}
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span
+              className="px-3 py-1.5 rounded-lg text-xs font-serif font-semibold"
               style={{
-                background: `linear-gradient(135deg, ${agent.accentColor}20 0%, ${agent.accentColor}40 100%)`,
+                backgroundColor: `${center.accentColor}15`,
+                color: center.accentColor,
               }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center text-4xl border-4 border-white shadow-lg"
-                  style={{ backgroundColor: agent.accentColor }}
-                >
-                  {categoryIcon}
-                </div>
-              </div>
-            </div>
-
-            <div className="p-5">
-              <h3 className="text-xl font-serif font-bold text-[#2c2c2c] mb-2">{agent.name}</h3>
-              <p className="text-sm font-serif text-[#991b1b] font-semibold mb-3">{agent.tagline}</p>
-              <p className="text-sm font-serif text-[#2c2c2c]/70 mb-4 line-clamp-3">{agent.purpose}</p>
-
-              <div className="space-y-2 mb-4">
-                <div className="flex items-center gap-2 text-[#2c2c2c]/60">
-                  <Zap className="w-4 h-4" />
-                  <span className="text-xs font-mono font-semibold">{agent.model}</span>
-                </div>
-                {agent.monastery && (
-                  <div className="flex items-center gap-2 text-[#2c2c2c]/60">
-                    <Users className="w-4 h-4" />
-                    <span className="text-xs font-serif">{agent.monastery}</span>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex items-center gap-2 mb-4">
-                <span
-                  className="px-3 py-1 rounded-lg text-xs font-serif font-semibold border-2"
-                  style={{
-                    backgroundColor: `${agent.accentColor}20`,
-                    color: agent.accentColor,
-                    borderColor: agent.accentColor,
-                  }}
-                >
-                  {categoryLabel}
-                </span>
-              </div>
-
-              <button
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#991b1b] text-white rounded-xl
-                  border-2 border-[#2c2c2c] shadow-[0_2px_0_#00000030,0_0_0_3px_#00000010_inset]
-                  hover:bg-[#7a1515] transition-colors font-semibold text-sm"
-                data-testid={`button-explore-discovery-${agent.id}`}
-              >
-                <Sparkles className="w-4 h-4" />
-                Tìm hiểu thêm
-              </button>
-            </div>
-          </motion.div>
-        </a>
-      </Link>
+              {categoryLabel}
+            </span>
+            <button
+              className="flex items-center gap-1 px-4 py-2 bg-[#991b1b] text-white rounded-lg
+                hover:bg-[#7a1515] transition-colors font-serif font-semibold text-xs"
+              data-testid={`button-explore-center-${center.id}`}
+            >
+              <Sparkles className="w-3 h-3" />
+              Khám phá
+            </button>
+          </div>
+        </div>
+      </motion.div>
     );
   };
 
@@ -219,17 +251,17 @@ export default function Discovery() {
 
               <div className="mb-6">
                 <p className="font-serif text-lg text-[#8B4513]/70">
-                  Tìm thấy <span className="font-bold text-[#991b1b]">{filteredAgents.length}</span> cộng đồng
+                  Tìm thấy <span className="font-bold text-[#991b1b]">{filteredCenters.length}</span> cộng đồng
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredAgents.map((agent) => (
-                  <AgentCard key={agent.id} agent={agent} />
+                {filteredCenters.map((center) => (
+                  <CenterCard key={center.id} center={center} />
                 ))}
               </div>
 
-              {filteredAgents.length === 0 && (
+              {filteredCenters.length === 0 && (
                 <div className="text-center py-16">
                   <div className="text-6xl mb-4">🏯</div>
                   <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Không tìm thấy cộng đồng</h3>
