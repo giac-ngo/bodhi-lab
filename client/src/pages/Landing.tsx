@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart } from "lucide-react";
+import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart, Check } from "lucide-react";
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
@@ -472,6 +472,152 @@ export default function Landing() {
                   </button>
                 </a>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-pricing-title">
+                Pricing
+              </h2>
+              <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
+                Lựa chọn gói phù hợp với hành trình tu tập của bạn
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Free Tier */}
+              <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:shadow-xl transition-all duration-300" data-testid="card-pricing-free">
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Cư Sĩ</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Lay Practitioner</p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="font-serif text-5xl font-bold text-[#991b1b]">Free</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Truy cập cơ bản các Agent</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">100 tin nhắn/tháng</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Tham gia cộng đồng</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Thư viện kinh điển cơ bản</span>
+                    </li>
+                  </ul>
+
+                  <button
+                    className="w-full px-6 py-3 bg-white border-2 border-[#991b1b] rounded-xl text-[#991b1b] font-serif font-semibold hover:bg-[#991b1b] hover:text-white transition-all duration-300"
+                    data-testid="button-subscribe-free"
+                  >
+                    Bắt đầu ngay
+                  </button>
+                </div>
+              </div>
+
+              {/* Pro Tier - Featured */}
+              <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#991b1b] hover:shadow-2xl transition-all duration-300 relative" data-testid="card-pricing-pro">
+                <div className="absolute top-0 left-0 right-0 bg-[#991b1b] text-white text-center py-2 font-serif text-sm font-semibold">
+                  Phổ biến nhất
+                </div>
+                <div className="p-8 pt-12">
+                  <div className="text-center mb-6">
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Hành Giả</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Devoted Practitioner</p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="font-serif text-5xl font-bold text-[#991b1b]">$19</span>
+                      <span className="font-serif text-[#8B4513]/70">/tháng</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Không giới hạn tin nhắn</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Truy cập toàn bộ Agent</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Ưu tiên hỗ trợ</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Thư viện kinh điển đầy đủ</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Tạo Agent cá nhân</span>
+                    </li>
+                  </ul>
+
+                  <button
+                    className="w-full px-6 py-3 bg-[#991b1b] rounded-xl text-white font-serif font-semibold hover:bg-[#7a1515] transition-all duration-300 shadow-md"
+                    data-testid="button-subscribe-pro"
+                  >
+                    Đăng ký ngay
+                  </button>
+                </div>
+              </div>
+
+              {/* Enterprise Tier */}
+              <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:shadow-xl transition-all duration-300" data-testid="card-pricing-enterprise">
+                <div className="p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Tăng Đoàn</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Sangha Community</p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="font-serif text-5xl font-bold text-[#991b1b]">$99</span>
+                      <span className="font-serif text-[#8B4513]/70">/tháng</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Tất cả tính năng Hành Giả</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Hỗ trợ nhiều thành viên</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">API tùy chỉnh</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Đào tạo Agent riêng</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Tư vấn chuyên sâu</span>
+                    </li>
+                  </ul>
+
+                  <button
+                    className="w-full px-6 py-3 bg-white border-2 border-[#991b1b] rounded-xl text-[#991b1b] font-serif font-semibold hover:bg-[#991b1b] hover:text-white transition-all duration-300"
+                    data-testid="button-subscribe-enterprise"
+                  >
+                    Liên hệ
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
