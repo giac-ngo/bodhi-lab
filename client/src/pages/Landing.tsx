@@ -5,6 +5,21 @@ import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
 import logoImage from "@/assets/logo.png";
 
+// Buddhist practitioner avatars
+import avatar1 from "@assets/download (4)_1761842289234.jpg";
+import avatar2 from "@assets/The Beginner's Guide to Meditation for Men_1761842289235.jpg";
+import avatar3 from "@assets/♥_1761842289235.jpg";
+import avatar4 from "@assets/Meditation_1761842289236.jpg";
+import avatar5 from "@assets/Forest Meditation Moment – Calm Mind Retreat Vibes_1761842289236.jpg";
+import avatar6 from "@assets/download (3)_1761842289236.jpg";
+import avatar7 from "@assets/download (2)_1761842289237.jpg";
+import avatar8 from "@assets/Buddhist nun_1761842289237.jpg";
+import avatar9 from "@assets/download (1)_1761842289238.jpg";
+import avatar10 from "@assets/download_1761842289238.jpg";
+import avatar11 from "@assets/Master Shi HengYi_1761842289239.jpg";
+import avatar12 from "@assets/3bacb184-32f1-4538-91c4-375a56b5ea47_1761842289239.jpg";
+import avatar13 from "@assets/6bed521b-69ca-4b5d-a603-9d2361bff5f7_1761842289240.jpg";
+
 function SocialNetworkSection() {
   const [activeView, setActiveView] = useState<"feed" | "search" | "profile" | "notifications">("feed");
   
@@ -159,9 +174,11 @@ function SocialNetworkSection() {
               <div className="bg-white/50 backdrop-blur-md border-2 border-[#8B4513]/20 rounded-2xl p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-start gap-4">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
-                      <Users className="w-10 h-10 text-white" />
-                    </div>
+                    <img 
+                      src={avatar3} 
+                      alt="Minh Tâm" 
+                      className="w-20 h-20 rounded-full object-cover border-2 border-[#d4af37]"
+                    />
                     <div>
                       <h2 className="text-2xl font-bold text-[#2c2c2c] mb-1">Minh Tâm</h2>
                       <p className="text-base text-[#8B4513]/60 mb-3">@minhtam</p>
@@ -199,9 +216,11 @@ function SocialNetworkSection() {
               {/* Minh Tâm's Posts */}
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-profile-post-1">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
+                  <img 
+                    src={avatar3} 
+                    alt="Minh Tâm" 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-[#d4af37]"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-serif font-bold text-[#2c2c2c]">Minh Tâm</span>
@@ -249,9 +268,11 @@ function SocialNetworkSection() {
 
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-profile-post-2">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#991b1b] to-[#d4af37] flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
+                  <img 
+                    src={avatar8} 
+                    alt="Thanh Hương" 
+                    className="w-12 h-12 rounded-full object-cover border-2 border-[#991b1b]"
+                  />
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-serif font-bold text-[#2c2c2c]">Thanh Hương</span>
@@ -1234,9 +1255,16 @@ export default function Landing() {
 
               {/* Host Avatar */}
               <div className="flex flex-col items-center py-8 border-b-2 border-[#8B4513]/20">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#d4af37] to-[#8B4513] flex items-center justify-center mb-3 relative">
-                  <Users className="w-12 h-12 text-white" />
-                  <div className="absolute -bottom-1 px-3 py-1 bg-[#991b1b] text-white rounded-full text-xs font-semibold">
+                <div className="relative mb-3">
+                  <img 
+                    src={
+                      selectedRadio === "live-1" || selectedRadio === "scheduled-2" ? avatar13 : 
+                      selectedRadio === "live-2" ? avatar8 : avatar11
+                    }
+                    alt="Host"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-[#d4af37]"
+                  />
+                  <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#991b1b] text-white rounded-full text-xs font-semibold">
                     Host
                   </div>
                 </div>
@@ -1253,16 +1281,18 @@ export default function Landing() {
                 </h4>
                 <div className="flex justify-center gap-4 flex-wrap">
                   {[
-                    { name: "Cô Thanh Hương", color: "from-[#8B4513] to-[#991b1b]" },
-                    { name: "Anh Minh Đức", color: "from-[#991b1b] to-[#d4af37]" },
-                    { name: "Chị Hồng Nhung", color: "from-[#d4af37] to-[#8B4513]" },
-                    { name: "Anh Quang Minh", color: "from-[#8B4513] to-[#d4af37]" },
-                    { name: "Chị Phương Anh", color: "from-[#991b1b] to-[#8B4513]" },
+                    { name: "Cô Thanh Hương", avatar: avatar8 },
+                    { name: "Anh Minh Đức", avatar: avatar3 },
+                    { name: "Chị Hồng Nhung", avatar: avatar6 },
+                    { name: "Anh Quang Minh", avatar: avatar2 },
+                    { name: "Chị Phương Anh", avatar: avatar8 },
                   ].map((speaker, idx) => (
                     <div key={idx} className="flex flex-col items-center">
-                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${speaker.color} flex items-center justify-center mb-1`}>
-                        <Users className="w-6 h-6 text-white" />
-                      </div>
+                      <img 
+                        src={speaker.avatar}
+                        alt={speaker.name}
+                        className="w-12 h-12 rounded-full object-cover border-2 border-[#8B4513] mb-1"
+                      />
                       <p className="font-serif text-xs text-[#2c2c2c] text-center max-w-[60px] truncate">
                         {speaker.name}
                       </p>
@@ -1277,18 +1307,14 @@ export default function Landing() {
                   LISTENERS (12)
                 </h4>
                 <div className="grid grid-cols-6 gap-3">
-                  {[
-                    "Chị Lan Anh", "Anh Tuấn", "Chị Mai", "Anh Hùng", "Chị Linh", "Anh Đức",
-                    "Chị Hương", "Anh Nam", "Chị Trang", "Anh Khoa", "Chị Ngọc", "Anh Bình"
-                  ].map((name, idx) => (
+                  {[avatar1, avatar2, avatar3, avatar4, avatar5, avatar7, 
+                    avatar9, avatar10, avatar11, avatar12, avatar6, avatar13].map((avatarSrc, idx) => (
                     <div key={idx} className="flex flex-col items-center">
-                      <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${
-                        idx % 3 === 0 ? "from-[#8B4513] to-[#991b1b]" :
-                        idx % 3 === 1 ? "from-[#d4af37] to-[#8B4513]" :
-                        "from-[#991b1b] to-[#d4af37]"
-                      } flex items-center justify-center`}>
-                        <User className="w-5 h-5 text-white" />
-                      </div>
+                      <img 
+                        src={avatarSrc}
+                        alt={`Listener ${idx + 1}`}
+                        className="w-10 h-10 rounded-full object-cover border-2 border-[#8B4513]/30"
+                      />
                     </div>
                   ))}
                 </div>
