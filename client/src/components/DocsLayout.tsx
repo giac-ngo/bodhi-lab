@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
+import { TracingBeam } from "@/components/TracingBeam";
 import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins, Server, Bot } from "lucide-react";
 
 interface DocsLayoutProps {
@@ -105,7 +106,9 @@ export function DocsLayout({ children }: DocsLayoutProps) {
         )}
 
         <main className="flex-1 lg:ml-80">
-          {children}
+          <TracingBeam className="py-8 px-4">
+            {children}
+          </TracingBeam>
         </main>
       </div>
     </div>
