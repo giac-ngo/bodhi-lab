@@ -92,7 +92,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
             </button>
             <div className="flex items-center gap-2">
               <img src={sutraIcon} alt="Sutra" className="w-6 h-6" />
-              <span className="font-serif text-base sm:text-lg font-bold text-primary">Bodhi Technology Lab</span>
+              <span className="font-serif text-base sm:text-lg font-bold text-primary">Awaken Technology for the Dharma‑Ending Age</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
