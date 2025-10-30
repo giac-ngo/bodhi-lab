@@ -40,7 +40,7 @@ export function DocsNav({ navigation }: DocsNavProps) {
       <div className="p-4 border-b space-y-4">
         <Link href="/">
           <div className="flex items-center cursor-pointer" data-testid="link-home">
-            <img src={logoImage} alt="Giác Ngộ" className="h-8" />
+            <img src={logoImage} alt="Bodhi Lab" className="h-8" />
           </div>
         </Link>
         
