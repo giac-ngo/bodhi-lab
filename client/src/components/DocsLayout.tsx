@@ -2,7 +2,8 @@ import { useState } from "react";
 import { DocsNav } from "@/components/DocsNav";
 import { Button } from "@/components/ui/button";
 import { TracingBeam } from "@/components/TracingBeam";
-import { Sparkles, Download, Share2, Menu, X, BookOpen, Coins, Server, Bot } from "lucide-react";
+import { Download, Share2, Menu, X, BookOpen, Coins, Server, Bot } from "lucide-react";
+import sutraIcon from "@/assets/sutra-icon.png";
 
 interface DocsLayoutProps {
   children: React.ReactNode;
@@ -76,7 +77,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
               {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-primary" />
+              <img src={sutraIcon} alt="Sutra" className="w-6 h-6" />
               <span className="font-serif text-base sm:text-lg font-bold text-primary">An Agentic Social Network for Collective Awakening</span>
             </div>
           </div>
