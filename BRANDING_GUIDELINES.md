@@ -1,9 +1,9 @@
-# Giác Ngộ Initiative - Branding Guidelines
+# Bodhi Lab - Branding Guidelines
 
 ## Brand Identity
 
-**Project Name**: Giác Ngộ Initiative (Awakening Ecosystem)  
-**Publisher**: Bodhi Technology Lab  
+**Project Name**: Bodhi Lab (Bodhi Technology Lab)  
+**Full Name**: Bodhi Technology Lab  
 **Purpose**: A bilingual (Vietnamese/English) Buddhist AI agent platform for spiritual technology and merit cultivation
 
 **Core Philosophy**: Technical precision meets spiritual intention—combining modern AI capabilities with timeless Buddhist wisdom in a warm, contemplative digital environment.
@@ -627,8 +627,9 @@ Input:      rounded-xl border-2 border-[#8B4513]/20 px-4 py-3 bg-white/30
 ## Version History
 
 - **v1.0** - October 30, 2025 - Initial comprehensive branding guidelines
+- **v1.1** - October 30, 2025 - Rebranded from Giác Ngộ Initiative to Bodhi Lab
 - Maintained by: Bodhi Technology Lab
-- Project: Giác Ngộ Initiative (Awakening Ecosystem)
+- Project: Bodhi Lab (Bodhi Technology Lab)
 
 ---
 

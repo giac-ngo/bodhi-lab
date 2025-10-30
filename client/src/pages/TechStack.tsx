@@ -8,10 +8,10 @@ export default function TechStack() {
             The Architecture of Awakened Technology
           </h1>
           <p className="font-serif text-xl italic text-muted-foreground">
-            The Giác Ngộ Tech Stack
+            The Bodhi Lab Tech Stack
           </p>
           <div className="space-y-1 text-muted-foreground">
-            <p className="font-serif font-semibold">Giác Ngộ Initiative</p>
+            <p className="font-serif font-semibold">Bodhi Lab</p>
             <p className="font-serif">Bodhi Technology Lab</p>
             <p className="font-serif text-sm italic">January 2025</p>
           </div>
@@ -39,7 +39,7 @@ export default function TechStack() {
           </h2>
           <div className="font-serif text-base leading-relaxed text-foreground space-y-4 text-justify">
             <p>
-              The Giác Ngộ Ecosystem is built upon a global network of decentralized off-chain computation nodes, acting as a collective supercomputer.
+              The Bodhi Lab Ecosystem is built upon a global network of decentralized off-chain computation nodes, acting as a collective supercomputer.
             </p>
             <p>
               Our philosophy begins with the rejection of centralized platforms. The "Sickness of the Digital Age" is fueled by centralized GPU farms (AWS, Google Cloud) which are designed to "harvest the human mind" as a commodity. To build a "sacred digital vessel," we must build on a foundation that has no single ruling entity. This decentralized infrastructure provides the perfect technical foundation, in parallel with our philosophy:
@@ -74,7 +74,7 @@ export default function TechStack() {
               We leverage verifiable off-chain ledgers. The entire history of shared wisdom, Dharma talks, and merit-generating actions is organized as Acyclic Data (DAG) structures. These structures are then reliably anchored to the blockchain, creating verifiable rails for our ecosystem.
             </p>
             <p>
-              This allows Giác Ngộ to maintain an immutable record of collective wisdom and merit history—our <strong>Mandala Ledger</strong>—without sacrificing speed or cost.
+              This allows Bodhi Lab to maintain an immutable record of collective wisdom and merit history—our <strong>Mandala Ledger</strong>—without sacrificing speed or cost.
             </p>
           </div>
         </section>
@@ -92,7 +92,7 @@ export default function TechStack() {
               The network's economy is built on a protocol for compute attribution and reputation—a universal standard for rewarding nodes based on verifiable computational proof.
             </p>
             <p>
-              The Giác Ngộ Ecosystem extends this philosophy to a higher layer, creating the <strong>Merit Attribution Protocol</strong>:
+              The Bodhi Lab Ecosystem extends this philosophy to a higher layer, creating the <strong>Merit Attribution Protocol</strong>:
             </p>
             <ul className="list-disc pl-8 space-y-3 text-muted-foreground">
               <li>
@@ -122,7 +122,7 @@ export default function TechStack() {
               Decentralized AI: The Threefold AI Vehicle (<em>Tam Thừa AI</em>)
             </h3>
             <p>
-              The Giác Ngộ Assistants (Tâm An, Giác Ngộ, Đốn Ngộ) are not proprietary models on a central server. They are deployed as elastic inference micro-services that scale to zero. Their wisdom is fine-tuned (e.g., LoRA / distributed fine-tuning) on the Dharma teachings using the pooled nodes. This is open-model friendly (supporting HF, PyTorch, etc.) and makes the Dharma uncensorable.
+              The Bodhi Lab Assistants (Tâm An, Giác Ngộ, Đốn Ngộ) are not proprietary models on a central server. They are deployed as elastic inference micro-services that scale to zero. Their wisdom is fine-tuned (e.g., LoRA / distributed fine-tuning) on the Dharma teachings using the pooled nodes. This is open-model friendly (supporting HF, PyTorch, etc.) and makes the Dharma uncensorable.
             </p>
 
             <h3 className="font-serif text-xl font-semibold text-foreground pt-4">
@@ -133,7 +133,7 @@ export default function TechStack() {
             </p>
 
             <h3 className="font-serif text-xl font-semibold text-foreground pt-4">
-              Trustless Reputation: The Awakened DAO (<em>DAO Giác Ngộ</em>)
+              Trustless Reputation: The Awakened DAO (<em>Bodhi Lab DAO</em>)
             </h3>
             <p>
               Our governance system is anchored to the verifiable pipelines of the network. When a user performs a merit-generating action (verified by our Merit Protocol), that action is recorded via the Mandala Ledger and receives a verifiable attestation. This creates a truly trustless governance system, where the Dao Token is a transparent record of merit, not a tradable financial asset.

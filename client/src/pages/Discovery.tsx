@@ -384,7 +384,7 @@ export default function Discovery() {
         <footer className="border-t border-[#8B4513]/20 py-8 bg-[#EFE0BD]/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <span className="font-serif font-bold text-[#991b1b]">Giác Ngộ Initiative</span>
+              <span className="font-serif font-bold text-[#991b1b]">Bodhi Lab</span>
               <div className="flex gap-6">
                 <Link href="/docs/models">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
@@ -402,7 +402,7 @@ export default function Discovery() {
                   </a>
                 </Link>
               </div>
-              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Giác Ngộ</div>
+              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Bodhi Technology Lab</div>
             </div>
           </div>
         </footer>

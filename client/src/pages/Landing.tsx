@@ -663,7 +663,7 @@ export default function Landing() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <img src={logoImage} alt="Giác Ngộ" className="h-8" />
+                  <img src={logoImage} alt="Bodhi Lab" className="h-8" />
                 </a>
               </Link>
               
@@ -824,7 +824,7 @@ export default function Landing() {
                 }`}
                 data-testid="text-hero-title"
               >
-                Giác Ngộ
+                Bodhi Lab
               </h1>
               <p
                 className={`font-serif text-xl text-[#8B4513]/70 text-center mb-12 max-w-2xl mx-auto transition-all duration-500 ${
@@ -1527,7 +1527,7 @@ export default function Landing() {
         <footer className="border-t border-[#8B4513]/20 py-8 bg-[#EFE0BD]/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <span className="font-serif font-bold text-[#991b1b]">Giác Ngộ Initiative</span>
+              <span className="font-serif font-bold text-[#991b1b]">Bodhi Lab</span>
               <div className="flex gap-6">
                 <Link href="/docs/models">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
@@ -1563,7 +1563,7 @@ export default function Landing() {
                   </a>
                 </Link>
               </div>
-              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Giác Ngộ</div>
+              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Bodhi Technology Lab</div>
             </div>
           </div>
         </footer>

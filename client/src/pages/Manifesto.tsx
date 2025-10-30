@@ -32,10 +32,10 @@ export default function Manifesto() {
           </p>
           <div className="space-y-1 pt-4 text-center">
             <p className="font-serif text-base text-foreground font-semibold !text-center" data-testid="text-organization">
-              {language === "vi" ? "Sáng Kiến Giác Ngộ" : "Giác Ngộ Initiative"}
+              {language === "vi" ? "Bodhi Lab" : "Bodhi Lab"}
             </p>
             <p className="font-serif text-base text-muted-foreground !text-center" data-testid="text-lab">
-              {language === "vi" ? "Công Nghệ Chánh Niệm" : "Bodhi Technology Lab"}
+              {language === "vi" ? "Bodhi Technology Lab" : "Bodhi Technology Lab"}
             </p>
           </div>
           <p className="font-serif text-base text-muted-foreground pt-2 !text-center" data-testid="text-date">
@@ -942,7 +942,7 @@ export default function Manifesto() {
                   When you have arrived Home, let the raft float away. It will find another traveler, in another time, in another dream.
                 </p>
                 <p className="text-center pt-4">
-                  — Giác Ngộ Initiative, 2025
+                  — Bodhi Lab, 2025
                 </p>
                 <p className="font-semibold italic text-center pt-4">
                   May all beings awaken. May all beings return Home.
