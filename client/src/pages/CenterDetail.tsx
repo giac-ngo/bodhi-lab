@@ -101,11 +101,75 @@ export default function CenterDetail() {
       <div className="relative z-10">
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#EFE0BD]/80 border-b border-[#8B4513]/20">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <Link href="/">
-              <a className="flex items-center" data-testid="link-brand">
-                <img src={logoImage} alt="Giác Ngộ" className="h-8" />
-              </a>
-            </Link>
+            <div className="relative group">
+              <Link href="/">
+                <a className="flex items-center" data-testid="link-brand">
+                  <img src={logoImage} alt="Giác Ngộ" className="h-8" />
+                </a>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white/95 backdrop-blur-md border-2 border-[#8B4513]/20 rounded-2xl shadow-2xl p-8 w-[800px]">
+                  <div className="grid grid-cols-4 gap-8">
+                    {/* Organization Column */}
+                    <div>
+                      <h3 className="font-serif font-bold text-[#991b1b] mb-4 text-sm">Organization</h3>
+                      <div className="space-y-3">
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-career">
+                          Career
+                        </a>
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-terms">
+                          Terms
+                        </a>
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-privacy">
+                          Privacy
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Library Column */}
+                    <div>
+                      <h3 className="font-serif font-bold text-[#991b1b] mb-4 text-sm">Library</h3>
+                      <div className="space-y-3">
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-sutra">
+                          Sutra
+                        </a>
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-verse">
+                          Verse
+                        </a>
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-stories">
+                          Stories
+                        </a>
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-qa">
+                          Q&A
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Community Column */}
+                    <div>
+                      <h3 className="font-serif font-bold text-[#991b1b] mb-4 text-sm">Community</h3>
+                      <div className="space-y-3">
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-dharma-calendar">
+                          Dharma Calendar
+                        </a>
+                      </div>
+                    </div>
+                    
+                    {/* Donation Column */}
+                    <div>
+                      <h3 className="font-serif font-bold text-[#991b1b] mb-4 text-sm">Donation</h3>
+                      <div className="space-y-3">
+                        <a href="#" className="block font-serif text-[#8B4513]/70 hover:text-[#991b1b] transition-colors text-sm" data-testid="link-donation">
+                          Support Us
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="flex items-center gap-4">
               <Link href="/docs/models">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors">
