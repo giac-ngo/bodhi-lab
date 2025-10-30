@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import logoImage from "@/assets/logo.png";
 
 interface NavSection {
   id: string;
@@ -40,7 +39,7 @@ export function DocsNav({ navigation }: DocsNavProps) {
       <div className="p-4 border-b space-y-4">
         <Link href="/">
           <div className="flex items-center cursor-pointer" data-testid="link-home">
-            <img src={logoImage} alt="Bodhi Lab" className="h-8" />
+            <span className="font-serif font-bold text-[#991b1b] text-lg">Bodhi Technology Lab</span>
           </div>
         </Link>
         

@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import { buddhistCenters } from "@shared/buddhistCenters";
 import { TracingBeam } from "@/components/TracingBeam";
-import logoImage from "@/assets/logo.png";
 
 export default function CenterDetail() {
   const params = useParams();
@@ -108,7 +107,7 @@ export default function CenterDetail() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <img src={logoImage} alt="Giác Ngộ" className="h-8" />
+                  <span className="font-serif font-bold text-[#991b1b] text-lg">Bodhi Technology Lab</span>
                 </a>
               </Link>
               

@@ -3,7 +3,6 @@ import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
-import logoImage from "@/assets/logo.png";
 
 // Buddhist practitioner avatars
 import avatar1 from "@assets/download (4)_1761842289234.jpg";
@@ -669,7 +668,7 @@ export default function Landing() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <img src={logoImage} alt="Bodhi Technology Lab" className="h-8" />
+                  <span className="font-serif font-bold text-[#991b1b] text-lg">Bodhi Technology Lab</span>
                 </a>
               </Link>
               
