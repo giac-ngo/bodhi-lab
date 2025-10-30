@@ -12,7 +12,7 @@ export default function MeritTokenomics() {
           </p>
           <div className="space-y-1 text-muted-foreground">
             <p className="font-serif font-semibold">Giác Ngộ Initiative</p>
-            <p className="font-serif">Dharma Technology Lab</p>
+            <p className="font-serif">Bodhi Technology Lab</p>
             <p className="font-serif text-sm italic">January 2025</p>
           </div>
         </header>

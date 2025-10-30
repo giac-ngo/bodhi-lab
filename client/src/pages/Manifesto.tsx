@@ -35,7 +35,7 @@ export default function Manifesto() {
               {language === "vi" ? "Sáng Kiến Giác Ngộ" : "Giác Ngộ Initiative"}
             </p>
             <p className="font-serif text-base text-muted-foreground !text-center" data-testid="text-lab">
-              {language === "vi" ? "Công Nghệ Chánh Niệm" : "Dharma Technology Lab"}
+              {language === "vi" ? "Công Nghệ Chánh Niệm" : "Bodhi Technology Lab"}
             </p>
           </div>
           <p className="font-serif text-base text-muted-foreground pt-2 !text-center" data-testid="text-date">
