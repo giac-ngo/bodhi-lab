@@ -1499,6 +1499,214 @@ export default function Landing() {
             </div>
           </div>
         </section>
+
+        {/* Contact Form Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Left Column - Information */}
+              <div>
+                <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-6" data-testid="text-contact-title">
+                  Partner With Us
+                </h2>
+                <p className="font-serif text-lg text-[#8B4513]/70 mb-8">
+                  We offer tailored technology solutions for Buddhist organizations based on your specific needs and community size.
+                </p>
+                
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-[#991b1b]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">White-label Solutions</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">Custom-branded platforms for your temple or center</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-[#991b1b]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Custom AI Agents</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">Specialized agents trained on your lineage's teachings</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-[#991b1b]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Donation & Event Tools</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">Integrated systems for your community operations</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-[#991b1b]" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Dedicated Support</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">Ongoing technical guidance and training</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <p className="font-serif text-sm text-[#8B4513]/70 mt-8">
+                  Contact us for a personalized consultation to discuss your organization's specific needs.
+                </p>
+              </div>
+
+              {/* Right Column - Contact Form */}
+              <div className="bg-white/50 backdrop-blur-md rounded-2xl p-8 border border-[#8B4513]/20 shadow-lg">
+                <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">
+                  Contact Our Team
+                </h3>
+                <p className="font-serif text-sm text-[#8B4513]/70 mb-6">
+                  Fill out the form below to discuss your organization's needs and receive a custom proposal.
+                </p>
+
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="John"
+                        className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
+                        data-testid="input-first-name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Doe"
+                        className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
+                        data-testid="input-last-name"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="john.doe@temple.org"
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
+                      data-testid="input-email"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      Organization Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g., Lotus Temple, Dharma Meditation Center"
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
+                      data-testid="input-organization"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      Your Role
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g., Director, Abbot, Coordinator"
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
+                      data-testid="input-role"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      Organization Type
+                    </label>
+                    <select
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all appearance-none cursor-pointer"
+                      data-testid="select-organization-type"
+                      style={{
+                        backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%238B4513' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+                        backgroundPosition: 'right 0.5rem center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: '1.5em 1.5em',
+                        paddingRight: '2.5rem'
+                      }}
+                    >
+                      <option value="">Select organization type</option>
+                      <option value="temple">Temple</option>
+                      <option value="monastery">Monastery</option>
+                      <option value="meditation-center">Meditation Center</option>
+                      <option value="dharma-center">Dharma Center</option>
+                      <option value="retreat-center">Retreat Center</option>
+                      <option value="sangha-community">Sangha Community</option>
+                      <option value="federation">Buddhist Federation</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      Community Size
+                    </label>
+                    <select
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all appearance-none cursor-pointer"
+                      data-testid="select-organization-size"
+                      style={{
+                        backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%238B4513' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
+                        backgroundPosition: 'right 0.5rem center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: '1.5em 1.5em',
+                        paddingRight: '2.5rem'
+                      }}
+                    >
+                      <option value="">Select community size</option>
+                      <option value="1-50">1-50 members</option>
+                      <option value="51-200">51-200 members</option>
+                      <option value="201-500">201-500 members</option>
+                      <option value="501-1000">501-1,000 members</option>
+                      <option value="1000+">1,000+ members</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
+                      How can we help?
+                    </label>
+                    <textarea
+                      placeholder="Tell us about your specific needs and goals..."
+                      rows={4}
+                      className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all resize-none"
+                      data-testid="textarea-message"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-[#991b1b] text-white rounded-xl font-serif font-semibold hover:bg-[#7a1515] transition-all duration-300 shadow-md text-sm"
+                    data-testid="button-submit-contact"
+                  >
+                    Request Information
+                  </button>
+
+                  <p className="font-serif text-xs text-[#8B4513]/60 text-center">
+                    By submitting this form, you agree to our privacy policy and terms of service.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
         </TracingBeam>
 
         <footer className="border-t border-[#8B4513]/20 py-8 bg-[#EFE0BD]/50 backdrop-blur-sm">
