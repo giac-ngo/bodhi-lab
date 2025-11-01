@@ -1537,7 +1537,7 @@ export default function Landing() {
                       <Check className="w-4 h-4 text-[#991b1b]" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Donation & Event Tools</h3>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Donation and Library Tools</h3>
                       <p className="font-serif text-sm text-[#8B4513]/70">Integrated systems for your community operations</p>
                     </div>
                   </li>
