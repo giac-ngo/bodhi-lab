@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Search, Sparkles, Users, Heart, MessageCircle, Repeat2, Home, User, Bell, Hash, Radio, Clock, X, Mic, Hand, Share2, Briefcase, ArrowRight, MapPin, Calendar, Award, Flame, CheckCircle2, UserPlus, ThumbsUp, BookOpen, Megaphone, CalendarClock } from "lucide-react";
 import { TracingBeam } from "@/components/TracingBeam";
+import { buddhistAgents } from "@shared/buddhistAgents";
 
 // Buddhist practitioner avatars
 import avatar1 from "@assets/download (4)_1761842289234.jpg";
@@ -17,6 +18,24 @@ import avatar10 from "@assets/download_1761842289238.jpg";
 import avatar11 from "@assets/Master Shi HengYi_1761842289239.jpg";
 import avatar12 from "@assets/3bacb184-32f1-4538-91c4-375a56b5ea47_1761842289239.jpg";
 import avatar13 from "@assets/6bed521b-69ca-4b5d-a603-9d2361bff5f7_1761842289240.jpg";
+
+// Agent artwork images
+import agentArt1 from "@assets/3_1761844028297.png";
+import agentArt2 from "@assets/15_1761844089890.png";
+import agentArt3 from "@assets/4_1761844089892.png";
+import agentArt4 from "@assets/32_1761844089890.png";
+import agentArt5 from "@assets/19_1761844089892.png";
+import agentArt6 from "@assets/5_1761844089893.png";
+
+// Mapping of agent IDs to artwork images
+const agentArtwork: Record<string, string> = {
+  "tam-an": agentArt1,
+  "giac-ngo": agentArt2,
+  "don-ngo": agentArt3,
+  "tinh-thuc": agentArt4,
+  "ke-van-ngo": agentArt5,
+  "van-tinh": agentArt6,
+};
 
 function SocialNetworkSection() {
   const [activeView, setActiveView] = useState<"feed" | "search" | "profile" | "notifications">("feed");
@@ -1065,6 +1084,107 @@ export default function Platform() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Community Agents Section */}
+          <section className="py-16 px-4 bg-[#EFE0BD]/50">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-agents-title">
+                  Agents từ Cộng Đồng
+                </h2>
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
+                  Khám phá các AI Agent được phát triển bởi các chùa chiền, thiền viện và trung tâm tu tập khắp nơi
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {buddhistAgents.slice(0, 6).map((agent) => (
+                  <div
+                    key={agent.id}
+                    className="group bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl"
+                    data-testid={`card-community-agent-${agent.id}`}
+                  >
+                    <div className="relative h-32 overflow-hidden">
+                      <img 
+                        src={agentArtwork[agent.id]} 
+                        alt={agent.name}
+                        className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
+
+                    <div className="p-6 space-y-4">
+                      <div>
+                        <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">
+                          {agent.name}
+                        </h3>
+                        <p className="font-serif text-sm italic text-[#991b1b] font-semibold mb-3">
+                          {agent.tagline}
+                        </p>
+                        <p className="font-serif text-sm text-[#2c2c2c]/70 line-clamp-2">
+                          {agent.purpose}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-4 border-t border-[#8B4513]/20">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className="px-2 py-1 rounded-lg text-xs font-mono font-semibold"
+                            style={{
+                              backgroundColor: `${agent.accentColor}20`,
+                              color: agent.accentColor,
+                            }}
+                          >
+                            {agent.model}
+                          </span>
+                        </div>
+                        {agent.monastery && (
+                          <div className="text-xs font-serif text-[#8B4513]/60 truncate max-w-[150px]">
+                            {agent.monastery}
+                          </div>
+                        )}
+                      </div>
+
+                      {agent.users !== undefined && agent.likes !== undefined && (
+                        <div className="flex items-center gap-4 text-sm text-[#8B4513]/60">
+                          <div className="flex items-center gap-1">
+                            <Users className="w-4 h-4" />
+                            <span className="font-serif">{agent.users >= 1000 ? `${(agent.users / 1000).toFixed(1)}K` : agent.users}</span>
+                          </div>
+                          <span>·</span>
+                          <div className="flex items-center gap-1">
+                            <Heart className="w-4 h-4" />
+                            <span className="font-serif">{agent.likes >= 1000 ? `${(agent.likes / 1000).toFixed(1)}K` : agent.likes}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      <Link href="/docs/models">
+                        <a
+                          className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#991b1b] text-white rounded-xl hover:bg-[#7a1515] transition-colors font-serif font-semibold text-sm shadow-md"
+                          data-testid={`button-explore-${agent.id}`}
+                        >
+                          <Sparkles className="w-4 h-4" />
+                          Khám phá Agent
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <Link href="/docs/models">
+                  <a
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 backdrop-blur-md border-2 border-[#991b1b] rounded-full text-[#991b1b] font-serif font-semibold text-lg hover:bg-[#991b1b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                    data-testid="button-view-all-agents"
+                  >
+                    Xem tất cả {buddhistAgents.length} Agents
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </Link>
               </div>
             </div>
           </section>
