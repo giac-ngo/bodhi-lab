@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Search, Sparkles, Users, Heart, MessageCircle, Repeat2, Home, User, Bell, Hash, Radio, Clock, X, Mic, Hand, Share2, Briefcase, ArrowRight, MapPin, Calendar, Award, Flame, CheckCircle2, UserPlus, ThumbsUp, BookOpen, Megaphone, CalendarClock } from "lucide-react";
+import { Search, Heart, MessageCircle, Repeat2, Home, User, Bell, Hash, Radio, Clock, X, Mic, Hand, Share2, ArrowRight } from "lucide-react";
 import { TracingBeam } from "@/components/TracingBeam";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import DonationCheckout from "@/components/DonationCheckout";
+import lotusIcon from "@assets/44_1762155616660.png";
+import bellIcon from "@assets/Bell_no_bg (1)_1762155616660.png";
+import buddhaIcon from "@assets/2_1762155709385.png";
+import sutraIcon from "@assets/Wordless Sutra Icon - Sumi-e Style_1762155698128.png";
 
 // Buddhist practitioner avatars
 import avatar1 from "@assets/download (4)_1761842289234.jpg";
@@ -60,7 +64,7 @@ function SocialNetworkSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Users className="w-8 h-8 text-[#991b1b]" />
+            <img src={lotusIcon} alt="Lotus" className="w-8 h-8 object-contain" />
             <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-social-title">
               Engage Your Sangha
             </h2>
@@ -77,7 +81,7 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-moderation">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-[#991b1b]" />
+                  <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain" />
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Right Speech Moderation</h3>
               </div>
@@ -86,11 +90,11 @@ function SocialNetworkSection() {
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">AI-assisted content flagging</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">Customizable moderation rules</span>
                 </li>
               </ul>
@@ -100,7 +104,7 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-study-groups">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                  <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Study Groups & Circles</h3>
               </div>
@@ -109,11 +113,11 @@ function SocialNetworkSection() {
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">Create topic-based discussion groups</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">Shared reading schedules & milestones</span>
                 </li>
               </ul>
@@ -123,7 +127,7 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-anonymous">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                  <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Anonymous Posting Option</h3>
               </div>
@@ -132,11 +136,11 @@ function SocialNetworkSection() {
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">Optional anonymous mode per post</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
                   <span className="font-serif text-[#2c2c2c]">Admin accountability tracking</span>
                 </li>
               </ul>
@@ -218,7 +222,7 @@ function SocialNetworkSection() {
                 {/* Trending Topics */}
                 <div className="mb-5">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-4 h-4 text-[#991b1b]" />
+                    <img src={buddhaIcon} alt="Buddha" className="w-4 h-4 object-contain" />
                     <h3 className="text-sm font-bold text-[#2c2c2c]">Chủ đề nổi bật</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -290,7 +294,7 @@ function SocialNetworkSection() {
                       <div className="flex items-center gap-2 mb-1">
                         <h2 className="text-2xl font-bold text-[#2c2c2c]">Minh Tâm</h2>
                         <div className="flex items-center gap-1 px-2 py-1 bg-[#d4af37]/20 rounded-full">
-                          <Award className="w-3 h-3 text-[#d4af37]" />
+                          <img src={lotusIcon} alt="Lotus" className="w-3 h-3 object-contain" />
                           <span className="text-xs font-semibold text-[#2c2c2c]">Intermediate Practitioner</span>
                         </div>
                       </div>
@@ -298,18 +302,18 @@ function SocialNetworkSection() {
                       
                       <div className="flex items-center gap-4 mb-3 text-sm text-[#8B4513]/70">
                         <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
+                          <img src={bellIcon} alt="Bell" className="w-4 h-4 object-contain" />
                           <span>Hà Nội, Việt Nam</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
+                          <img src={bellIcon} alt="Bell" className="w-4 h-4 object-contain" />
                           <span>Joined March 2023</span>
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2 mb-3">
                         <div className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full">
-                          <Flame className="w-4 h-4" />
+                          <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                           <span className="text-sm font-bold">108 day streak</span>
                         </div>
                       </div>
@@ -383,7 +387,7 @@ function SocialNetworkSection() {
                 <div className="bg-gradient-to-br from-[#EFE0BD]/80 to-[#E5D5B7]/80 rounded-xl p-5 mb-4 border border-[#d4af37]/30">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                       <span className="font-serif font-bold text-[#991b1b] text-lg">Giác Ngộ</span>
                       <div className="flex items-center gap-1 px-2 py-0.5 bg-[#991b1b]/10 rounded-full">
                         <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -441,7 +445,7 @@ function SocialNetworkSection() {
                 <div className="bg-gradient-to-br from-[#EFE0BD]/80 to-[#E5D5B7]/80 rounded-xl p-5 mb-4 border border-[#d4af37]/30">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-5 h-5 text-[#8B4513]" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                       <span className="font-serif font-bold text-[#8B4513] text-lg">Tâm An</span>
                       <div className="flex items-center gap-1 px-2 py-0.5 bg-gray-100 rounded-full">
                         <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
@@ -492,7 +496,7 @@ function SocialNetworkSection() {
                     <div className="flex items-center gap-2">
                       <span className="font-serif font-bold text-[#2c2c2c]">Chùa Linh Quang</span>
                       <div className="flex items-center gap-1 px-2 py-0.5 bg-[#991b1b]/10 rounded-full">
-                        <Megaphone className="w-3 h-3 text-[#991b1b]" />
+                        <img src={bellIcon} alt="Bell" className="w-3 h-3 object-contain" />
                         <span className="text-xs font-semibold text-[#991b1b]">Temple</span>
                       </div>
                       <span className="font-serif text-sm text-[#8B4513]/50">@linhquang</span>
@@ -509,7 +513,7 @@ function SocialNetworkSection() {
 
                 <div className="bg-[#EFE0BD]/50 rounded-xl p-4 mb-4 border border-[#d4af37]/30">
                   <div className="flex items-center gap-2 mb-2">
-                    <CalendarClock className="w-5 h-5 text-[#991b1b]" />
+                    <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
                     <span className="font-serif font-bold text-[#2c2c2c]">Thông tin sự kiện</span>
                   </div>
                   <div className="space-y-1 text-sm text-[#2c2c2c]/80">
@@ -555,7 +559,7 @@ function SocialNetworkSection() {
 
                 <div className="bg-gradient-to-br from-[#EFE0BD]/80 to-[#E5D5B7]/80 rounded-xl p-5 mb-4 border border-[#d4af37]/30">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                    <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                     <span className="font-serif font-bold text-[#991b1b] text-base">Agent: Giác Ngộ</span>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 italic mb-3">
@@ -657,7 +661,7 @@ function SocialNetworkSection() {
 
                 <div className="bg-gradient-to-br from-[#EFE0BD]/80 to-[#E5D5B7]/80 rounded-xl p-5 mb-4 border border-[#d4af37]/30">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                    <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                     <span className="font-serif font-bold text-[#991b1b] text-base">Agent: Kế Văn Ngộ</span>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 italic mb-3">
@@ -698,7 +702,7 @@ function SocialNetworkSection() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#991b1b] to-[#7a1515] rounded-full flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-white" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -723,7 +727,7 @@ function SocialNetworkSection() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#b8941f] rounded-full flex items-center justify-center">
-                      <CalendarClock className="w-6 h-6 text-white" />
+                      <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -759,7 +763,7 @@ function SocialNetworkSection() {
                         className="w-12 h-12 rounded-full object-cover border-2 border-[#991b1b]"
                       />
                       <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#991b1b] rounded-full flex items-center justify-center">
-                        <UserPlus className="w-3 h-3 text-white" />
+                        <img src={lotusIcon} alt="Lotus" className="w-3 h-3 object-contain" />
                       </div>
                     </div>
                   </div>
@@ -788,7 +792,7 @@ function SocialNetworkSection() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-500 rounded-full flex items-center justify-center">
-                      <ThumbsUp className="w-6 h-6 text-white" />
+                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -813,7 +817,7 @@ function SocialNetworkSection() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#8B4513] to-[#6b3410] rounded-full flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-white" />
+                      <img src={sutraIcon} alt="Sutra" className="w-6 h-6 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1">
@@ -976,7 +980,7 @@ export default function Platform() {
                   <div className="p-6">
                     <h3 className="font-serif font-bold text-[#991b1b] mb-5 text-xs uppercase tracking-wider flex items-center gap-2">
                       <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center">
-                        <Briefcase className="w-3.5 h-3.5 text-[#991b1b]" />
+                        <img src={sutraIcon} alt="Sutra" className="w-3.5 h-3.5 object-contain" />
                       </div>
                       Company
                     </h3>
@@ -1046,7 +1050,7 @@ export default function Platform() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <BookOpen className="w-8 h-8 text-[#991b1b]" />
+                  <img src={sutraIcon} alt="Sutra" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-library-title">
                     Document & Resource Library
                   </h2>
@@ -1073,19 +1077,19 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Support for PDF, EPUB, audio (MP3), video (MP4)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Full-text search across all documents</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Custom tagging system by topic, teacher, lineage</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Multi-language support for translations</span>
                     </li>
                   </ul>
@@ -1100,7 +1104,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-access-control">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Award className="w-6 h-6 text-[#991b1b]" />
+                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
                     </div>
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Access Control & Versioning</h3>
                   </div>
@@ -1109,19 +1113,19 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Granular access control (public, members, ordained)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Version history for all documents</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Offline download for retreats without internet</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Analytics on most-accessed resources</span>
                     </li>
                   </ul>
@@ -1137,7 +1141,7 @@ export default function Platform() {
                 <div className="flex flex-col lg:flex-row items-center gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-full bg-[#991b1b]/20 flex items-center justify-center">
-                      <BookOpen className="w-8 h-8 text-[#991b1b]" />
+                      <img src={sutraIcon} alt="Sutra" className="w-8 h-8 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1 text-center lg:text-left">
@@ -1174,7 +1178,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-recurring-dana">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <CalendarClock className="w-5 h-5 text-[#991b1b]" />
+                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Recurring Dāna</h3>
                   </div>
@@ -1183,15 +1187,15 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Monthly, quarterly, annual cycles</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Automatic receipts for tax deductions</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Member dashboard to manage commitments</span>
                     </li>
                   </ul>
@@ -1201,7 +1205,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-payment-methods">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multiple Payment Methods</h3>
                   </div>
@@ -1210,15 +1214,15 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Credit/debit cards, ACH transfers</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">QR codes for instant donations</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Mobile wallets (Apple Pay, Google Pay)</span>
                     </li>
                   </ul>
@@ -1228,7 +1232,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-merit-dedication">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                      <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Merit Dedication</h3>
                   </div>
@@ -1237,15 +1241,15 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Dedicate merit to deceased or living beings</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Optional sutra quotes on donation page</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Anonymous donation option</span>
                     </li>
                   </ul>
@@ -1483,7 +1487,7 @@ export default function Platform() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Sparkles className="w-8 h-8 text-[#991b1b]" />
+                  <img src={buddhaIcon} alt="Buddha" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-branding-title">
                     Custom Branding
                   </h2>
@@ -1501,7 +1505,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-logo-upload">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-[#991b1b]" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
                     </div>
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Logo & Visual Identity</h3>
                   </div>
@@ -1510,19 +1514,19 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Upload SVG, PNG logos with transparent backgrounds</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Pre-built Buddhist aesthetic themes (Lotus, Bodhi, Zen Garden)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Custom color palette generator with accessibility checks</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Font pairing for sutras, headings, and body text</span>
                     </li>
                   </ul>
@@ -1537,7 +1541,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-domain-mapping">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-[#991b1b]" />
+                      <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
                     </div>
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Domain & White-labeling</h3>
                   </div>
@@ -1546,19 +1550,19 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Custom domain mapping with DNS guidance</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Automatic SSL/TLS certificates for secure connections</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Complete white-labeling (no Bodhi Tech branding visible)</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-sm text-[#2c2c2c]">Custom email domains for notifications (@yourtemple.org)</span>
                     </li>
                   </ul>
@@ -1574,7 +1578,7 @@ export default function Platform() {
                 <div className="flex flex-col lg:flex-row items-center gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 rounded-full bg-[#991b1b]/20 flex items-center justify-center">
-                      <Award className="w-8 h-8 text-[#991b1b]" />
+                      <img src={lotusIcon} alt="Lotus" className="w-8 h-8 object-contain" />
                     </div>
                   </div>
                   <div className="flex-1 text-center lg:text-left">
@@ -1595,7 +1599,7 @@ export default function Platform() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Calendar className="w-8 h-8 text-[#991b1b]" />
+                  <img src={bellIcon} alt="Bell" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-radio-title">
                     Events & Reminder Calendar
                   </h2>
@@ -1613,7 +1617,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-scheduling">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <CalendarClock className="w-5 h-5 text-[#991b1b]" />
+                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Smart Scheduling</h3>
                   </div>
@@ -1622,11 +1626,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Recurring event templates (Vesak, Uposatha, etc.)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Multi-timezone support for global sangha</span>
                     </li>
                   </ul>
@@ -1636,7 +1640,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-rsvp">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <UserPlus className="w-5 h-5 text-[#991b1b]" />
+                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">RSVP Tracking</h3>
                   </div>
@@ -1645,11 +1649,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">One-click RSVP with capacity limits</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Attendance analytics and member engagement insights</span>
                     </li>
                   </ul>
@@ -1668,11 +1672,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Email, SMS, and push notification options</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Custom reminder schedules per event type</span>
                     </li>
                   </ul>
@@ -1698,7 +1702,7 @@ export default function Platform() {
                         LIVE
                       </div>
                       <div className="flex items-center gap-1 text-[#8B4513]/60">
-                        <Users className="w-4 h-4" />
+                        <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                         <span className="text-sm font-semibold">234</span>
                       </div>
                     </div>
@@ -1739,7 +1743,7 @@ export default function Platform() {
                         LIVE
                       </div>
                       <div className="flex items-center gap-1 text-[#8B4513]/60">
-                        <Users className="w-4 h-4" />
+                        <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                         <span className="text-sm font-semibold">156</span>
                       </div>
                     </div>
@@ -1788,7 +1792,7 @@ export default function Platform() {
                         1h 59m
                       </div>
                       <div className="flex items-center gap-1 text-[#8B4513]/60">
-                        <Users className="w-4 h-4" />
+                        <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                         <span className="text-sm font-semibold">0</span>
                       </div>
                     </div>
@@ -1828,7 +1832,7 @@ export default function Platform() {
                         2h 59m
                       </div>
                       <div className="flex items-center gap-1 text-[#8B4513]/60">
-                        <Users className="w-4 h-4" />
+                        <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                         <span className="text-sm font-semibold">0</span>
                       </div>
                     </div>
@@ -1883,7 +1887,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-training">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                      <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Custom Knowledge Training</h3>
                   </div>
@@ -1892,11 +1896,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Upload PDFs, audio, video for training</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Fine-tune responses to match your lineage style</span>
                     </li>
                   </ul>
@@ -1906,7 +1910,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-traditions">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multi-Tradition Modes</h3>
                   </div>
@@ -1915,11 +1919,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Pre-configured tradition templates</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Cites sutras with chapter/verse precision</span>
                     </li>
                   </ul>
@@ -1929,7 +1933,7 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-voice">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Megaphone className="w-5 h-5 text-[#991b1b]" />
+                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Voice & Text Queries</h3>
                   </div>
@@ -1938,11 +1942,11 @@ export default function Platform() {
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Voice input in 50+ languages</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
                       <span className="font-serif text-[#2c2c2c]">Text-to-speech responses for accessibility</span>
                     </li>
                   </ul>
@@ -2006,7 +2010,7 @@ export default function Platform() {
                       {agent.users !== undefined && agent.likes !== undefined && (
                         <div className="flex items-center gap-4 text-sm text-[#8B4513]/60">
                           <div className="flex items-center gap-1">
-                            <Users className="w-4 h-4" />
+                            <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                             <span className="font-serif">{agent.users >= 1000 ? `${(agent.users / 1000).toFixed(1)}K` : agent.users}</span>
                           </div>
                           <span>·</span>
@@ -2022,7 +2026,7 @@ export default function Platform() {
                           className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#991b1b] text-white rounded-xl hover:bg-[#7a1515] transition-colors font-serif font-semibold text-sm shadow-md"
                           data-testid={`button-explore-${agent.id}`}
                         >
-                          <Sparkles className="w-4 h-4" />
+                          <img src={buddhaIcon} alt="Buddha" className="w-4 h-4 object-contain" />
                           Khám phá Agent
                         </a>
                       </Link>
@@ -2067,7 +2071,7 @@ export default function Platform() {
                           </div>
                         )}
                         <div className="flex items-center gap-1 text-[#8B4513]/60">
-                          <Users className="w-4 h-4" />
+                          <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain" />
                           <span className="text-sm font-semibold">
                             {selectedRadio === "live-1" ? "18" : selectedRadio === "live-2" ? "15" : "0"}
                           </span>
