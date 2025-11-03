@@ -10,6 +10,9 @@ import lotusIcon from "@assets/44_1762155616660.png";
 import bellIcon from "@assets/Bell_no_bg (1)_1762155616660.png";
 import buddhaIcon from "@assets/2_1762155709385.png";
 import sutraIcon from "@assets/Wordless Sutra Icon - Sumi-e Style_1762155698128.png";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { platformTranslations } from "@/translations/platform";
 
 // Buddhist practitioner avatars
 import avatar1 from "@assets/download (4)_1761842289234.jpg";
@@ -44,7 +47,7 @@ const agentArtwork: Record<string, string> = {
   "van-tinh": agentArt6,
 };
 
-function SocialNetworkSection() {
+function SocialNetworkSection({ t }: { t: typeof platformTranslations.en }) {
   const [activeView, setActiveView] = useState<"feed" | "search" | "profile" | "notifications">("feed");
   
   const trendingSuggestions = {
@@ -66,14 +69,14 @@ function SocialNetworkSection() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img src={lotusIcon} alt="Lotus" className="w-8 h-8 object-contain" />
             <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-social-title">
-              Engage Your Sangha
+              {t.sangha.title}
             </h2>
           </div>
           <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-            White-label community platform to connect your practitioners, share Dharma talks, and foster mindful Right Speech discussions with built-in moderation tools
+            {t.sangha.subtitle}
           </p>
           <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto mb-8">
-            Create study groups, moderate conversations with Buddhist ethics guidelines, and allow anonymous posting for sensitive spiritual questions—all under your monastery's trusted brand
+            {t.sangha.description}
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
@@ -81,19 +84,19 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-moderation">
               <div className="flex items-center gap-3 mb-3">
                 <img src={lotusIcon} alt="Lotus" className="w-10 h-10 object-contain" />
-                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Right Speech Moderation</h3>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">{t.sangha.moderation.title}</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                Pre-built moderation guidelines based on Buddhist Right Speech principles. Flag harmful content, encourage constructive dialogue, and maintain a respectful sangha environment.
+                {t.sangha.moderation.description}
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">AI-assisted content flagging</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.moderation.features[0]}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">Customizable moderation rules</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.moderation.features[1]}</span>
                 </li>
               </ul>
             </div>
@@ -102,19 +105,19 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-study-groups">
               <div className="flex items-center gap-3 mb-3">
                 <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
-                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Study Groups & Circles</h3>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">{t.sangha.studyGroups.title}</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                Members form private or public study groups around specific sutras, meditation practices, or philosophical topics. Track progress together with shared reading schedules.
+                {t.sangha.studyGroups.description}
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">Create topic-based discussion groups</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.studyGroups.features[0]}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">Shared reading schedules & milestones</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.studyGroups.features[1]}</span>
                 </li>
               </ul>
             </div>
@@ -123,19 +126,19 @@ function SocialNetworkSection() {
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-anonymous">
               <div className="flex items-center gap-3 mb-3">
                 <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
-                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Anonymous Posting Option</h3>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">{t.sangha.anonymous.title}</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                Allow members to ask sensitive spiritual questions anonymously—addressing doubts, personal struggles, or practice challenges without fear of judgment while maintaining community trust.
+                {t.sangha.anonymous.description}
               </p>
               <ul className="space-y-1.5 text-xs">
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">Optional anonymous mode per post</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.anonymous.features[0]}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <img src={lotusIcon} alt="Lotus" className="w-3.5 h-3.5 object-contain flex-shrink-0 mt-0.5" />
-                  <span className="font-serif text-[#2c2c2c]">Admin accountability tracking</span>
+                  <span className="font-serif text-[#2c2c2c]">{t.sangha.anonymous.features[1]}</span>
                 </li>
               </ul>
             </div>
@@ -879,6 +882,8 @@ function SocialNetworkSection() {
 }
 
 export default function Platform() {
+  const { language } = useLanguage();
+  const t = platformTranslations[language];
   const [selectedRadio, setSelectedRadio] = useState<string | null>(null);
   const [donationAmount, setDonationAmount] = useState<number | null>(500000);
   const [customAmount, setCustomAmount] = useState<string>("");
@@ -974,31 +979,31 @@ export default function Platform() {
                   <div className="p-6">
                     <h3 className="font-serif font-bold text-[#991b1b] mb-5 text-xs uppercase tracking-wider flex items-center gap-2">
                       <img src={sutraIcon} alt="Sutra" className="w-6 h-6 object-contain" />
-                      Company
+                      {t.footer.company}
                     </h3>
                     <div className="space-y-3">
                       <Link href="/about">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-about">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          About
+                          {t.footer.about}
                         </a>
                       </Link>
                       <Link href="/career">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-career">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Career
+                          {t.footer.career}
                         </a>
                       </Link>
                       <Link href="/terms">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-terms">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Terms
+                          {t.footer.terms}
                         </a>
                       </Link>
                       <Link href="/privacy">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-privacy">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Privacy
+                          {t.footer.privacy}
                         </a>
                       </Link>
                     </div>
@@ -1032,6 +1037,7 @@ export default function Platform() {
                   Docs
                 </a>
               </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </header>
@@ -1044,14 +1050,14 @@ export default function Platform() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <img src={sutraIcon} alt="Sutra" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-library-title">
-                    Document & Resource Library
+                    {t.library.title}
                   </h2>
                 </div>
                 <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-                  Organize your temple's sutras, chants, teachings, and media in a searchable, accessible digital library
+                  {t.library.subtitle}
                 </p>
                 <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
-                  Preserve your lineage's wisdom for future generations with version control and offline access
+                  {t.library.description}
                 </p>
               </div>
 
@@ -1060,27 +1066,27 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-searchable-library">
                   <div className="flex items-center gap-3 mb-6">
                     <Search className="w-12 h-12 text-[#991b1b]" />
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Searchable Library</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">{t.library.searchable.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
-                    Upload sutras, commentaries, chant sheets, audio dharma talks, and video recordings. Tag by tradition, teacher, topic, or language. Full-text search helps members find exactly what they need.
+                    {t.library.searchable.description}
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Support for PDF, EPUB, audio (MP3), video (MP4)</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.searchable.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Full-text search across all documents</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.searchable.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Custom tagging system by topic, teacher, lineage</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.searchable.features[2]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Multi-language support for translations</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.searchable.features[3]}</span>
                     </li>
                   </ul>
                   <div className="flex flex-wrap gap-2">
@@ -1094,27 +1100,27 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-access-control">
                   <div className="flex items-center gap-3 mb-6">
                     <img src={lotusIcon} alt="Lotus" className="w-12 h-12 object-contain" />
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Access Control & Versioning</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">{t.library.accessControl.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
-                    Set permissions for public, members-only, or ordained-only content. Track updates to sutras and commentaries with version history—perfect for evolving translations or teacher revisions.
+                    {t.library.accessControl.description}
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Granular access control (public, members, ordained)</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.accessControl.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Version history for all documents</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.accessControl.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Offline download for retreats without internet</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.accessControl.features[2]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Analytics on most-accessed resources</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.library.accessControl.features[3]}</span>
                     </li>
                   </ul>
                   <div className="flex flex-wrap gap-2">
@@ -1133,9 +1139,9 @@ export default function Platform() {
                     </div>
                   </div>
                   <div className="flex-1 text-center lg:text-left">
-                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Digital Dharma Preservation</h3>
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">{t.library.preservation.title}</h3>
                     <p className="font-serif text-sm text-[#8B4513]/70">
-                      In the Dharma-Ending Age, preserving authentic teachings is paramount. Your library becomes a living archive—accessible to current sangha members and safeguarded for future generations. Host rare commentaries, lineage-specific practices, and local teacher wisdom that might otherwise be lost.
+                      {t.library.preservation.text}
                     </p>
                   </div>
                 </div>
@@ -1150,14 +1156,14 @@ export default function Platform() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Heart className="w-8 h-8 text-[#991b1b]" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-donation-title">
-                    Donation Tools
+                    {t.donation.title}
                   </h2>
                 </div>
                 <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-                  Accept dāna with dignity—frame generosity as spiritual practice, not transactional fundraising
+                  {t.donation.subtitle}
                 </p>
                 <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
-                  Transform online giving into an act of merit-making and support your temple's self-sufficiency
+                  {t.donation.description}
                 </p>
               </div>
 
@@ -1166,23 +1172,23 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-recurring-dana">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Recurring Dāna</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.donation.recurringDana.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
-                    Enable monthly or annual commitments. Members can sustain your monastery with predictable support—like traditional alms rounds, modernized.
+                    {t.donation.recurringDana.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Monthly, quarterly, annual cycles</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.recurringDana.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Automatic receipts for tax deductions</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.recurringDana.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Member dashboard to manage commitments</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.recurringDana.features[2]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1191,23 +1197,23 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-payment-methods">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multiple Payment Methods</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.donation.paymentMethods.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
-                    Accept cards, bank transfers, QR codes, and mobile wallets. Print QR codes for physical displays at your temple entrance or shrine.
+                    {t.donation.paymentMethods.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Credit/debit cards, ACH transfers</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.paymentMethods.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">QR codes for instant donations</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.paymentMethods.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Mobile wallets (Apple Pay, Google Pay)</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.paymentMethods.features[2]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1216,23 +1222,23 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-merit-dedication">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Merit Dedication</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.donation.meritDedication.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
-                    Allow donors to dedicate merit to loved ones, include sutra quotes, or give anonymously. Honor the spiritual nature of generosity.
+                    {t.donation.meritDedication.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Dedicate merit to deceased or living beings</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.meritDedication.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Optional sutra quotes on donation page</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.meritDedication.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Anonymous donation option</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.donation.meritDedication.features[2]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1246,9 +1252,9 @@ export default function Platform() {
                     </div>
                   </div>
                   <div className="flex-1 text-center lg:text-left">
-                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Transparent & Low-Fee Processing</h3>
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">{t.donation.lowFee.title}</h3>
                     <p className="font-serif text-sm text-[#8B4513]/70">
-                      Practitioner Pod tier: 2% processing fee. Sangha Community and above: negotiated rates based on volume. No hidden fees, no monthly minimums. Every donation goes toward sustaining the Dharma, not enriching payment processors.
+                      {t.donation.lowFee.text}
                     </p>
                   </div>
                 </div>
@@ -1471,14 +1477,14 @@ export default function Platform() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <img src={buddhaIcon} alt="Buddha" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-branding-title">
-                    Custom Branding
+                    {t.branding.title}
                   </h2>
                 </div>
                 <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-                  Transform the platform into a seamless extension of your monastery's identity
+                  {t.branding.subtitle}
                 </p>
                 <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
-                  Every temple has a unique lineage and aesthetic—your platform should reflect that dignity
+                  {t.branding.description}
                 </p>
               </div>
 
@@ -1487,27 +1493,27 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-logo-upload">
                   <div className="flex items-center gap-3 mb-6">
                     <img src={buddhaIcon} alt="Buddha" className="w-12 h-12 object-contain" />
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Logo & Visual Identity</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">{t.branding.logoVisual.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
-                    Upload your monastery's logo, dharma wheel, or lineage seal. Choose from temple-inspired color palettes or create custom themes that resonate with your tradition—Zen minimalism, Tibetan vibrancy, or Pure Land serenity.
+                    {t.branding.logoVisual.description}
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Upload SVG, PNG logos with transparent backgrounds</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.logoVisual.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Pre-built Buddhist aesthetic themes (Lotus, Bodhi, Zen Garden)</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.logoVisual.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Custom color palette generator with accessibility checks</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.logoVisual.features[2]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Font pairing for sutras, headings, and body text</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.logoVisual.features[3]}</span>
                     </li>
                   </ul>
                   <div className="flex flex-wrap gap-2">
@@ -1521,27 +1527,27 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-domain-mapping">
                   <div className="flex items-center gap-3 mb-6">
                     <img src={bellIcon} alt="Bell" className="w-12 h-12 object-contain" />
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Domain & White-labeling</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">{t.branding.domainWhitelabel.title}</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
-                    Map your custom domain (e.g., platform.yourtemple.org) with automatic SSL certificates. Remove all external branding—this becomes your platform, serving your sangha under your monastery's trusted name.
+                    {t.branding.domainWhitelabel.description}
                   </p>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Custom domain mapping with DNS guidance</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.domainWhitelabel.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Automatic SSL/TLS certificates for secure connections</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.domainWhitelabel.features[1]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Complete white-labeling (no Bodhi Tech branding visible)</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.domainWhitelabel.features[2]}</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-sm text-[#2c2c2c]">Custom email domains for notifications (@yourtemple.org)</span>
+                      <span className="font-serif text-sm text-[#2c2c2c]">{t.branding.domainWhitelabel.features[3]}</span>
                     </li>
                   </ul>
                   <div className="flex flex-wrap gap-2">
@@ -1560,9 +1566,9 @@ export default function Platform() {
                     </div>
                   </div>
                   <div className="flex-1 text-center lg:text-left">
-                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Sovereignty Through Design</h3>
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">{t.branding.sovereignty.title}</h3>
                     <p className="font-serif text-sm text-[#8B4513]/70">
-                      Your monastery maintains complete visual sovereignty. Members experience your platform as a natural extension of your physical temple—building trust, familiarity, and deeper engagement with the Dharma under your lineage's guidance.
+                      {t.branding.sovereignty.text}
                     </p>
                   </div>
                 </div>
@@ -1570,7 +1576,7 @@ export default function Platform() {
             </div>
           </section>
 
-          <SocialNetworkSection />
+          <SocialNetworkSection t={t} />
 
           {/* Dharma Radio Section - Events & Reminder Calendar */}
           <section id="dharma-radio" className="py-16 px-4">
@@ -1579,14 +1585,14 @@ export default function Platform() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <img src={bellIcon} alt="Bell" className="w-8 h-8 object-contain" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-radio-title">
-                    Events & Reminder Calendar
+                    {t.events.title}
                   </h2>
                 </div>
                 <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-                  Schedule temple rituals, group meditations, and dharma talks with automated reminders and RSVP tracking
+                  {t.events.subtitle}
                 </p>
                 <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic mb-8">
-                  Below is an interactive demo of "Dharma Radio"—live audio rooms where your sangha can gather for talks, Q&A sessions, and group practice. Event scheduling, RSVP management, and push notifications keep your community engaged.
+                  {t.events.description}
                 </p>
               </div>
 
@@ -1595,19 +1601,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-scheduling">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Smart Scheduling</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.events.smartScheduling.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Schedule recurring events (daily meditation, weekly dharma talks, monthly retreats) with timezone support and automated reminders via email, SMS, or push notifications.
+                    {t.events.smartScheduling.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Recurring event templates (Vesak, Uposatha, etc.)</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.smartScheduling.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Multi-timezone support for global sangha</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.smartScheduling.features[1]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1616,19 +1622,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-rsvp">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={lotusIcon} alt="Lotus" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">RSVP Tracking</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.events.rsvpTracking.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Members can RSVP with one click. Track attendance, send follow-up messages to attendees, and gather feedback after events to improve future programs.
+                    {t.events.rsvpTracking.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">One-click RSVP with capacity limits</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.rsvpTracking.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Attendance analytics and member engagement insights</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.rsvpTracking.features[1]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1637,19 +1643,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-reminders">
                   <div className="flex items-center gap-3 mb-4">
                     <Bell className="w-10 h-10 text-[#991b1b]" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Automated Reminders</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.events.reminders.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Send reminders 24 hours, 1 hour, or 15 minutes before events. Members choose their preferred notification method—no one misses an important teaching session.
+                    {t.events.reminders.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Email, SMS, and push notification options</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.reminders.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Custom reminder schedules per event type</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.events.reminders.features[1]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1843,14 +1849,14 @@ export default function Platform() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <MessageCircle className="w-8 h-8 text-[#991b1b]" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-agents-title">
-                    Compassionate AI Guidance
+                    {t.ai.title}
                   </h2>
                 </div>
                 <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-                  Deploy custom AI agents trained on your lineage's teachings—offering members 24/7 access to doctrinal guidance, meditation support, and sutra references
+                  {t.ai.subtitle}
                 </p>
                 <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
-                  Unlike generic chatbots, these agents are fine-tuned on your specific tradition, ensuring answers align with your monastery's interpretation of the Dharma
+                  {t.ai.description}
                 </p>
               </div>
 
@@ -1859,19 +1865,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-training">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Custom Knowledge Training</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.ai.customTraining.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Upload your monastery's sutras, commentaries, teacher talks, and practice guides. The AI learns your lineage's unique interpretation—Zen koans, Pure Land recitations, or Theravāda meditation instructions.
+                    {t.ai.customTraining.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Upload PDFs, audio, video for training</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.customTraining.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Fine-tune responses to match your lineage style</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.customTraining.features[1]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1880,19 +1886,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-traditions">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multi-Tradition Modes</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.ai.multilingualSupport.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Select doctrinal modes for different Buddhist traditions—Zen, Pure Land, Theravāda, Tibetan, or custom blends. Agents cite specific sutras and adapt tone to your teaching style.
+                    {t.ai.multilingualSupport.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Pre-configured tradition templates</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.multilingualSupport.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Cites sutras with chapter/verse precision</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.multilingualSupport.features[1]}</span>
                     </li>
                   </ul>
                 </div>
@@ -1901,19 +1907,19 @@ export default function Platform() {
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-voice">
                   <div className="flex items-center gap-3 mb-4">
                     <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
-                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Voice & Text Queries</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">{t.ai.ethicalSafeguards.title}</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
-                    Members can ask questions via voice or text in multiple languages. Agents respond with written answers or audio, making teachings accessible to elderly members or those with low literacy.
+                    {t.ai.ethicalSafeguards.description}
                   </p>
                   <ul className="space-y-2 text-xs">
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Voice input in 50+ languages</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.ethicalSafeguards.features[0]}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-[#2c2c2c]">Text-to-speech responses for accessibility</span>
+                      <span className="font-serif text-[#2c2c2c]">{t.ai.ethicalSafeguards.features[1]}</span>
                     </li>
                   </ul>
                 </div>
