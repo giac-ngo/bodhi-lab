@@ -109,3 +109,67 @@ Preferred communication style: Simple, everyday language.
 - Agent Models page with filtering by vehicle level and search functionality
 - Quick Start guide with code examples for API integration
 - Token Pricing page displaying transparent cost breakdown
+
+### Platform Capabilities (B2B Showcase)
+
+**Recent Changes (November 3, 2025)**: Transformed the Platform page from a basic social network demo into a comprehensive B2B showcase with six in-depth capability sections targeting Buddhist organizations (temples, monasteries, meditation centers).
+
+**Platform Page Structure**: Located at `/platform`, the page showcases white-label technology solutions with detailed feature cards designed to convert B2B customers. Each section follows a consistent pattern: Icon + Title + Description + Feature Cards (3-column responsive grid) + Interactive Demo/Examples.
+
+**Six Platform Capability Sections**:
+
+1. **Community Forum** (`#awaken-feed`)
+   - Updated title from "Engage Your Sangha" to "Community Forum"
+   - Feature cards: Right Speech Moderation (AI-assisted flagging), Study Groups & Circles (sutra study), Anonymous Posting (sensitive questions)
+   - Includes interactive social feed demo with Vietnamese sample content
+   - Data-testid: card-forum-moderation, card-forum-study-groups, card-forum-anonymous
+
+2. **Custom Branding** (`#branding`)
+   - Logo & visual identity upload with theme builder
+   - Domain & white-labeling with SSL certificates
+   - Sovereignty messaging emphasizing temple control over data and branding
+   - Data-testid: card-branding-logo, card-branding-domain, card-branding-sovereignty
+
+3. **Donation Tools** (`#donations`)
+   - Recurring donations with multiple payment cycles
+   - Multiple payment methods (QR codes, cards, bank transfers)
+   - Merit dedication and anonymous giving options
+   - Data-testid: card-donation-recurring, card-donation-payment, card-donation-merit
+
+4. **Document & Resource Library** (`#library`)
+   - Searchable library with full-text search across PDFs
+   - Access control with role-based permissions
+   - Offline download capabilities and version history
+   - Data-testid: card-library-search, card-library-access, card-library-offline
+
+5. **Events & Reminder Calendar** (`#dharma-radio`)
+   - Smart scheduling with recurring event templates (Vesak, Uposatha)
+   - RSVP tracking with capacity limits and attendance analytics
+   - Automated reminders via email, SMS, and push notifications
+   - Includes interactive "Dharma Radio" live audio rooms demo
+   - Data-testid: card-events-scheduling, card-events-rsvp, card-events-reminders
+
+6. **Compassionate AI Guidance** (Community Agents section)
+   - Custom knowledge training from monastery resources (PDFs, audio, video)
+   - Multi-tradition modes (Zen, Pure Land, Theravāda, Tibetan)
+   - Voice & text queries in 50+ languages with text-to-speech responses
+   - Community Agent Marketplace showcasing pre-trained agents from temples worldwide
+   - Data-testid: card-ai-training, card-ai-traditions, card-ai-voice
+
+**Design Consistency**:
+- All sections use Buddhist color palette (#991b1b for primary red, #8B4513 for browns, #EFE0BD for beige backgrounds)
+- Feature cards use HSL alpha transparency for layered glass-morphism effects
+- CheckCircle2 icons from lucide-react for feature bullet points
+- Icons consistently placed in rounded containers with #991b1b/10 backgrounds
+- Responsive grids: 1 column mobile, 2-3 columns tablet/desktop
+
+**B2B Messaging Strategy**:
+- Emphasizes sovereignty, white-labeling, and temple control over technology
+- Highlights spiritual aspects (merit dedication, Right Speech, Dharma preservation)
+- Focuses on practical temple needs (donations, events, moderation, AI customization)
+- Uses professional B2B language while maintaining Buddhist authenticity
+
+**Testing Compliance**:
+- All feature cards include unique data-testid attributes following pattern: card-{section}-{feature}
+- Interactive elements and key content blocks marked for testing
+- No duplicate testids across entire Platform page
