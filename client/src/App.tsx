@@ -17,6 +17,7 @@ import Overview from "@/pages/Overview";
 import AgentModels from "@/pages/AgentModels";
 import QuickStart from "@/pages/QuickStart";
 import TokenPricing from "@/pages/TokenPricing";
+import About from "@/pages/About";
 import Career from "@/pages/Career";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/platform" component={Platform} />
       <Route path="/discovery" component={Discovery} />
       <Route path="/center/:id" component={CenterDetail} />
+      <Route path="/about" component={About} />
       <Route path="/career" component={Career} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
