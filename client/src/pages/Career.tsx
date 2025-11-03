@@ -1,5 +1,9 @@
 import { Link } from "wouter";
-import { Briefcase, ArrowRight, Heart, Code, Brain, Users, Globe, Calendar, CheckCircle2, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import lotusIcon from "@assets/44_1762155616660.png";
+import bellIcon from "@assets/Bell_no_bg (1)_1762155616660.png";
+import buddhaIcon from "@assets/2_1762155709385.png";
+import sutraIcon from "@assets/Wordless Sutra Icon - Sumi-e Style_1762155698128.png";
 
 export default function Career() {
   return (
@@ -38,7 +42,7 @@ export default function Career() {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Briefcase className="w-12 h-12 text-[#991b1b]" />
+              <img src={sutraIcon} alt="Sutra" className="w-12 h-12 object-contain" />
             </div>
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#991b1b] mb-6" data-testid="text-career-title">
               Join Our Sacred Mission
@@ -60,7 +64,7 @@ export default function Career() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-intentional">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-[#991b1b]" />
+                    <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Intentional Work</h3>
                 </div>
@@ -72,7 +76,7 @@ export default function Career() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-distributed">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-[#991b1b]" />
+                    <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Fully Distributed</h3>
                 </div>
@@ -84,7 +88,7 @@ export default function Career() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-contemplative">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <Brain className="w-6 h-6 text-[#991b1b]" />
+                    <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Contemplative Tech</h3>
                 </div>
@@ -242,7 +246,7 @@ export default function Career() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex gap-4" data-testid="card-benefit-compensation">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Competitive Compensation</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -252,7 +256,7 @@ export default function Career() {
               </div>
 
               <div className="flex gap-4" data-testid="card-benefit-retreat">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Retreat Support</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -262,7 +266,7 @@ export default function Career() {
               </div>
 
               <div className="flex gap-4" data-testid="card-benefit-flexible">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Flexible Hours</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -272,7 +276,7 @@ export default function Career() {
               </div>
 
               <div className="flex gap-4" data-testid="card-benefit-learning">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Learning Budget</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -282,7 +286,7 @@ export default function Career() {
               </div>
 
               <div className="flex gap-4" data-testid="card-benefit-health">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Health & Wellness</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -292,7 +296,7 @@ export default function Career() {
               </div>
 
               <div className="flex gap-4" data-testid="card-benefit-sabbatical">
-                <CheckCircle2 className="w-6 h-6 text-[#991b1b] flex-shrink-0 mt-1" />
+                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-serif text-lg font-bold text-[#2c2c2c] mb-2">Sabbatical Program</h3>
                   <p className="font-serif text-sm text-[#8B4513]/70">
@@ -377,7 +381,7 @@ export default function Career() {
         {/* Contact CTA */}
         <section className="py-16 px-4 bg-gradient-to-br from-[#991b1b]/10 to-[#8B4513]/10">
           <div className="max-w-4xl mx-auto text-center">
-            <Mail className="w-16 h-16 text-[#991b1b] mx-auto mb-6" />
+            <img src={bellIcon} alt="Bell" className="w-16 h-16 object-contain mx-auto mb-6" />
             <h2 className="font-serif text-3xl font-bold text-[#991b1b] mb-4" data-testid="text-contact-title">
               Don't See Your Role?
             </h2>
