@@ -56,12 +56,90 @@ function SocialNetworkSection() {
     <section id="awaken-feed" className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-social-title">
-            Engage Your Sangha
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Users className="w-8 h-8 text-[#991b1b]" />
+            <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-social-title">
+              Community Forum
+            </h2>
+          </div>
           <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
-            White-label community platform to connect your practitioners, share Dharma talks, and foster mindful discussions
+            White-label community platform to connect your practitioners, share Dharma talks, and foster mindful Right Speech discussions with built-in moderation tools
           </p>
+          <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto mb-8">
+            Create study groups, moderate conversations with Buddhist ethics guidelines, and allow anonymous posting for sensitive spiritual questions—all under your monastery's trusted brand
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
+            {/* Moderation Tools */}
+            <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-moderation">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                  <Award className="w-5 h-5 text-[#991b1b]" />
+                </div>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Right Speech Moderation</h3>
+              </div>
+              <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                Pre-built moderation guidelines based on Buddhist Right Speech principles. Flag harmful content, encourage constructive dialogue, and maintain a respectful sangha environment.
+              </p>
+              <ul className="space-y-1.5 text-xs">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">AI-assisted content flagging</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">Customizable moderation rules</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Study Groups */}
+            <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-study-groups">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                </div>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Study Groups & Circles</h3>
+              </div>
+              <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                Members form private or public study groups around specific sutras, meditation practices, or philosophical topics. Track progress together with shared reading schedules.
+              </p>
+              <ul className="space-y-1.5 text-xs">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">Create topic-based discussion groups</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">Shared reading schedules & milestones</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Anonymous Posting */}
+            <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-anonymous">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                </div>
+                <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Anonymous Posting Option</h3>
+              </div>
+              <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                Allow members to ask sensitive spiritual questions anonymously—addressing doubts, personal struggles, or practice challenges without fear of judgment while maintaining community trust.
+              </p>
+              <ul className="space-y-1.5 text-xs">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">Optional anonymous mode per post</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                  <span className="font-serif text-[#2c2c2c]">Admin accountability tracking</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic mb-2">
             The interactive demo below shows the member experience within your temple's custom-branded platform—featuring your branding, your AI agents (like "Giác Ngộ" shown here), and your sangha's conversations
           </p>
@@ -892,19 +970,432 @@ export default function Platform() {
         <TracingBeam className="pt-24">
           <SocialNetworkSection />
 
-          {/* Dharma Radio Section */}
+          {/* Custom Branding Section */}
+          <section id="custom-branding" className="py-16 px-4 bg-[#EFE0BD]/50">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Sparkles className="w-8 h-8 text-[#991b1b]" />
+                  <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-branding-title">
+                    Custom Branding
+                  </h2>
+                </div>
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
+                  Transform the platform into a seamless extension of your monastery's identity
+                </p>
+                <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
+                  Every temple has a unique lineage and aesthetic—your platform should reflect that dignity
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                {/* Logo & Visual Identity */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-logo-upload">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Sparkles className="w-6 h-6 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Logo & Visual Identity</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
+                    Upload your monastery's logo, dharma wheel, or lineage seal. Choose from temple-inspired color palettes or create custom themes that resonate with your tradition—Zen minimalism, Tibetan vibrancy, or Pure Land serenity.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Upload SVG, PNG logos with transparent backgrounds</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Pre-built Buddhist aesthetic themes (Lotus, Bodhi, Zen Garden)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Custom color palette generator with accessibility checks</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Font pairing for sutras, headings, and body text</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Logo Upload</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Theme Builder</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Color Palettes</span>
+                  </div>
+                </div>
+
+                {/* Domain & White-labeling */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-domain-mapping">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Domain & White-labeling</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
+                    Map your custom domain (e.g., platform.yourtemple.org) with automatic SSL certificates. Remove all external branding—this becomes your platform, serving your sangha under your monastery's trusted name.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Custom domain mapping with DNS guidance</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Automatic SSL/TLS certificates for secure connections</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Complete white-labeling (no Bodhi Tech branding visible)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Custom email domains for notifications (@yourtemple.org)</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Custom Domain</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">SSL Included</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">White-label</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#991b1b]/10 to-[#8B4513]/10 rounded-2xl border-2 border-[#991b1b]/30 p-8">
+                <div className="flex flex-col lg:flex-row items-center gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#991b1b]/20 flex items-center justify-center">
+                      <Award className="w-8 h-8 text-[#991b1b]" />
+                    </div>
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Sovereignty Through Design</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70">
+                      Your monastery maintains complete visual sovereignty. Members experience your platform as a natural extension of your physical temple—building trust, familiarity, and deeper engagement with the Dharma under your lineage's guidance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Donation Tools Section */}
+          <section id="donation-tools" className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Heart className="w-8 h-8 text-[#991b1b]" />
+                  <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-donation-title">
+                    Donation Tools
+                  </h2>
+                </div>
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
+                  Accept dāna with dignity—frame generosity as spiritual practice, not transactional fundraising
+                </p>
+                <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
+                  Transform online giving into an act of merit-making and support your temple's self-sufficiency
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                {/* Recurring Dāna */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-recurring-dana">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <CalendarClock className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Recurring Dāna</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                    Enable monthly or annual commitments. Members can sustain your monastery with predictable support—like traditional alms rounds, modernized.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Monthly, quarterly, annual cycles</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Automatic receipts for tax deductions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Member dashboard to manage commitments</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* QR Codes & Multiple Methods */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-payment-methods">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multiple Payment Methods</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                    Accept cards, bank transfers, QR codes, and mobile wallets. Print QR codes for physical displays at your temple entrance or shrine.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Credit/debit cards, ACH transfers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">QR codes for instant donations</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Mobile wallets (Apple Pay, Google Pay)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Merit Dedication & Anonymous Giving */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-merit-dedication">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Merit Dedication</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                    Allow donors to dedicate merit to loved ones, include sutra quotes, or give anonymously. Honor the spiritual nature of generosity.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Dedicate merit to deceased or living beings</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Optional sutra quotes on donation page</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Anonymous donation option</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#991b1b]/10 to-[#8B4513]/10 rounded-2xl border-2 border-[#991b1b]/30 p-8">
+                <div className="flex flex-col lg:flex-row items-center gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#991b1b]/20 flex items-center justify-center">
+                      <Heart className="w-8 h-8 text-[#991b1b]" />
+                    </div>
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Transparent & Low-Fee Processing</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70">
+                      Practitioner Pod tier: 2% processing fee. Sangha Community and above: negotiated rates based on volume. No hidden fees, no monthly minimums. Every donation goes toward sustaining the Dharma, not enriching payment processors.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Document & Resource Library Section */}
+          <section id="resource-library" className="py-16 px-4 bg-[#EFE0BD]/50">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <BookOpen className="w-8 h-8 text-[#991b1b]" />
+                  <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-library-title">
+                    Document & Resource Library
+                  </h2>
+                </div>
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
+                  Organize your temple's sutras, chants, teachings, and media in a searchable, accessible digital library
+                </p>
+                <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
+                  Preserve your lineage's wisdom for future generations with version control and offline access
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                {/* Searchable Library */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-searchable-library">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Search className="w-6 h-6 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Searchable Library</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
+                    Upload sutras, commentaries, chant sheets, audio dharma talks, and video recordings. Tag by tradition, teacher, topic, or language. Full-text search helps members find exactly what they need.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Support for PDF, EPUB, audio (MP3), video (MP4)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Full-text search across all documents</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Custom tagging system by topic, teacher, lineage</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Multi-language support for translations</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Full-text Search</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Multi-format</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Tagging</span>
+                  </div>
+                </div>
+
+                {/* Access Control & Version Control */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-access-control">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Award className="w-6 h-6 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Access Control & Versioning</h3>
+                  </div>
+                  <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
+                    Set permissions for public, members-only, or ordained-only content. Track updates to sutras and commentaries with version history—perfect for evolving translations or teacher revisions.
+                  </p>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Granular access control (public, members, ordained)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Version history for all documents</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Offline download for retreats without internet</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-sm text-[#2c2c2c]">Analytics on most-accessed resources</span>
+                    </li>
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Access Control</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Offline Access</span>
+                    <span className="px-3 py-1 bg-[#991b1b]/10 text-[#991b1b] rounded-full text-xs font-semibold">Versioning</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#991b1b]/10 to-[#8B4513]/10 rounded-2xl border-2 border-[#991b1b]/30 p-8">
+                <div className="flex flex-col lg:flex-row items-center gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#991b1b]/20 flex items-center justify-center">
+                      <BookOpen className="w-8 h-8 text-[#991b1b]" />
+                    </div>
+                  </div>
+                  <div className="flex-1 text-center lg:text-left">
+                    <h3 className="font-serif text-xl font-bold text-[#2c2c2c] mb-2">Digital Dharma Preservation</h3>
+                    <p className="font-serif text-sm text-[#8B4513]/70">
+                      In the Dharma-Ending Age, preserving authentic teachings is paramount. Your library becomes a living archive—accessible to current sangha members and safeguarded for future generations. Host rare commentaries, lineage-specific practices, and local teacher wisdom that might otherwise be lost.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Dharma Radio Section - Events & Reminder Calendar */}
           <section id="dharma-radio" className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                  <Radio className="w-8 h-8 text-[#991b1b]" />
+                  <Calendar className="w-8 h-8 text-[#991b1b]" />
                   <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-radio-title">
-                    Dharma Radio
+                    Events & Reminder Calendar
                   </h2>
                 </div>
-                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
-                  Tham gia các buổi thảo luận trực tiếp về Phật pháp
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
+                  Schedule temple rituals, group meditations, and dharma talks with automated reminders and RSVP tracking
                 </p>
+                <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic mb-8">
+                  Below is an interactive demo of "Dharma Radio"—live audio rooms where your sangha can gather for talks, Q&A sessions, and group practice. Event scheduling, RSVP management, and push notifications keep your community engaged.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                {/* Scheduling & Automation */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-scheduling">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <CalendarClock className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Smart Scheduling</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Schedule recurring events (daily meditation, weekly dharma talks, monthly retreats) with timezone support and automated reminders via email, SMS, or push notifications.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Recurring event templates (Vesak, Uposatha, etc.)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Multi-timezone support for global sangha</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* RSVP & Attendance */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-rsvp">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <UserPlus className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">RSVP Tracking</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Members can RSVP with one click. Track attendance, send follow-up messages to attendees, and gather feedback after events to improve future programs.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">One-click RSVP with capacity limits</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Attendance analytics and member engagement insights</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Notifications & Reminders */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-reminders">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Bell className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Automated Reminders</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Send reminders 24 hours, 1 hour, or 15 minutes before events. Members choose their preferred notification method—no one misses an important teaching session.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Email, SMS, and push notification options</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Custom reminder schedules per event type</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Live Now Section */}
@@ -1088,15 +1579,99 @@ export default function Platform() {
             </div>
           </section>
 
-          {/* Community Agents Section */}
+          {/* Community Agents Section - Compassionate AI Guidance */}
           <section className="py-16 px-4 bg-[#EFE0BD]/50">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-agents-title">
-                  Agents từ Cộng Đồng
-                </h2>
-                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
-                  Khám phá các AI Agent được phát triển bởi các chùa chiền, thiền viện và trung tâm tu tập khắp nơi
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <MessageCircle className="w-8 h-8 text-[#991b1b]" />
+                  <h2 className="font-serif text-4xl font-bold text-[#991b1b]" data-testid="text-agents-title">
+                    Compassionate AI Guidance
+                  </h2>
+                </div>
+                <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto mb-4">
+                  Deploy custom AI agents trained on your lineage's teachings—offering members 24/7 access to doctrinal guidance, meditation support, and sutra references
+                </p>
+                <p className="font-serif text-sm text-[#8B4513]/60 max-w-3xl mx-auto italic">
+                  Unlike generic chatbots, these agents are fine-tuned on your specific tradition, ensuring answers align with your monastery's interpretation of the Dharma
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+                {/* Custom Training */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-training">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Custom Knowledge Training</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Upload your monastery's sutras, commentaries, teacher talks, and practice guides. The AI learns your lineage's unique interpretation—Zen koans, Pure Land recitations, or Theravāda meditation instructions.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Upload PDFs, audio, video for training</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Fine-tune responses to match your lineage style</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Multi-tradition Support */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-traditions">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multi-Tradition Modes</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Select doctrinal modes for different Buddhist traditions—Zen, Pure Land, Theravāda, Tibetan, or custom blends. Agents cite specific sutras and adapt tone to your teaching style.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Pre-configured tradition templates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Cites sutras with chapter/verse precision</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Voice & Accessibility */}
+                <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-voice">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                      <Megaphone className="w-5 h-5 text-[#991b1b]" />
+                    </div>
+                    <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Voice & Text Queries</h3>
+                  </div>
+                  <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
+                    Members can ask questions via voice or text in multiple languages. Agents respond with written answers or audio, making teachings accessible to elderly members or those with low literacy.
+                  </p>
+                  <ul className="space-y-2 text-xs">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Voice input in 50+ languages</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                      <span className="font-serif text-[#2c2c2c]">Text-to-speech responses for accessibility</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="text-center mb-12">
+                <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-4">Community Agent Marketplace</h3>
+                <p className="font-serif text-sm text-[#8B4513]/70 max-w-2xl mx-auto">
+                  Explore pre-trained agents developed by temples worldwide, or share your custom agents with the broader Buddhist tech community
                 </p>
               </div>
 
