@@ -39,7 +39,7 @@ export default function Terms() {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <img src={sutraIcon} alt="Sutra" className="w-12 h-12 object-contain" />
+              <img src={sutraIcon} alt="Sutra" className="w-20 h-20 object-contain" />
             </div>
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#991b1b] mb-6" data-testid="text-terms-title">
               Terms of Service

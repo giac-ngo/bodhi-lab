@@ -45,9 +45,7 @@ export default function About() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-16 h-16 rounded-full bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={lotusIcon} alt="Lotus" className="w-8 h-8 object-contain" />
-              </div>
+              <img src={lotusIcon} alt="Lotus" className="w-20 h-20 object-contain" />
             </div>
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#991b1b] mb-6" data-testid="text-about-title">
               About Bodhi Technology Lab
@@ -60,9 +58,7 @@ export default function About() {
           {/* Mission Section */}
           <div className="bg-white/50 backdrop-blur-md rounded-3xl border-2 border-[#8B4513]/20 p-8 md:p-12 mb-12" data-testid="section-mission">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
-              </div>
+              <img src={bellIcon} alt="Bell" className="w-12 h-12 object-contain" />
               <h2 className="font-serif text-3xl font-bold text-[#991b1b]">Our Mission</h2>
             </div>
             <p className="font-serif text-lg text-[#2c2c2c] leading-relaxed mb-6">
@@ -76,9 +72,7 @@ export default function About() {
           {/* Values Section */}
           <div className="bg-white/50 backdrop-blur-md rounded-3xl border-2 border-[#8B4513]/20 p-8 md:p-12 mb-12" data-testid="section-values">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
-              </div>
+              <img src={buddhaIcon} alt="Buddha" className="w-12 h-12 object-contain" />
               <h2 className="font-serif text-3xl font-bold text-[#991b1b]">Our Values</h2>
             </div>
 
@@ -116,9 +110,7 @@ export default function About() {
           {/* What We Do Section */}
           <div className="bg-white/50 backdrop-blur-md rounded-3xl border-2 border-[#8B4513]/20 p-8 md:p-12 mb-12" data-testid="section-what-we-do">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={sutraIcon} alt="Sutra" className="w-6 h-6 object-contain" />
-              </div>
+              <img src={sutraIcon} alt="Sutra" className="w-12 h-12 object-contain" />
               <h2 className="font-serif text-3xl font-bold text-[#991b1b]">What We Build</h2>
             </div>
 
@@ -156,9 +148,7 @@ export default function About() {
           {/* Team Section */}
           <div className="bg-gradient-to-br from-[#991b1b]/10 to-[#8B4513]/10 rounded-3xl border-2 border-[#991b1b]/30 p-8 md:p-12 mb-12" data-testid="section-team">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
-              </div>
+              <img src={lotusIcon} alt="Lotus" className="w-12 h-12 object-contain" />
               <h2 className="font-serif text-3xl font-bold text-[#2c2c2c]">Our Team</h2>
             </div>
             <p className="font-serif text-lg text-[#8B4513]/80 leading-relaxed mb-6">
@@ -172,9 +162,7 @@ export default function About() {
           {/* Global Reach Section */}
           <div className="bg-white/50 backdrop-blur-md rounded-3xl border-2 border-[#8B4513]/20 p-8 md:p-12 mb-12" data-testid="section-reach">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
-              </div>
+              <img src={bellIcon} alt="Bell" className="w-12 h-12 object-contain" />
               <h2 className="font-serif text-3xl font-bold text-[#991b1b]">Global Reach, Local Care</h2>
             </div>
             <p className="font-serif text-lg text-[#2c2c2c] leading-relaxed mb-6">

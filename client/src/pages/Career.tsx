@@ -42,7 +42,7 @@ export default function Career() {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <img src={sutraIcon} alt="Sutra" className="w-12 h-12 object-contain" />
+              <img src={sutraIcon} alt="Sutra" className="w-20 h-20 object-contain" />
             </div>
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#991b1b] mb-6" data-testid="text-career-title">
               Join Our Sacred Mission
@@ -63,9 +63,7 @@ export default function Career() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-intentional">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
-                  </div>
+                  <img src={lotusIcon} alt="Lotus" className="w-12 h-12 object-contain" />
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Intentional Work</h3>
                 </div>
                 <p className="font-serif text-sm text-[#8B4513]/70">
@@ -75,9 +73,7 @@ export default function Career() {
 
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-distributed">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
-                  </div>
+                  <img src={bellIcon} alt="Bell" className="w-12 h-12 object-contain" />
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Fully Distributed</h3>
                 </div>
                 <p className="font-serif text-sm text-[#8B4513]/70">
@@ -87,9 +83,7 @@ export default function Career() {
 
               <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 space-y-4" data-testid="card-culture-contemplative">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                    <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
-                  </div>
+                  <img src={buddhaIcon} alt="Buddha" className="w-12 h-12 object-contain" />
                   <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Contemplative Tech</h3>
                 </div>
                 <p className="font-serif text-sm text-[#8B4513]/70">

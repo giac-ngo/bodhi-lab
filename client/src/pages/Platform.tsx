@@ -80,9 +80,7 @@ function SocialNetworkSection() {
             {/* Moderation Tools */}
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-moderation">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain" />
-                </div>
+                <img src={lotusIcon} alt="Lotus" className="w-10 h-10 object-contain" />
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Right Speech Moderation</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -103,9 +101,7 @@ function SocialNetworkSection() {
             {/* Study Groups */}
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-study-groups">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
-                </div>
+                <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Study Groups & Circles</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -126,9 +122,7 @@ function SocialNetworkSection() {
             {/* Anonymous Posting */}
             <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 text-left" data-testid="card-forum-anonymous">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                  <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
-                </div>
+                <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
                 <h3 className="font-serif text-base font-bold text-[#2c2c2c]">Anonymous Posting Option</h3>
               </div>
               <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -979,9 +973,7 @@ export default function Platform() {
                   style={{ boxShadow: 'inset 0 1px 2px rgba(139, 69, 19, 0.1), 0 20px 60px rgba(139, 69, 19, 0.15)' }}>
                   <div className="p-6">
                     <h3 className="font-serif font-bold text-[#991b1b] mb-5 text-xs uppercase tracking-wider flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center">
-                        <img src={sutraIcon} alt="Sutra" className="w-3.5 h-3.5 object-contain" />
-                      </div>
+                      <img src={sutraIcon} alt="Sutra" className="w-6 h-6 object-contain" />
                       Company
                     </h3>
                     <div className="space-y-3">
@@ -1067,9 +1059,7 @@ export default function Platform() {
                 {/* Searchable Library */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-searchable-library">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Search className="w-6 h-6 text-[#991b1b]" />
-                    </div>
+                    <Search className="w-12 h-12 text-[#991b1b]" />
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Searchable Library</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
@@ -1103,9 +1093,7 @@ export default function Platform() {
                 {/* Access Control & Version Control */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-access-control">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
-                    </div>
+                    <img src={lotusIcon} alt="Lotus" className="w-12 h-12 object-contain" />
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Access Control & Versioning</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
@@ -1177,9 +1165,7 @@ export default function Platform() {
                 {/* Recurring Dāna */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-recurring-dana">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Recurring Dāna</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
@@ -1204,9 +1190,7 @@ export default function Platform() {
                 {/* QR Codes & Multiple Methods */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-payment-methods">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multiple Payment Methods</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
@@ -1231,9 +1215,7 @@ export default function Platform() {
                 {/* Merit Dedication & Anonymous Giving */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300" data-testid="card-merit-dedication">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Merit Dedication</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
@@ -1504,9 +1486,7 @@ export default function Platform() {
                 {/* Logo & Visual Identity */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-logo-upload">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
-                    </div>
+                    <img src={buddhaIcon} alt="Buddha" className="w-12 h-12 object-contain" />
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Logo & Visual Identity</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
@@ -1540,9 +1520,7 @@ export default function Platform() {
                 {/* Domain & White-labeling */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8 hover:shadow-xl transition-all duration-300" data-testid="card-domain-mapping">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={bellIcon} alt="Bell" className="w-6 h-6 object-contain" />
-                    </div>
+                    <img src={bellIcon} alt="Bell" className="w-12 h-12 object-contain" />
                     <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Domain & White-labeling</h3>
                   </div>
                   <p className="font-serif text-sm text-[#2c2c2c]/70 mb-6">
@@ -1616,9 +1594,7 @@ export default function Platform() {
                 {/* Scheduling & Automation */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-scheduling">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Smart Scheduling</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -1639,9 +1615,7 @@ export default function Platform() {
                 {/* RSVP & Attendance */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-rsvp">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={lotusIcon} alt="Lotus" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">RSVP Tracking</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -1662,9 +1636,7 @@ export default function Platform() {
                 {/* Notifications & Reminders */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-events-reminders">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <Bell className="w-5 h-5 text-[#991b1b]" />
-                    </div>
+                    <Bell className="w-10 h-10 text-[#991b1b]" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Automated Reminders</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -1886,9 +1858,7 @@ export default function Platform() {
                 {/* Custom Training */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-training">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={sutraIcon} alt="Sutra" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Custom Knowledge Training</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -1909,9 +1879,7 @@ export default function Platform() {
                 {/* Multi-tradition Support */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-traditions">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={buddhaIcon} alt="Buddha" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Multi-Tradition Modes</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
@@ -1932,9 +1900,7 @@ export default function Platform() {
                 {/* Voice & Accessibility */}
                 <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6" data-testid="card-ai-voice">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
-                      <img src={bellIcon} alt="Bell" className="w-5 h-5 object-contain" />
-                    </div>
+                    <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
                     <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Voice & Text Queries</h3>
                   </div>
                   <p className="font-serif text-xs text-[#2c2c2c]/70 mb-3">
