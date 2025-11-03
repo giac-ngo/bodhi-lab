@@ -5,8 +5,12 @@ import { CompactAgentCard } from "@/components/CompactAgentCard";
 import { AgentDialog } from "@/components/AgentDialog";
 import { Search, ChevronDown } from "lucide-react";
 import { buddhistAgents, vehicleInfo, type BuddhistAgent, type BuddhistVehicle } from "@shared/buddhistAgents";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { docsTranslations } from "@/translations/docs";
 
 export default function AgentModels() {
+  const { language } = useLanguage();
+  const t = docsTranslations[language].agentModels;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedVehicles, setSelectedVehicles] = useState<Set<BuddhistVehicle>>(new Set());
   const [selectedAgent, setSelectedAgent] = useState<BuddhistAgent | null>(null);
@@ -43,10 +47,10 @@ export default function AgentModels() {
   };
 
   const vehicleOptions: Array<{ value: BuddhistVehicle, label: string }> = [
-    { value: "tiểu-thừa", label: "Tiểu Thừa" },
-    { value: "trung-thừa", label: "Trung Thừa" },
-    { value: "đại-thừa", label: "Đại Thừa" },
-    { value: "phật-thừa", label: "Phật Thừa" }
+    { value: "tiểu-thừa", label: t.filters.vehicles.tieu },
+    { value: "trung-thừa", label: t.filters.vehicles.trung },
+    { value: "đại-thừa", label: t.filters.vehicles.dai },
+    { value: "phật-thừa", label: t.filters.vehicles.phat }
   ];
 
   return (
@@ -54,10 +58,10 @@ export default function AgentModels() {
       {/* Header Section - Centered */}
       <div className="text-center py-16 px-8 space-y-6 max-w-3xl mx-auto">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground" data-testid="heading-agent-models">
-          Discover Your Agent
+          {t.title}
         </h1>
         <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed">
-          Explore Buddhist AI agents from monasteries and centers across traditions. Each agent is carefully designed with specific system prompts and methodologies.
+          {t.subtitle}
         </p>
 
         {/* Centered Search Bar */}
@@ -65,7 +69,7 @@ export default function AgentModels() {
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <Input
             type="text"
-            placeholder="Search agents..."
+            placeholder={t.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 font-serif"
@@ -81,7 +85,7 @@ export default function AgentModels() {
           <aside className="w-64 flex-shrink-0">
             <div className="space-y-6 sticky top-8">
               <h3 className="font-serif text-lg font-semibold text-foreground">
-                Filter Agents
+                {t.filters.title}
               </h3>
 
               {/* Vehicle Filter */}
@@ -91,7 +95,7 @@ export default function AgentModels() {
                   className="flex items-center justify-between w-full font-serif text-sm font-medium text-foreground hover-elevate"
                   data-testid="button-toggle-vehicle-filter"
                 >
-                  <span>Buddhist Vehicle</span>
+                  <span>{t.filters.vehicle}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${vehicleFilterOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
@@ -123,7 +127,7 @@ export default function AgentModels() {
           <div className="flex-1 space-y-6">
             <div className="flex items-center justify-between">
               <p className="font-serif text-sm text-muted-foreground">
-                {filteredAgents.length} {filteredAgents.length === 1 ? 'agent' : 'agents'} found
+                {filteredAgents.length} {filteredAgents.length === 1 ? t.results.agent : t.results.agents} {t.results.found}
               </p>
             </div>
 
@@ -140,7 +144,7 @@ export default function AgentModels() {
             {filteredAgents.length === 0 && (
               <div className="text-center py-16">
                 <p className="font-serif text-muted-foreground">
-                  No agents found matching your search criteria.
+                  {t.emptyState}
                 </p>
               </div>
             )}

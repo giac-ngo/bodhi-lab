@@ -3,6 +3,9 @@ import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { landingTranslations } from "@/translations/landing";
 
 // Buddhist artwork for agent cards
 import agentArt1 from "@assets/3_1761844028297.png";
@@ -91,6 +94,9 @@ function SphereAnimation() {
 }
 
 export default function Landing() {
+  const { language } = useLanguage();
+  const t = landingTranslations[language];
+  
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -101,15 +107,6 @@ export default function Landing() {
       console.log("Searching for:", searchQuery);
     }
   };
-
-  const popularQuestions = [
-    { name: "Giác Ngộ nghĩa là gì?" },
-    { name: "Làm sao để thành Phật?" },
-    { name: "Làm sao để thoát mọi khổ đau?" },
-    { name: "Làm sao để tìm thấy hạnh phúc mãi mãi?" },
-    { name: "Chánh niệm là gì?" },
-    { name: "Nghiệp báo hoạt động ra sao?" },
-  ];
 
   return (
     <div className="min-h-screen bg-[#EFE0BD] text-[#8B4513] overflow-x-hidden">
@@ -135,7 +132,7 @@ export default function Landing() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <span className="font-serif font-bold text-[#991b1b] text-lg">Bodhi Technology Lab</span>
+                  <span className="font-serif font-bold text-[#991b1b] text-lg">{t.header.brand}</span>
                 </a>
               </Link>
               
@@ -148,31 +145,31 @@ export default function Landing() {
                       <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center">
                         <Briefcase className="w-3.5 h-3.5 text-[#991b1b]" />
                       </div>
-                      Company
+                      {t.header.company.title}
                     </h3>
                     <div className="space-y-3">
                       <Link href="/about">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-about">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          About
+                          {t.header.company.about}
                         </a>
                       </Link>
                       <Link href="/career">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-career">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Career
+                          {t.header.company.career}
                         </a>
                       </Link>
                       <Link href="/terms">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-terms">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Terms
+                          {t.header.company.terms}
                         </a>
                       </Link>
                       <Link href="/privacy">
                         <a className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-privacy">
                           <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                          Privacy
+                          {t.header.company.privacy}
                         </a>
                       </Link>
                     </div>
@@ -186,30 +183,31 @@ export default function Landing() {
                 className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
                 data-testid="link-services"
               >
-                Services
+                {t.header.nav.services}
               </a>
               <a 
                 href="#services" 
                 className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" 
                 data-testid="link-pricing"
               >
-                Pricing
+                {t.header.nav.pricing}
               </a>
               <Link href="/platform">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-platform">
-                  Platform
+                  {t.header.nav.platform}
                 </a>
               </Link>
               <Link href="/discovery">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-discovery">
-                  Discovery
+                  {t.header.nav.discovery}
                 </a>
               </Link>
               <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
-                  Docs
+                  {t.header.nav.docs}
                 </a>
               </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </header>
@@ -230,7 +228,7 @@ export default function Landing() {
                 }`}
                 data-testid="text-hero-title"
               >
-                Bodhi Technology Lab
+                {t.hero.title}
               </h1>
               <p
                 className={`font-serif text-xl text-[#8B4513]/70 text-center mb-12 max-w-2xl mx-auto transition-all duration-500 ${
@@ -238,7 +236,7 @@ export default function Landing() {
                 }`}
                 data-testid="text-hero-subtitle"
               >
-                Awaken Technology for the Dharma-Ending Age
+                {t.hero.subtitle}
               </p>
               <p
                 className={`font-serif text-base text-[#8B4513]/60 text-center mb-8 max-w-2xl mx-auto transition-all duration-500 ${
@@ -246,7 +244,7 @@ export default function Landing() {
                 }`}
                 data-testid="text-hero-description"
               >
-                A studio-first builder hub for Buddhist organisations. We partner with temples, monasteries, and meditation centres to create sacred technology that serves the Dharma, not the market.
+                {t.hero.description}
               </p>
 
               <div className={`flex flex-wrap justify-center gap-4 transition-all duration-500 ${searchFocused ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"}`}>
@@ -255,7 +253,7 @@ export default function Landing() {
                   className="font-serif px-8 py-4 rounded-xl bg-[#991b1b] hover:bg-[#8B4513] text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   data-testid="button-start-sprint"
                 >
-                  Start a Sprint
+                  {t.hero.cta.startSprint}
                   <ArrowRight className="h-5 w-5" />
                 </a>
                 <a
@@ -263,7 +261,7 @@ export default function Landing() {
                   className="font-serif px-8 py-4 rounded-xl bg-white/50 backdrop-blur-md hover:bg-white/70 text-[#991b1b] font-semibold border-2 border-[#8B4513]/20 transition-all duration-300 hover:scale-105"
                   data-testid="button-explore-platform"
                 >
-                  Explore Platform
+                  {t.hero.cta.explorePlatform}
                 </a>
               </div>
 
@@ -272,22 +270,12 @@ export default function Landing() {
                   searchFocused ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"
                 }`}
               >
-                <div className="flex items-center gap-2 text-[#8B4513]/70 font-serif text-sm">
-                  <Check className="w-4 h-4 text-[#991b1b]" />
-                  <span>Custom Branding</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#8B4513]/70 font-serif text-sm">
-                  <Check className="w-4 h-4 text-[#991b1b]" />
-                  <span>AI-Powered Tools</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#8B4513]/70 font-serif text-sm">
-                  <Check className="w-4 h-4 text-[#991b1b]" />
-                  <span>Decentralized Infrastructure</span>
-                </div>
-                <div className="flex items-center gap-2 text-[#8B4513]/70 font-serif text-sm">
-                  <Check className="w-4 h-4 text-[#991b1b]" />
-                  <span>Censorship Resistant</span>
-                </div>
+                {t.hero.features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-2 text-[#8B4513]/70 font-serif text-sm">
+                    <Check className="w-4 h-4 text-[#991b1b]" />
+                    <span>{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -297,16 +285,16 @@ export default function Landing() {
               }`}
             >
               <div className="text-center">
-                <div className="font-serif text-3xl font-bold text-[#991b1b]">200+</div>
-                <div className="font-serif text-[#8B4513]/50 text-sm">Engineers & Monastics</div>
+                <div className="font-serif text-3xl font-bold text-[#991b1b]">{t.hero.stats.engineers.value}</div>
+                <div className="font-serif text-[#8B4513]/50 text-sm">{t.hero.stats.engineers.label}</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-3xl font-bold text-[#991b1b]">ISO</div>
-                <div className="font-serif text-[#8B4513]/50 text-sm">9001/27001 Certified</div>
+                <div className="font-serif text-3xl font-bold text-[#991b1b]">{t.hero.stats.certification.value}</div>
+                <div className="font-serif text-[#8B4513]/50 text-sm">{t.hero.stats.certification.label}</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-3xl font-bold text-[#991b1b]">Global</div>
-                <div className="font-serif text-[#8B4513]/50 text-sm">Decentralized Network</div>
+                <div className="font-serif text-3xl font-bold text-[#991b1b]">{t.hero.stats.network.value}</div>
+                <div className="font-serif text-[#8B4513]/50 text-sm">{t.hero.stats.network.label}</div>
               </div>
             </div>
           </section>
@@ -316,10 +304,10 @@ export default function Landing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-capabilities-title">
-                Platform Capabilities
+                {t.capabilities.title}
               </h2>
               <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
-                White-label tools designed to help your temple thrive, self-fund, and preserve your lineage with dignity and sovereignty
+                {t.capabilities.subtitle}
               </p>
             </div>
 
@@ -330,15 +318,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <Sparkles className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Custom Branding</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.customBranding.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Easily adapt the interface to your monastery's identity. Upload logos, choose color palettes, and map custom domains. Pre-loaded themes evoke Buddhist serenity.
+                  {t.capabilities.customBranding.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Logo Upload</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Custom Domain</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Theme Builder</span>
+                  {t.capabilities.customBranding.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -348,15 +336,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <HandHeart className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Donation Tools</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.donationTools.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Accept one-time or recurring dāna via cards, bank transfers, or QR codes. Frame contributions as acts of generosity with optional sutra quotes and merit dedication.
+                  {t.capabilities.donationTools.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Recurring</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">QR Codes</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Anonymous</span>
+                  {t.capabilities.donationTools.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -366,15 +354,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <Calendar className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Event & Reminder Calendar</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.eventCalendar.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Schedule temple rituals, group meditations, or retreats with ease. Automated push reminders, RSVP tracking, and pre-set templates for important days like Vesak.
+                  {t.capabilities.eventCalendar.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Recurring Events</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">RSVP</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Reminders</span>
+                  {t.capabilities.eventCalendar.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -384,15 +372,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <MessageCircle className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Compassionate AI Guidance</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.aiGuidance.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Configurable AI agents with your own knowledge bases. Select doctrinal modes like Zen, Pure Land, or Theravāda. Voice or text queries return curated sutra references.
+                  {t.capabilities.aiGuidance.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Custom Knowledge</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Voice & Text</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Multi-Tradition</span>
+                  {t.capabilities.aiGuidance.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -402,15 +390,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Document & Resource Library</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.documentLibrary.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Organize sutras, chants, commentaries, and audio/video files in a searchable library. Set access controls, enable offline access, and track versioning for updated translations.
+                  {t.capabilities.documentLibrary.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Searchable</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Offline Access</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Version Control</span>
+                  {t.capabilities.documentLibrary.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
 
@@ -420,15 +408,15 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
                     <Users className="w-6 h-6 text-[#991b1b]" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">Community Forum</h3>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.communityForum.title}</h3>
                 </div>
                 <p className="font-serif text-sm text-[#2c2c2c]/70">
-                  Optional moderated discussion area for members to ask questions, share reflections, and form study groups. Pre-built Right Speech guidelines and anonymous posting options.
+                  {t.capabilities.communityForum.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Moderated</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Study Groups</span>
-                  <span className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">Anonymous</span>
+                  {t.capabilities.communityForum.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -439,7 +427,7 @@ export default function Landing() {
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 backdrop-blur-md border-2 border-[#991b1b] rounded-full text-[#991b1b] font-serif font-semibold text-lg hover:bg-[#991b1b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                   data-testid="button-view-services"
                 >
-                  Explore Our Services
+                  {t.capabilities.cta}
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
@@ -452,10 +440,10 @@ export default function Landing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-4" data-testid="text-services-title">
-                Pricing
+                {t.pricing.title}
               </h2>
               <p className="font-serif text-lg text-[#8B4513]/70 max-w-2xl mx-auto">
-                Choose the plan that best serves your sangha—from exploration to enterprise-scale deployment
+                {t.pricing.subtitle}
               </p>
             </div>
 
@@ -464,41 +452,27 @@ export default function Landing() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:shadow-xl transition-all duration-300" data-testid="card-pricing-seeker">
                 <div className="p-6">
                   <div className="text-center mb-6">
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Seeker</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">{t.pricing.seeker.title}</h3>
                     <div className="flex items-baseline justify-center gap-1 mb-2">
-                      <span className="font-serif text-4xl font-bold text-[#991b1b]">US$0</span>
+                      <span className="font-serif text-4xl font-bold text-[#991b1b]">{t.pricing.seeker.price}</span>
                     </div>
-                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Small sanghas and independent practitioners exploring digital tools</p>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">{t.pricing.seeker.description}</p>
                   </div>
 
                   <ul className="space-y-3 mb-6">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Access to a single project with basic templates</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Up to 100 messages/month through AI guides</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Basic library of open Dharma resources</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">1 admin user</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">5% donation processing fee</span>
-                    </li>
+                    {t.pricing.seeker.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                        <span className="font-serif text-xs text-[#2c2c2c]">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
 
                   <button
                     className="w-full px-4 py-2.5 bg-white border-2 border-[#991b1b] rounded-xl text-[#991b1b] font-serif font-semibold hover:bg-[#991b1b] hover:text-white transition-all duration-300 text-sm"
                     data-testid="button-subscribe-seeker"
                   >
-                    Get Started
+                    {t.pricing.seeker.cta}
                   </button>
                 </div>
               </div>
@@ -506,46 +480,32 @@ export default function Landing() {
               {/* Practitioner Pod - Featured */}
               <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#991b1b] hover:shadow-2xl transition-all duration-300 relative" data-testid="card-pricing-practitioner">
                 <div className="absolute top-0 left-0 right-0 bg-[#991b1b] text-white text-center py-2 font-serif text-xs font-semibold">
-                  Most Popular
+                  {t.pricing.practitioner.badge}
                 </div>
                 <div className="p-6 pt-10">
                   <div className="text-center mb-6">
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Practitioner Pod</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">{t.pricing.practitioner.title}</h3>
                     <div className="flex items-baseline justify-center gap-1 mb-2">
-                      <span className="font-serif text-4xl font-bold text-[#991b1b]">US$49</span>
-                      <span className="font-serif text-[#8B4513]/70">/month</span>
+                      <span className="font-serif text-4xl font-bold text-[#991b1b]">{t.pricing.practitioner.price}</span>
+                      <span className="font-serif text-[#8B4513]/70">{t.pricing.practitioner.priceUnit}</span>
                     </div>
-                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Temples and centres ready to digitise day‑to‑day operations</p>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">{t.pricing.practitioner.description}</p>
                   </div>
 
                   <ul className="space-y-3 mb-6">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Unlimited messages and full access to all agents</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">White‑label modules for donations, events & library</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Priority support and bug fixes</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Up to 5 admin users and 500 active devotees</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Reduced donation fee (2%)</span>
-                    </li>
+                    {t.pricing.practitioner.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                        <span className="font-serif text-xs text-[#2c2c2c]">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
 
                   <button
                     className="w-full px-4 py-2.5 bg-[#991b1b] rounded-xl text-white font-serif font-semibold hover:bg-[#7a1515] transition-all duration-300 shadow-md text-sm"
                     data-testid="button-subscribe-practitioner"
                   >
-                    Subscribe Now
+                    {t.pricing.practitioner.cta}
                   </button>
                 </div>
               </div>
@@ -554,42 +514,28 @@ export default function Landing() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:shadow-xl transition-all duration-300" data-testid="card-pricing-sangha">
                 <div className="p-6">
                   <div className="text-center mb-6">
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Sangha Community</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">{t.pricing.sangha.title}</h3>
                     <div className="flex items-baseline justify-center gap-1 mb-2">
-                      <span className="font-serif text-4xl font-bold text-[#991b1b]">US$149</span>
-                      <span className="font-serif text-[#8B4513]/70">/month</span>
+                      <span className="font-serif text-4xl font-bold text-[#991b1b]">{t.pricing.sangha.price}</span>
+                      <span className="font-serif text-[#8B4513]/70">{t.pricing.sangha.priceUnit}</span>
                     </div>
-                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">Large monasteries or regional organisations needing multi‑member coordination</p>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">{t.pricing.sangha.description}</p>
                   </div>
 
                   <ul className="space-y-3 mb-6">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">All Practitioner Pod features</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Multiple pods/sites under one account</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Custom domain and branding</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Advanced analytics dashboards</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Custom AI agent training</span>
-                    </li>
+                    {t.pricing.sangha.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                        <span className="font-serif text-xs text-[#2c2c2c]">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
 
                   <button
                     className="w-full px-4 py-2.5 bg-white border-2 border-[#991b1b] rounded-xl text-[#991b1b] font-serif font-semibold hover:bg-[#991b1b] hover:text-white transition-all duration-300 text-sm"
                     data-testid="button-subscribe-sangha"
                   >
-                    Subscribe Now
+                    {t.pricing.sangha.cta}
                   </button>
                 </div>
               </div>
@@ -598,42 +544,28 @@ export default function Landing() {
               <div className="bg-white/50 backdrop-blur-md rounded-2xl overflow-hidden border-2 border-[#8B4513]/20 hover:shadow-xl transition-all duration-300" data-testid="card-pricing-mandala">
                 <div className="p-6">
                   <div className="text-center mb-6">
-                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Mandala Network</h3>
+                    <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">{t.pricing.mandala.title}</h3>
                     <div className="flex items-baseline justify-center gap-1 mb-2">
-                      <span className="font-serif text-2xl font-bold text-[#991b1b]">Custom</span>
+                      <span className="font-serif text-2xl font-bold text-[#991b1b]">{t.pricing.mandala.price}</span>
                     </div>
-                    <p className="font-serif text-xs text-[#8B4513]/60 mb-2">(starting at US$299/month)</p>
-                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">National or transnational sangha networks and federations</p>
+                    <p className="font-serif text-xs text-[#8B4513]/60 mb-2">{t.pricing.mandala.priceNote}</p>
+                    <p className="font-serif text-sm text-[#8B4513]/70 mb-4">{t.pricing.mandala.description}</p>
                   </div>
 
                   <ul className="space-y-3 mb-6">
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Everything in Sangha Community</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Bespoke development & unlimited projects</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Dedicated success manager & 24×7 support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Private on‑premises deployment options</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
-                      <span className="font-serif text-xs text-[#2c2c2c]">Governance tools for multiple councils</span>
-                    </li>
+                    {t.pricing.mandala.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-[#991b1b] flex-shrink-0 mt-0.5" />
+                        <span className="font-serif text-xs text-[#2c2c2c]">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
 
                   <button
                     className="w-full px-4 py-2.5 bg-white border-2 border-[#991b1b] rounded-xl text-[#991b1b] font-serif font-semibold hover:bg-[#991b1b] hover:text-white transition-all duration-300 text-sm"
                     data-testid="button-contact-mandala"
                   >
-                    Contact Us
+                    {t.pricing.mandala.cta}
                   </button>
                 </div>
               </div>
@@ -648,10 +580,10 @@ export default function Landing() {
               {/* Left Column - Information */}
               <div>
                 <h2 className="font-serif text-4xl font-bold text-[#991b1b] mb-6" data-testid="text-contact-title">
-                  Partner With Us
+                  {t.contact.title}
                 </h2>
                 <p className="font-serif text-lg text-[#8B4513]/70 mb-8">
-                  We offer tailored technology solutions for Buddhist organizations based on your specific needs and community size.
+                  {t.contact.subtitle}
                 </p>
                 
                 <ul className="space-y-4">
@@ -660,8 +592,8 @@ export default function Landing() {
                       <Check className="w-4 h-4 text-[#991b1b]" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">White-label Solutions</h3>
-                      <p className="font-serif text-sm text-[#8B4513]/70">Custom-branded platforms for your temple or center</p>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">{t.contact.benefits.whiteLabelSolutions.title}</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">{t.contact.benefits.whiteLabelSolutions.description}</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -669,8 +601,8 @@ export default function Landing() {
                       <Check className="w-4 h-4 text-[#991b1b]" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Custom AI Agents</h3>
-                      <p className="font-serif text-sm text-[#8B4513]/70">Specialized agents trained on your lineage's teachings</p>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">{t.contact.benefits.customAiAgents.title}</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">{t.contact.benefits.customAiAgents.description}</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -678,8 +610,8 @@ export default function Landing() {
                       <Check className="w-4 h-4 text-[#991b1b]" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Donation and Library Tools</h3>
-                      <p className="font-serif text-sm text-[#8B4513]/70">Integrated systems for your community operations</p>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">{t.contact.benefits.donationLibraryTools.title}</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">{t.contact.benefits.donationLibraryTools.description}</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -687,46 +619,46 @@ export default function Landing() {
                       <Check className="w-4 h-4 text-[#991b1b]" />
                     </div>
                     <div>
-                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">Dedicated Support</h3>
-                      <p className="font-serif text-sm text-[#8B4513]/70">Ongoing technical guidance and training</p>
+                      <h3 className="font-serif font-semibold text-[#2c2c2c] mb-1">{t.contact.benefits.dedicatedSupport.title}</h3>
+                      <p className="font-serif text-sm text-[#8B4513]/70">{t.contact.benefits.dedicatedSupport.description}</p>
                     </div>
                   </li>
                 </ul>
 
                 <p className="font-serif text-sm text-[#8B4513]/70 mt-8">
-                  Contact us for a personalized consultation to discuss your organization's specific needs.
+                  {t.contact.note}
                 </p>
               </div>
 
               {/* Right Column - Contact Form */}
               <div className="bg-white/50 backdrop-blur-md rounded-2xl p-8 border border-[#8B4513]/20 shadow-lg">
                 <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">
-                  Contact Our Team
+                  {t.contact.form.title}
                 </h3>
                 <p className="font-serif text-sm text-[#8B4513]/70 mb-6">
-                  Fill out the form below to discuss your organization's needs and receive a custom proposal.
+                  {t.contact.form.subtitle}
                 </p>
 
                 <form className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                        First Name
+                        {t.contact.form.firstName}
                       </label>
                       <input
                         type="text"
-                        placeholder="John"
+                        placeholder={t.contact.form.firstNamePlaceholder}
                         className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
                         data-testid="input-first-name"
                       />
                     </div>
                     <div>
                       <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                        Last Name
+                        {t.contact.form.lastName}
                       </label>
                       <input
                         type="text"
-                        placeholder="Doe"
+                        placeholder={t.contact.form.lastNamePlaceholder}
                         className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
                         data-testid="input-last-name"
                       />
@@ -735,11 +667,11 @@ export default function Landing() {
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      Email
+                      {t.contact.form.email}
                     </label>
                     <input
                       type="email"
-                      placeholder="john.doe@temple.org"
+                      placeholder={t.contact.form.emailPlaceholder}
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
                       data-testid="input-email"
                     />
@@ -747,11 +679,11 @@ export default function Landing() {
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      Organization Name
+                      {t.contact.form.organizationName}
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g., Lotus Temple, Dharma Meditation Center"
+                      placeholder={t.contact.form.organizationPlaceholder}
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
                       data-testid="input-organization"
                     />
@@ -759,11 +691,11 @@ export default function Landing() {
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      Your Role
+                      {t.contact.form.role}
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g., Director, Abbot, Coordinator"
+                      placeholder={t.contact.form.rolePlaceholder}
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all"
                       data-testid="input-role"
                     />
@@ -771,7 +703,7 @@ export default function Landing() {
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      Organization Type
+                      {t.contact.form.organizationType}
                     </label>
                     <select
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all appearance-none cursor-pointer"
@@ -784,21 +716,21 @@ export default function Landing() {
                         paddingRight: '2.5rem'
                       }}
                     >
-                      <option value="">Select organization type</option>
-                      <option value="temple">Temple</option>
-                      <option value="monastery">Monastery</option>
-                      <option value="meditation-center">Meditation Center</option>
-                      <option value="dharma-center">Dharma Center</option>
-                      <option value="retreat-center">Retreat Center</option>
-                      <option value="sangha-community">Sangha Community</option>
-                      <option value="federation">Buddhist Federation</option>
-                      <option value="other">Other</option>
+                      <option value="">{t.contact.form.organizationTypeOptions.placeholder}</option>
+                      <option value="temple">{t.contact.form.organizationTypeOptions.temple}</option>
+                      <option value="monastery">{t.contact.form.organizationTypeOptions.monastery}</option>
+                      <option value="meditation-center">{t.contact.form.organizationTypeOptions.meditationCenter}</option>
+                      <option value="dharma-center">{t.contact.form.organizationTypeOptions.dharmaCenter}</option>
+                      <option value="retreat-center">{t.contact.form.organizationTypeOptions.retreatCenter}</option>
+                      <option value="sangha-community">{t.contact.form.organizationTypeOptions.sanghaCommunity}</option>
+                      <option value="federation">{t.contact.form.organizationTypeOptions.federation}</option>
+                      <option value="other">{t.contact.form.organizationTypeOptions.other}</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      Community Size
+                      {t.contact.form.communitySize}
                     </label>
                     <select
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all appearance-none cursor-pointer"
@@ -811,21 +743,21 @@ export default function Landing() {
                         paddingRight: '2.5rem'
                       }}
                     >
-                      <option value="">Select community size</option>
-                      <option value="1-50">1-50 members</option>
-                      <option value="51-200">51-200 members</option>
-                      <option value="201-500">201-500 members</option>
-                      <option value="501-1000">501-1,000 members</option>
-                      <option value="1000+">1,000+ members</option>
+                      <option value="">{t.contact.form.communitySizeOptions.placeholder}</option>
+                      <option value="1-50">{t.contact.form.communitySizeOptions.small}</option>
+                      <option value="51-200">{t.contact.form.communitySizeOptions.medium}</option>
+                      <option value="201-500">{t.contact.form.communitySizeOptions.large}</option>
+                      <option value="501-1000">{t.contact.form.communitySizeOptions.larger}</option>
+                      <option value="1000+">{t.contact.form.communitySizeOptions.largest}</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block font-serif text-sm font-medium text-[#2c2c2c] mb-1.5">
-                      How can we help?
+                      {t.contact.form.message}
                     </label>
                     <textarea
-                      placeholder="Tell us about your specific needs and goals..."
+                      placeholder={t.contact.form.messagePlaceholder}
                       rows={4}
                       className="w-full px-4 py-2.5 bg-white border border-[#8B4513]/30 rounded-lg font-serif text-sm text-[#2c2c2c] placeholder:text-[#8B4513]/40 focus:outline-none focus:ring-2 focus:ring-[#991b1b]/50 focus:border-[#991b1b] transition-all resize-none"
                       data-testid="textarea-message"
@@ -837,11 +769,11 @@ export default function Landing() {
                     className="w-full px-6 py-3 bg-[#991b1b] text-white rounded-xl font-serif font-semibold hover:bg-[#7a1515] transition-all duration-300 shadow-md text-sm"
                     data-testid="button-submit-contact"
                   >
-                    Request Information
+                    {t.contact.form.submit}
                   </button>
 
                   <p className="font-serif text-xs text-[#8B4513]/60 text-center">
-                    By submitting this form, you agree to our privacy policy and terms of service.
+                    {t.contact.form.disclaimer}
                   </p>
                 </form>
               </div>
@@ -853,32 +785,32 @@ export default function Landing() {
         <footer className="border-t border-[#8B4513]/20 py-8 bg-[#EFE0BD]/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <span className="font-serif font-bold text-[#991b1b]">Bodhi Technology Lab</span>
+              <span className="font-serif font-bold text-[#991b1b]">{t.footer.brand}</span>
               <div className="flex gap-6">
                 <a 
                   href="#capabilities" 
                   className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors"
                 >
-                  Platform
+                  {t.footer.platform}
                 </a>
                 <a 
                   href="#services" 
                   className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors"
                 >
-                  Services
+                  {t.footer.services}
                 </a>
                 <Link href="/discovery">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Discovery
+                    {t.footer.discovery}
                   </a>
                 </Link>
                 <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Docs
+                    {t.footer.docs}
                   </a>
                 </Link>
               </div>
-              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Bodhi Technology Lab</div>
+              <div className="font-serif text-[#8B4513]/50">{t.footer.copyright.replace('{year}', new Date().getFullYear().toString())}</div>
             </div>
           </div>
         </footer>

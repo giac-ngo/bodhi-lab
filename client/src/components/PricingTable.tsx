@@ -2,18 +2,22 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 import { modelPricing } from "@shared/buddhistAgents";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { docsTranslations } from "@/translations/docs";
 
 export function PricingTable() {
+  const { language } = useLanguage();
+  const t = docsTranslations[language].pricing;
   const models = Object.entries(modelPricing);
 
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4 max-w-3xl mx-auto">
         <h2 className="font-serif text-3xl font-semibold text-foreground">
-          Token Pricing
+          {t.title}
         </h2>
         <p className="text-muted-foreground">
-          Transparent pricing per 1 million tokens. Choose the model that best serves your path to awakening.
+          {t.subtitle}
         </p>
       </div>
 
@@ -31,7 +35,7 @@ export function PricingTable() {
                     {model.name}
                   </h3>
                   {modelKey === "gpt-5" && (
-                    <Badge variant="default" data-testid="badge-advanced">Advanced</Badge>
+                    <Badge variant="default" data-testid="badge-advanced">{t.advanced}</Badge>
                   )}
                 </div>
                 <p className="text-sm text-muted-foreground" data-testid={`text-description-${modelKey}`}>
@@ -44,35 +48,35 @@ export function PricingTable() {
                   <span className="font-mono text-3xl font-bold text-foreground" data-testid={`text-input-price-${modelKey}`}>
                     ${model.inputPrice.toFixed(2)}
                   </span>
-                  <span className="text-sm text-muted-foreground">/ 1M input tokens</span>
+                  <span className="text-sm text-muted-foreground">{t.inputTokens}</span>
                 </div>
                 <div className="flex items-baseline gap-2">
                   <span className="font-mono text-3xl font-bold text-foreground" data-testid={`text-output-price-${modelKey}`}>
                     ${model.outputPrice.toFixed(2)}
                   </span>
-                  <span className="text-sm text-muted-foreground">/ 1M output tokens</span>
+                  <span className="text-sm text-muted-foreground">{t.outputTokens}</span>
                 </div>
               </div>
 
               <div className="border-t pt-6 space-y-4">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-muted-foreground mb-1">Context Window</p>
+                    <p className="text-muted-foreground mb-1">{t.contextWindow}</p>
                     <p className="font-mono font-semibold" data-testid={`text-context-${modelKey}`}>
-                      {model.contextWindow.toLocaleString()} tokens
+                      {model.contextWindow.toLocaleString()} {t.tokens}
                     </p>
                   </div>
                   <div>
-                    <p className="text-muted-foreground mb-1">Max Output</p>
+                    <p className="text-muted-foreground mb-1">{t.maxOutput}</p>
                     <p className="font-mono font-semibold" data-testid={`text-max-output-${modelKey}`}>
-                      {model.maxOutput.toLocaleString()} tokens
+                      {model.maxOutput.toLocaleString()} {t.tokens}
                     </p>
                   </div>
                 </div>
 
                 <div>
                   <p className="text-xs uppercase tracking-wide font-semibold text-muted-foreground mb-3">
-                    Used by Agents
+                    {t.usedByAgents}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {model.agents.map((agentName) => (
@@ -97,8 +101,7 @@ export function PricingTable() {
       <Card className="max-w-5xl mx-auto bg-accent/30" data-testid="card-pricing-note">
         <div className="p-6 space-y-2">
           <p className="font-serif text-sm text-foreground">
-            <strong>Merit-Based Economy:</strong> Pricing reflects computational costs while supporting our mission of spiritual awakening. 
-            All proceeds support the development of dharma technology and the maintenance of this sacred digital vessel.
+            <strong>{t.note.title}</strong> {t.note.text}
           </p>
         </div>
       </Card>

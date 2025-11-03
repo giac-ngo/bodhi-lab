@@ -4,17 +4,22 @@ import { Search, MapPin, Users, Star, Sparkles, Briefcase, BookOpen, Calendar, H
 import { buddhistCenters } from "@shared/buddhistCenters";
 import { Link } from "wouter";
 import { TracingBeam } from "@/components/TracingBeam";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { discoveryTranslations } from "@/translations/discovery";
 
 export default function Discovery() {
+  const { language } = useLanguage();
+  const t = discoveryTranslations[language];
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", label: "Tất cả", icon: "🏛️" },
-    { id: "monastery", label: "Chùa Chiền", icon: "🏯" },
-    { id: "meditation-center", label: "Thiền Viện", icon: "🧘" },
-    { id: "temple", label: "Đền Tháp", icon: "⛩️" },
-    { id: "retreat-center", label: "Trung Tâm Tu Tập", icon: "🌄" },
+    { id: "all", label: t.categories.all, icon: "🏛️" },
+    { id: "monastery", label: t.categories.monastery, icon: "🏯" },
+    { id: "meditation-center", label: t.categories.meditationCenter, icon: "🧘" },
+    { id: "temple", label: t.categories.temple, icon: "⛩️" },
+    { id: "retreat-center", label: t.categories.retreatCenter, icon: "🌄" },
   ];
 
   const filteredCenters = buddhistCenters.filter((center) => {
@@ -40,28 +45,28 @@ export default function Discovery() {
           return (
             <div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 text-green-700 rounded-lg text-xs font-semibold">
               <div className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-              Đang mở
+              {t.status.open}
             </div>
           );
         case "closed":
           return (
             <div className="flex items-center gap-1 px-2 py-1 bg-red-500/20 text-red-700 rounded-lg text-xs font-semibold">
               <div className="w-1.5 h-1.5 bg-red-500 rounded-full" />
-              Đóng cửa
+              {t.status.closed}
             </div>
           );
         case "retreat":
           return (
             <div className="flex items-center gap-1 px-2 py-1 bg-[#991b1b]/20 text-[#991b1b] rounded-lg text-xs font-semibold">
               <div className="w-1.5 h-1.5 bg-[#991b1b] rounded-full" />
-              Đang tu tập
+              {t.status.retreat}
             </div>
           );
         case "by-appointment":
           return (
             <div className="flex items-center gap-1 px-2 py-1 bg-[#2c2c2c]/20 text-[#2c2c2c] rounded-lg text-xs font-semibold">
               <div className="w-1.5 h-1.5 bg-[#2c2c2c] rounded-full" />
-              Theo lịch hẹn
+              {t.status.byAppointment}
             </div>
           );
       }
@@ -152,7 +157,7 @@ export default function Discovery() {
               data-testid={`button-explore-center-${center.id}`}
             >
               <Sparkles className="w-3 h-3" />
-              Cúng dường
+              {t.centerCard.donateButton}
             </button>
           </div>
         </div>
@@ -186,7 +191,7 @@ export default function Discovery() {
             <div className="relative group">
               <Link href="/">
                 <a className="flex items-center" data-testid="link-brand">
-                  <span className="font-serif font-bold text-[#991b1b] text-lg">Bodhi Technology Lab</span>
+                  <span className="font-serif font-bold text-[#991b1b] text-lg">{t.header.brand}</span>
                 </a>
               </Link>
               
@@ -199,20 +204,20 @@ export default function Discovery() {
                       <div className="w-6 h-6 rounded-full bg-[#991b1b]/10 flex items-center justify-center">
                         <Briefcase className="w-3.5 h-3.5 text-[#991b1b]" />
                       </div>
-                      Company
+                      {t.header.company}
                     </h3>
                     <div className="space-y-3">
                       <a href="#" className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-career">
                         <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                        Career
+                        {t.header.companyDropdown.career}
                       </a>
                       <a href="#" className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-terms">
                         <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                        Terms
+                        {t.header.companyDropdown.terms}
                       </a>
                       <a href="#" className="group/item flex items-center gap-2 font-serif text-[#8B4513]/80 hover:text-[#991b1b] transition-all text-sm py-1.5 px-2 rounded-lg hover:bg-[#991b1b]/10" data-testid="link-privacy">
                         <div className="w-1 h-1 rounded-full bg-[#8B4513]/40 group-hover/item:bg-[#991b1b]"></div>
-                        Privacy
+                        {t.header.companyDropdown.privacy}
                       </a>
                     </div>
                   </div>
@@ -222,25 +227,26 @@ export default function Discovery() {
             <div className="flex items-center gap-4">
               <Link href="/platform">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-platform">
-                  Platform
+                  {t.header.nav.platform}
                 </a>
               </Link>
               <a href="/#capabilities" className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-services">
-                Services
+                {t.header.nav.services}
               </a>
               <a href="/#services" className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-pricing">
-                Pricing
+                {t.header.nav.pricing}
               </a>
               <Link href="/discovery">
                 <a className="font-serif text-[#991b1b] px-4 py-2 rounded-full bg-[#8B4513]/10 transition-colors" data-testid="link-discovery">
-                  Discovery
+                  {t.header.nav.discovery}
                 </a>
               </Link>
               <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
-                  Docs
+                  {t.header.nav.docs}
                 </a>
               </Link>
+              <LanguageSwitcher />
             </div>
           </div>
         </header>
@@ -250,10 +256,10 @@ export default function Discovery() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-[#991b1b]" data-testid="text-discovery-title">
-                  Khám Phá Cộng Đồng
+                  {t.hero.title}
                 </h1>
                 <p className="font-serif text-xl text-[#8B4513]/70 max-w-2xl mx-auto mb-8">
-                  Kết nối với các chùa chiền, thiền viện, và trung tâm tu tập Phật giáo khắp nơi trên thế giới
+                  {t.hero.subtitle}
                 </p>
 
                 <div className="max-w-2xl mx-auto mb-8">
@@ -263,7 +269,7 @@ export default function Discovery() {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Tìm kiếm cộng đồng, chùa chiền, thiền viện..."
+                      placeholder={t.hero.searchPlaceholder}
                       className="flex-1 bg-transparent outline-none text-base font-serif text-[#8B4513] placeholder:text-[#8B4513]/50"
                       data-testid="input-discovery-search"
                     />
@@ -292,7 +298,7 @@ export default function Discovery() {
 
               <div className="mb-6">
                 <p className="font-serif text-lg text-[#8B4513]/70">
-                  Tìm thấy <span className="font-bold text-[#991b1b]">{filteredCenters.length}</span> cộng đồng
+                  {t.results.found} <span className="font-bold text-[#991b1b]">{filteredCenters.length}</span> {filteredCenters.length === 1 ? t.results.community : t.results.communities}
                 </p>
               </div>
 
@@ -305,9 +311,9 @@ export default function Discovery() {
               {filteredCenters.length === 0 && (
                 <div className="text-center py-16">
                   <div className="text-6xl mb-4">🏯</div>
-                  <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">Không tìm thấy cộng đồng</h3>
+                  <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-2">{t.emptyState.title}</h3>
                   <p className="font-serif text-lg text-[#8B4513]/70">
-                    Thử tìm kiếm với từ khóa khác hoặc chọn danh mục khác
+                    {t.emptyState.description}
                   </p>
                 </div>
               )}
@@ -318,30 +324,30 @@ export default function Discovery() {
         <footer className="border-t border-[#8B4513]/20 py-8 bg-[#EFE0BD]/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <span className="font-serif font-bold text-[#991b1b]">Bodhi Lab</span>
+              <span className="font-serif font-bold text-[#991b1b]">{t.footer.brand}</span>
               <div className="flex gap-6">
                 <Link href="/">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Platform
+                    {t.footer.platform}
                   </a>
                 </Link>
                 <Link href="/">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Services
+                    {t.footer.services}
                   </a>
                 </Link>
                 <Link href="/discovery">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Discovery
+                    {t.footer.discovery}
                   </a>
                 </Link>
                 <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Docs
+                    {t.footer.docs}
                   </a>
                 </Link>
               </div>
-              <div className="font-serif text-[#8B4513]/50">© {new Date().getFullYear()} Bodhi Technology Lab</div>
+              <div className="font-serif text-[#8B4513]/50">{t.footer.copyright.replace('{year}', new Date().getFullYear().toString())}</div>
             </div>
           </div>
         </footer>
