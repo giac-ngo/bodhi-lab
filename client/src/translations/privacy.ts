@@ -208,7 +208,7 @@ export const privacyTranslations = {
       },
       ai: {
         title: "Tương Tác AI",
-        text: "Các cuộc trò chuyện với các đại lý AI Phật giáo của chúng tôi được lưu trữ để cải thiện phản hồi và duy trì ngữ cảnh. Bạn có thể xóa lịch sử trò chuyện của mình bất cứ lúc nào. Chúng tôi ẩn danh hóa dữ liệu được sử dụng để đào tạo mô hình."
+        text: "Các cuộc trò chuyện với các đại lý AI Phật giáo  được lưu trữ để cải thiện phản hồi và duy trì ngữ cảnh. Bạn có thể xóa lịch sử trò chuyện của mình bất cứ lúc nào. Chúng tôi ẩn danh hóa dữ liệu được sử dụng để đào tạo mô hình."
       },
       payment: {
         title: "Thông Tin Quyên Góp",
@@ -216,14 +216,14 @@ export const privacyTranslations = {
       },
       communications: {
         title: "Liên Lạc",
-        text: "Khi bạn liên hệ với chúng tôi qua email hoặc biểu mẫu hỗ trợ, chúng tôi lưu trữ tin nhắn của bạn và phản hồi của chúng tôi để cung cấp hỗ trợ và cải thiện dịch vụ của chúng tôi."
+        text: "Khi bạn liên hệ với chúng tôi qua email hoặc biểu mẫu hỗ trợ, chúng tôi lưu trữ tin nhắn của bạn và phản hồi  để cung cấp hỗ trợ và cải thiện dịch vụ ."
       }
     },
     
     usage: {
       title: "Cách Chúng Tôi Sử Dụng Thông Tin Của Bạn",
       points: [
-        "Cung cấp và duy trì các dịch vụ nền tảng của chúng tôi",
+        "Cung cấp và duy trì các dịch vụ nền tảng ",
         "Cải thiện phản hồi của đại lý AI và cơ sở kiến thức",
         "Xử lý quyên góp và tạo biên lai thuế",
         "Gửi cập nhật dịch vụ thiết yếu và thông báo bảo mật",
@@ -326,7 +326,7 @@ export const privacyTranslations = {
     
     children: {
       title: "Quyền Riêng Tư Trẻ Em",
-      text: "Dịch vụ của chúng tôi không hướng đến trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn tin rằng một đứa trẻ đã cung cấp cho chúng tôi dữ liệu cá nhân, vui lòng liên hệ với chúng tôi tại",
+      text: "Dịch vụ  không hướng đến trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn tin rằng một đứa trẻ đã cung cấp cho chúng tôi dữ liệu cá nhân, vui lòng liên hệ với chúng tôi tại",
       email: "privacy@boddhilab.io",
       outro: "và chúng tôi sẽ xóa nó ngay lập tức."
     },
@@ -338,7 +338,7 @@ export const privacyTranslations = {
     
     changes: {
       title: "Thay Đổi Chính Sách Này",
-      text: "Chúng tôi có thể cập nhật Chính Sách Bảo Mật này theo thời gian. Các thay đổi quan trọng sẽ được thông báo qua email và/hoặc thông báo nổi bật trên nền tảng của chúng tôi. Tiếp tục sử dụng sau khi thay đổi cấu thành sự chấp nhận. Ngày có hiệu lực luôn được liệt kê ở đầu trang này."
+      text: "Chúng tôi có thể cập nhật Chính Sách Bảo Mật này theo thời gian. Các thay đổi quan trọng sẽ được thông báo qua email và/hoặc thông báo nổi bật trên nền tảng . Tiếp tục sử dụng sau khi thay đổi cấu thành sự chấp nhận. Ngày có hiệu lực luôn được liệt kê ở đầu trang này."
     },
     
     contact: {

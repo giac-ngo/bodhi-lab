@@ -132,7 +132,7 @@ export const careerTranslations = {
       },
       contemplative: {
         title: "Công Nghệ Thiền Quán",
-        text: "Chúng tôi thực hành những gì chúng tôi xây dựng. Các buổi thiền thường xuyên, pháp thoại và đánh giá mã chánh niệm là một phần của quy trình làm việc của chúng tôi."
+        text: "Chúng tôi thực hành những gì chúng tôi xây dựng. Các buổi thiền thường xuyên, pháp thoại và đánh giá mã chánh niệm là một phần của quy trình làm việc ."
       }
     },
     positions: {
@@ -203,7 +203,7 @@ export const careerTranslations = {
       },
       step3: {
         title: "Phỏng Vấn Kỹ Thuật",
-        text: "Lập trình cặp hoặc bài tập thiết kế liên quan đến nền tảng của chúng tôi"
+        text: "Lập trình cặp hoặc bài tập thiết kế liên quan đến nền tảng "
       },
       step4: {
         title: "Phỏng Vấn Nhóm",

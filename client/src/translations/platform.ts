@@ -208,7 +208,7 @@ export const platformTranslations = {
   vi: {
     hero: {
       title: "Tính Năng Nền Tảng",
-      subtitle: "Chuyển đổi sự hiện diện kỹ thuật số của chùa của bạn với nền tảng toàn diện của chúng tôi"
+      subtitle: "Chuyển đổi sự hiện diện kỹ thuật số của chùa của bạn với nền tảng toàn diện "
     },
     
     library: {

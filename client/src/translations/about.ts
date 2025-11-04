@@ -83,14 +83,14 @@ export const aboutTranslations = {
     mission: {
       title: "Sứ Mệnh Của Chúng Tôi",
       para1: "Chúng tôi tồn tại để bảo tồn và truyền bá Phật Pháp trong thời đại kỹ thuật số. Khi các chùa chiền và tu viện điều hướng trong một thế giới ngày càng kết nối, chúng tôi cung cấp nền tảng công nghệ cho phép họ tập trung vào điều quan trọng nhất: hướng dẫn hành giả trên con đường giải thoát.",
-      para2: "Nền tảng của chúng tôi trao quyền cho các tổ chức Phật giáo duy trì chủ quyền, tính xác thực và tính toàn vẹn tâm linh của họ trong khi tận dụng các công cụ hiện đại để xây dựng cộng đồng, giáo dục và hỗ trợ bền vững."
+      para2: "Nền tảng  trao quyền cho các tổ chức Phật giáo duy trì chủ quyền, tính xác thực và tính toàn vẹn tâm linh của họ trong khi tận dụng các công cụ hiện đại để xây dựng cộng đồng, giáo dục và hỗ trợ bền vững."
     },
     
     values: {
       title: "Giá Trị Của Chúng Tôi",
       tradition: {
         title: "🙏 Tôn Trọng Truyền Thống",
-        text: "Chúng tôi tôn vinh dòng truyền thừa trí tuệ Phật giáo 2.500 năm. Công nghệ của chúng tôi phục vụ Phật Pháp—không bao giờ ngược lại. Mọi tính năng đều được thiết kế với sự tôn trọng sâu sắc đối với thực hành thiền quán và truyền thừa xác thực."
+        text: "Chúng tôi tôn vinh dòng truyền thừa trí tuệ Phật giáo 2.500 năm. Công nghệ  phục vụ Phật Pháp—không bao giờ ngược lại. Mọi tính năng đều được thiết kế với sự tôn trọng sâu sắc đối với thực hành thiền quán và truyền thừa xác thực."
       },
       sovereignty: {
         title: "🌸 Chủ Quyền Chùa Chiền",
@@ -129,13 +129,13 @@ export const aboutTranslations = {
     team: {
       title: "Đội Ngũ Của Chúng Tôi",
       para1: "Chúng tôi là một nhóm phân tán gồm các kỹ sư, nhà thiết kế và hành giả Phật giáo kết hợp chuyên môn kỹ thuật với sự hiểu biết chân thực về truyền thống thiền quán. Nhiều người trong chúng tôi duy trì thực hành thiền cá nhân và đã dành thời gian trong các khóa tu hoặc môi trường tu viện.",
-      para2: "Chúng tôi làm việc trong chế độ thiền quán—có chủ ý, chánh niệm và quan tâm sâu sắc đến các cộng đồng chúng tôi phục vụ. Quy trình phát triển của chúng tôi tôn vinh cả các nguyên tắc Phật giáo và các thực hành phần mềm hiện đại tốt nhất."
+      para2: "Chúng tôi làm việc trong chế độ thiền quán—có chủ ý, chánh niệm và quan tâm sâu sắc đến các cộng đồng chúng tôi phục vụ. Quy trình phát triển  tôn vinh cả các nguyên tắc Phật giáo và các thực hành phần mềm hiện đại tốt nhất."
     },
     
     reach: {
       title: "Phạm Vi Toàn Cầu, Chăm Sóc Địa Phương",
       para1: "Mặc dù chúng tôi phục vụ các cộng đồng Phật giáo trên toàn thế giới—từ các chùa Tịnh Độ Việt Nam đến các trung tâm thiền Tây Tạng đến các tu viện Thiền Nhật Bản—chúng tôi hiểu rằng mỗi truyền thống có nhu cầu, phong tục và bối cảnh văn hóa độc đáo.",
-      para2: "Nền tảng của chúng tôi thích ứng với các yêu cầu cụ thể của dòng truyền thừa của bạn trong khi duy trì các giá trị phổ quát của Phật Pháp. Chúng tôi hỗ trợ nhiều ngôn ngữ, tùy chỉnh văn hóa và các tính năng cụ thể theo truyền thống."
+      para2: "Nền tảng  thích ứng với các yêu cầu cụ thể của dòng truyền thừa của bạn trong khi duy trì các giá trị phổ quát của Phật Pháp. Chúng tôi hỗ trợ nhiều ngôn ngữ, tùy chỉnh văn hóa và các tính năng cụ thể theo truyền thống."
     },
     
     cta: {

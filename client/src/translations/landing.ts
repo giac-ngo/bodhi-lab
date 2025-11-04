@@ -439,7 +439,7 @@ export const landingTranslations = {
         message: "Chúng tôi có thể giúp gì?",
         messagePlaceholder: "Cho chúng tôi biết về nhu cầu và mục tiêu cụ thể của bạn...",
         submit: "Yêu Cầu Thông Tin",
-        disclaimer: "Bằng cách gửi biểu mẫu này, bạn đồng ý với chính sách bảo mật và điều khoản dịch vụ của chúng tôi."
+        disclaimer: "Bằng cách gửi biểu mẫu này, bạn đồng ý với chính sách bảo mật và điều khoản dịch vụ ."
       }
     },
 

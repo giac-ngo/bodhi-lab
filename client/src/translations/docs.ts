@@ -423,7 +423,7 @@ export const docsTranslations = {
         },
         flourish: {
           title: "Phát Triển Bền Vững",
-          text: "Công cụ của chúng tôi giúp chùa chiền và cộng đồng phát triển, tự chủ tài chính và bảo tồn truyền thống. Chúng tôi tin công nghệ có thể hỗ trợ, không làm suy yếu quyền tự chủ của tu sĩ và cộng đồng Phật tử."
+          text: "Công cụ  giúp chùa chiền và cộng đồng phát triển, tự chủ tài chính và bảo tồn truyền thống. Chúng tôi tin công nghệ có thể hỗ trợ, không làm suy yếu quyền tự chủ của tu sĩ và cộng đồng Phật tử."
         },
         respond: {
           title: "Giải Pháp Cho Thời Đại Số",
@@ -450,19 +450,19 @@ export const docsTranslations = {
         },
         censorship: {
           title: "Chống Kiểm Duyệt",
-          text: "Phật pháp không nên bị im lặng bởi bất kỳ quyền lực nào. Hệ thống của chúng tôi được thiết kế để chống kiểm duyệt."
+          text: "Phật pháp không nên bị im lặng bởi bất kỳ quyền lực nào. Hệ thống  được thiết kế để chống kiểm duyệt."
         }
       },
       methods: {
         title: "Phương Pháp",
-        intro: "Chúng tôi hợp tác với tu sĩ, bậc thầy và các chuyên gia công nghệ để tạo ra giải pháp công nghệ Phật giáo. Quy trình của chúng tôi thực tế và hiệu quả:",
+        intro: "Chúng tôi hợp tác với tu sĩ, bậc thầy và các chuyên gia công nghệ để tạo ra giải pháp công nghệ Phật giáo. Quy trình  thực tế và hiệu quả:",
         scope: {
           title: "Lên Kế Hoạch Cùng Nhau",
           text: "Chúng tôi lập danh sách yêu cầu và xác định nơi AI hoặc công nghệ khác có thể giúp ích. Nếu một tính năng không thực sự cần thiết, chúng tôi không làm."
         },
         assemble: {
           title: "Tập Hợp Đội Ngũ Chuyên Nghiệp",
-          text: "Chúng tôi tạo các đội ngũ chuyên nghiệp gồm frontend, backend, QA và PM, cùng các chuyên gia AI/Web3 nếu cần. Đội ngũ làm việc chuyên biệt cho chùa của bạn. Mọi thứ đều mang thương hiệu của bạn: chùa của bạn, quy tắc của bạn, công nghệ của chúng tôi."
+          text: "Chúng tôi tạo các đội ngũ chuyên nghiệp gồm frontend, backend, QA và PM, cùng các chuyên gia AI/Web3 nếu cần. Đội ngũ làm việc chuyên biệt cho chùa của bạn. Mọi thứ đều mang thương hiệu của bạn: chùa của bạn, quy tắc của bạn, công nghệ ."
         },
         ship: {
           title: "Triển Khai Và Bảo Trì",
@@ -471,7 +471,7 @@ export const docsTranslations = {
       },
       capabilities: {
         title: "Tính Năng Nền Tảng",
-        intro: "Chúng tôi phát hiện nhiều nhu cầu chưa được đáp ứng: giới trẻ ít tham gia (chỉ ~20% người dưới 30 tuổi đến chùa thường xuyên), quản lý quyên góp thủ công, cần hỗ trợ nhiều ngôn ngữ và lo ngại về thương mại hóa Phật pháp. Nền tảng của chúng tôi giải quyết các vấn đề này:",
+        intro: "Chúng tôi phát hiện nhiều nhu cầu chưa được đáp ứng: giới trẻ ít tham gia (chỉ ~20% người dưới 30 tuổi đến chùa thường xuyên), quản lý quyên góp thủ công, cần hỗ trợ nhiều ngôn ngữ và lo ngại về thương mại hóa Phật pháp. Nền tảng  giải quyết các vấn đề này:",
         customBranding: {
           title: "Tùy Chỉnh Thương Hiệu",
           text: "Dễ dàng thay đổi giao diện theo phong cách chùa bạn. Tải logo, chọn màu sắc và font chữ, đặt tên miền riêng. Các mẫu có sẵn phù hợp với phong cách Phật giáo (tối giản Thiền với họa tiết sen, hoặc màu vàng Theravāda)."
@@ -486,7 +486,7 @@ export const docsTranslations = {
         },
         aiGuidance: {
           title: "AI Hướng Dẫn Phật Pháp",
-          text: "AI của chúng tôi có thể tùy chỉnh. Tải tài liệu riêng của bạn và chọn truyền thống (Thiền, Tịnh Độ, Theravāda), với phong cách trả lời từ bi hoặc trang trọng. Hỏi bằng giọng nói hoặc văn bản để nhận trích dẫn kinh sách và hướng dẫn thực hành. Hệ thống đảm bảo giáo lý chính xác, hỗ trợ chữ Pali/Hán và lời dạy hàng ngày."
+          text: "AI  có thể tùy chỉnh. Tải tài liệu riêng của bạn và chọn truyền thống (Thiền, Tịnh Độ, Theravāda), với phong cách trả lời từ bi hoặc trang trọng. Hỏi bằng giọng nói hoặc văn bản để nhận trích dẫn kinh sách và hướng dẫn thực hành. Hệ thống đảm bảo giáo lý chính xác, hỗ trợ chữ Pali/Hán và lời dạy hàng ngày."
         },
         documentLibrary: {
           title: "Thư Viện Tài Liệu",
@@ -505,11 +505,11 @@ export const docsTranslations = {
         title: "Tại Sao Hợp Tác",
         trusted: {
           title: "Được Tin Cậy",
-          text: "Đội ngũ của chúng tôi đã làm công nghệ Phật giáo hơn 10 năm. Hơn 200 kỹ sư, tu sĩ hợp tác theo quy trình ISO‑9001/27001 để đảm bảo chất lượng."
+          text: "Đội ngũ  đã làm công nghệ Phật giáo hơn 10 năm. Hơn 200 kỹ sư, tu sĩ hợp tác theo quy trình ISO‑9001/27001 để đảm bảo chất lượng."
         },
         economics: {
           title: "Giá Cả Hợp Lý",
-          text: "Hệ thống của chúng tôi tự động thu nhỏ khi không dùng—bạn không phải trả tiền cho thứ không dùng. Giá minh bạch, miễn phí hoặc rẻ cho chùa nhỏ, giá cố định cho chùa lớn."
+          text: "Hệ thống  tự động thu nhỏ khi không dùng—bạn không phải trả tiền cho thứ không dùng. Giá minh bạch, miễn phí hoặc rẻ cho chùa nhỏ, giá cố định cho chùa lớn."
         },
         privacy: {
           title: "Bảo Mật Riêng Tư",
@@ -526,10 +526,10 @@ export const docsTranslations = {
       },
       infrastructure: {
         title: "Hạ Tầng Bền Vững",
-        intro: "Công nghệ của chúng tôi phản ánh giá trị của chúng tôi. Chúng tôi thiết kế hạ tầng phi tập trung, bảo mật để hỗ trợ cộng đồng Phật giáo:",
+        intro: "Công nghệ  phản ánh giá trị . Chúng tôi thiết kế hạ tầng phi tập trung, bảo mật để hỗ trợ cộng đồng Phật giáo:",
         decentralisation: {
           title: "Hệ Thống Phi Tập Trung",
-          text: "Giống như tăng đoàn không có một lãnh đạo duy nhất, hệ thống của chúng tôi không có điểm kiểm soát duy nhất. Chúng tôi dùng mạng lưới máy tính toàn cầu để tạo hệ thống chống kiểm duyệt. Mỗi máy đóng góp sức mạnh; không ai kiểm soát tất cả."
+          text: "Giống như tăng đoàn không có một lãnh đạo duy nhất, hệ thống  không có điểm kiểm soát duy nhất. Chúng tôi dùng mạng lưới máy tính toàn cầu để tạo hệ thống chống kiểm duyệt. Mỗi máy đóng góp sức mạnh; không ai kiểm soát tất cả."
         },
         economics: {
           title: "Tiết Kiệm Chi Phí",

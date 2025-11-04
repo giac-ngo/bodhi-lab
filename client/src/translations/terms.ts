@@ -214,18 +214,18 @@ export const termsTranslations = {
     hero: {
       title: "Điều Khoản Dịch Vụ",
       effectiveDate: "Ngày Có Hiệu Lực: 3 Tháng 11, 2025",
-      subtitle: "Các Điều Khoản Dịch Vụ này điều chỉnh việc sử dụng nền tảng và dịch vụ của Bodhi Technology Lab. Bằng cách truy cập nền tảng của chúng tôi, bạn đồng ý với các điều khoản này."
+      subtitle: "Các Điều Khoản Dịch Vụ này điều chỉnh việc sử dụng nền tảng và dịch vụ của Bodhi Technology Lab. Bằng cách truy cập nền tảng , bạn đồng ý với các điều khoản này."
     },
     
     acceptance: {
       title: "1. Chấp Nhận Điều Khoản",
-      text1: "Bằng cách tạo tài khoản hoặc sử dụng bất kỳ dịch vụ nào của Bodhi Technology Lab, bạn đồng ý bị ràng buộc bởi các Điều Khoản Dịch Vụ này, Chính Sách Bảo Mật của chúng tôi và bất kỳ hướng dẫn bổ sung nào chúng tôi cung cấp. Nếu bạn không đồng ý, vui lòng ngừng sử dụng ngay lập tức.",
+      text1: "Bằng cách tạo tài khoản hoặc sử dụng bất kỳ dịch vụ nào của Bodhi Technology Lab, bạn đồng ý bị ràng buộc bởi các Điều Khoản Dịch Vụ này, Chính Sách Bảo Mật  và bất kỳ hướng dẫn bổ sung nào chúng tôi cung cấp. Nếu bạn không đồng ý, vui lòng ngừng sử dụng ngay lập tức.",
       text2: "Đối với các nền tảng chùa chiền nhãn trắng, các điều khoản bổ sung có thể áp dụng như được chỉ định trong thỏa thuận dịch vụ của bạn."
     },
     
     eligibility: {
       title: "2. Điều Kiện Đủ Điều Kiện",
-      text1: "Bạn phải ít nhất 13 tuổi để sử dụng dịch vụ của chúng tôi. Nếu bạn dưới 18 tuổi, bạn phải có sự đồng ý của cha mẹ hoặc người giám hộ.",
+      text1: "Bạn phải ít nhất 13 tuổi để sử dụng dịch vụ . Nếu bạn dưới 18 tuổi, bạn phải có sự đồng ý của cha mẹ hoặc người giám hộ.",
       text2: "Bằng cách đăng ký, bạn cam đoan rằng tất cả thông tin được cung cấp là chính xác và rằng bạn có quyền ràng buộc tổ chức của mình (nếu đăng ký thay mặt cho chùa chiền, tu viện hoặc tăng đoàn)."
     },
     
@@ -253,13 +253,13 @@ export const termsTranslations = {
     
     acceptableUse: {
       title: "4. Chính Sách Sử Dụng Chấp Nhận Được",
-      intro: "Nền tảng của chúng tôi được thiết kế để phục vụ Phật Pháp và giảm đau khổ. Bạn đồng ý không:",
+      intro: "Nền tảng  được thiết kế để phục vụ Phật Pháp và giảm đau khổ. Bạn đồng ý không:",
       points: [
         "Vi phạm bất kỳ luật, quy định hoặc quyền của người khác",
         "Đăng nội dung có hại, thù hận, bạo lực hoặc khiêu dâm",
         "Quấy rối, đe dọa hoặc mạo danh người khác",
         "Phân phối thư rác, phần mềm độc hại hoặc vi-rút",
-        "Cào, thu thập dữ liệu hoặc kỹ nghệ ngược nền tảng của chúng tôi",
+        "Cào, thu thập dữ liệu hoặc kỹ nghệ ngược nền tảng ",
         "Cố gắng giành quyền truy cập trái phép vào hệ thống hoặc dữ liệu",
         "Sử dụng nền tảng cho mục đích thương mại không liên quan đến thực hành Phật giáo hoặc hoạt động chùa chiền",
         "Trình bày sai lệch giáo lý hoặc mạo danh giáo viên tâm linh mà không có sự cho phép"
@@ -269,7 +269,7 @@ export const termsTranslations = {
     
     ai: {
       title: "5. Hướng Dẫn Sử Dụng Đại Lý AI",
-      intro: "Các đại lý AI Phật giáo của chúng tôi là công cụ hướng dẫn, không phải là sự thay thế cho giáo viên có trình độ hoặc lời khuyên chuyên nghiệp:",
+      intro: "Các đại lý AI Phật giáo  là công cụ hướng dẫn, không phải là sự thay thế cho giáo viên có trình độ hoặc lời khuyên chuyên nghiệp:",
       points: [
         "Phản hồi AI được tạo ra bởi thuật toán và có thể chứa lỗi hoặc diễn giải sai",
         "Không chỉ dựa vào đại lý AI cho lời khuyên y tế, pháp lý hoặc sức khỏe tâm thần",
@@ -283,19 +283,19 @@ export const termsTranslations = {
       title: "6. Sở Hữu Trí Tuệ",
       ourContent: {
         label: "Nội Dung Của Chúng Tôi:",
-        text: "Tất cả mã nền tảng, thiết kế, thương hiệu, mô hình AI và tài liệu đều thuộc sở hữu của Bodhi Technology Lab hoặc người cấp phép của chúng tôi. Bạn không được sao chép, sửa đổi hoặc phân phối tài liệu độc quyền của chúng tôi mà không có sự cho phép."
+        text: "Tất cả mã nền tảng, thiết kế, thương hiệu, mô hình AI và tài liệu đều thuộc sở hữu của Bodhi Technology Lab hoặc người cấp phép . Bạn không được sao chép, sửa đổi hoặc phân phối tài liệu độc quyền  mà không có sự cho phép."
       },
       yourContent: {
         label: "Nội Dung Của Bạn:",
-        text: "Bạn giữ quyền sở hữu nội dung bạn tải lên (tài liệu, phương tiện, dữ liệu đào tạo AI). Bằng cách tải lên, bạn cấp cho chúng tôi giấy phép xử lý, lưu trữ và hiển thị nội dung của bạn khi cần thiết để cung cấp dịch vụ của chúng tôi."
+        text: "Bạn giữ quyền sở hữu nội dung bạn tải lên (tài liệu, phương tiện, dữ liệu đào tạo AI). Bằng cách tải lên, bạn cấp cho chúng tôi giấy phép xử lý, lưu trữ và hiển thị nội dung của bạn khi cần thiết để cung cấp dịch vụ ."
       },
       dharmaTeachings: {
         label: "Giáo Lý Phật Pháp:",
-        text: "Các văn bản Phật giáo truyền thống, kinh sách và giáo lý được coi là một phần của di sản chung của nhân loại. Chúng tôi tôn trọng những người nắm giữ dòng truyền thừa và ghi công của tất cả các giáo lý được trình bày trên nền tảng của chúng tôi."
+        text: "Các văn bản Phật giáo truyền thống, kinh sách và giáo lý được coi là một phần của di sản chung của nhân loại. Chúng tôi tôn trọng những người nắm giữ dòng truyền thừa và ghi công của tất cả các giáo lý được trình bày trên nền tảng ."
       },
       openSource: {
         label: "Mã Nguồn Mở:",
-        text: "Một số thành phần của nền tảng của chúng tôi có thể được phát hành theo giấy phép mã nguồn mở. Các thành phần đó được điều chỉnh bởi các điều khoản giấy phép tương ứng của chúng."
+        text: "Một số thành phần của nền tảng  có thể được phát hành theo giấy phép mã nguồn mở. Các thành phần đó được điều chỉnh bởi các điều khoản giấy phép tương ứng của chúng."
       }
     },
     
@@ -303,7 +303,7 @@ export const termsTranslations = {
       title: "7. Điều Khoản Thanh Toán & Quyên Góp",
       subscription: {
         label: "Gói Đăng Ký:",
-        text: "Giá được liệt kê trên trang web của chúng tôi. Phí được tính hàng tháng hoặc hàng năm trước. Chúng tôi có quyền thay đổi giá với thông báo 30 ngày."
+        text: "Giá được liệt kê trên trang web . Phí được tính hàng tháng hoặc hàng năm trước. Chúng tôi có quyền thay đổi giá với thông báo 30 ngày."
       },
       donationProcessing: {
         label: "Xử Lý Quyên Góp:",
@@ -331,7 +331,7 @@ export const termsTranslations = {
       },
       dataRetention: {
         label: "Lưu Giữ Dữ Liệu:",
-        text: "Sau khi chấm dứt, chúng tôi sẽ giữ lại dữ liệu của bạn trong 30 ngày để cho phép khôi phục, sau đó xóa vĩnh viễn nó (ngoại trừ theo yêu cầu của pháp luật hoặc Chính Sách Bảo Mật của chúng tôi)."
+        text: "Sau khi chấm dứt, chúng tôi sẽ giữ lại dữ liệu của bạn trong 30 ngày để cho phép khôi phục, sau đó xóa vĩnh viễn nó (ngoại trừ theo yêu cầu của pháp luật hoặc Chính Sách Bảo Mật )."
       }
     },
     
@@ -339,7 +339,7 @@ export const termsTranslations = {
       title: "9. Tuyên Bố Từ Chối & Giới Hạn",
       asIs: {
         label: "Dịch Vụ NGUYÊN TRẠNG:",
-        text: "Nền tảng của chúng tôi được cung cấp \"nguyên trạng\" mà không có bất kỳ bảo đảm nào, rõ ràng hoặc ngụ ý. Chúng tôi không đảm bảo hoạt động liên tục, không có lỗi hoặc an toàn."
+        text: "Nền tảng  được cung cấp \"nguyên trạng\" mà không có bất kỳ bảo đảm nào, rõ ràng hoặc ngụ ý. Chúng tôi không đảm bảo hoạt động liên tục, không có lỗi hoặc an toàn."
       },
       noProfessionalAdvice: {
         label: "Không Có Lời Khuyên Chuyên Nghiệp:",
@@ -347,7 +347,7 @@ export const termsTranslations = {
       },
       limitationOfLiability: {
         label: "Giới Hạn Trách Nhiệm Pháp Lý:",
-        text: "Ở mức độ tối đa được pháp luật cho phép, Bodhi Technology Lab không chịu trách nhiệm cho thiệt hại gián tiếp, ngẫu nhiên hoặc hậu quả. Tổng trách nhiệm pháp lý của chúng tôi sẽ không vượt quá phí bạn đã trả trong 12 tháng qua."
+        text: "Ở mức độ tối đa được pháp luật cho phép, Bodhi Technology Lab không chịu trách nhiệm cho thiệt hại gián tiếp, ngẫu nhiên hoặc hậu quả. Tổng trách nhiệm pháp lý  sẽ không vượt quá phí bạn đã trả trong 12 tháng qua."
       },
       thirdPartyServices: {
         label: "Dịch Vụ Bên Thứ Ba:",
@@ -388,7 +388,7 @@ export const termsTranslations = {
       points: [
         {
           label: "Thỏa Thuận Toàn Bộ:",
-          text: "Các Điều Khoản này, cùng với Chính Sách Bảo Mật của chúng tôi, cấu thành toàn bộ thỏa thuận giữa bạn và Bodhi Technology Lab."
+          text: "Các Điều Khoản này, cùng với Chính Sách Bảo Mật , cấu thành toàn bộ thỏa thuận giữa bạn và Bodhi Technology Lab."
         },
         {
           label: "Tính Khả Thi:",
@@ -400,7 +400,7 @@ export const termsTranslations = {
         },
         {
           label: "Chuyển Nhượng:",
-          text: "Bạn không được chuyển quyền của bạn theo các Điều Khoản này mà không có sự đồng ý của chúng tôi. Chúng tôi có thể chuyển quyền của chúng tôi cho các chi nhánh hoặc người kế nhiệm."
+          text: "Bạn không được chuyển quyền của bạn theo các Điều Khoản này mà không có sự đồng ý . Chúng tôi có thể chuyển quyền  cho các chi nhánh hoặc người kế nhiệm."
         }
       ]
     },
