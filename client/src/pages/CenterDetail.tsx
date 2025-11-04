@@ -20,9 +20,18 @@ import {
   Sparkles,
   HandHeart,
   Calendar,
+  CreditCard,
+  Landmark,
 } from "lucide-react";
+import { SiCashapp, SiApplepay } from "react-icons/si";
 import { buddhistCenters } from "@shared/buddhistCenters";
 import { TracingBeam } from "@/components/TracingBeam";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import lotusIcon from "@assets/44_1762155616660.png";
+import bellIcon from "@assets/Bell_no_bg (1)_1762155616660.png";
+import buddhaIcon from "@assets/2_1762155709385.png";
+import sutraIcon from "@assets/Wordless Sutra Icon - Sumi-e Style_1762155698128.png";
 
 export default function CenterDetail() {
   const params = useParams();
@@ -30,8 +39,32 @@ export default function CenterDetail() {
   const [activeTab, setActiveTab] = useState<"about" | "dharma-talk" | "calendar" | "library" | "agents" | "donation">(
     "about"
   );
+  const [donationAmount, setDonationAmount] = useState(500000);
+  const [customAmount, setCustomAmount] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<"card" | "cashapp" | "applepay" | "venmo" | "bank">("card");
+  const [isCreatingPayment, setIsCreatingPayment] = useState(false);
+  const { toast } = useToast();
 
   const center = buddhistCenters.find((c) => c.id === centerId);
+
+  const handleDonationSubmit = async () => {
+    setIsCreatingPayment(true);
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      toast({
+        title: "Demo Donation Complete",
+        description: `Thank you for your ${donationAmount.toLocaleString()}đ donation to ${center?.name}!`,
+      });
+      setIsCreatingPayment(false);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "This is a demo. No actual payment was processed.",
+        variant: "destructive",
+      });
+      setIsCreatingPayment(false);
+    }
+  };
 
   if (!center) {
     return (
@@ -377,14 +410,445 @@ export default function CenterDetail() {
                   )}
 
                   {activeTab === "donation" && (
-                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                      <h2 className="text-2xl font-serif font-bold text-[#2c2c2c] mb-4">Cúng Dường</h2>
-                      <p className="text-base font-serif text-[#8B4513]/70 mb-6">
-                        Hỗ trợ cộng đồng tu tập và phát triển các hoạt động hoằng pháp.
-                      </p>
-                      <button className="px-6 py-3 bg-[#991b1b] text-white rounded-xl hover:bg-[#7a1515] transition-colors font-serif font-bold shadow-md">
-                        Cúng dường ngay
+                    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+                      {/* Header */}
+                      <div className="text-center">
+                        <div className="flex items-center justify-center gap-3 mb-4">
+                          <Heart className="w-8 h-8 text-[#991b1b]" />
+                          <h2 className="font-serif text-3xl font-bold text-[#991b1b]">Support {center.name}</h2>
+                        </div>
+                        <p className="font-serif text-base text-[#8B4513]/70 max-w-2xl mx-auto">
+                          Accept dāna with dignity—generous giving framed as spiritual practice, not transactional fundraising
+                        </p>
+                      </div>
+
+                      {/* Three Feature Cards */}
+                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        {/* Recurring Dāna */}
+                        <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300">
+                          <div className="flex items-center gap-3 mb-4">
+                            <img src={bellIcon} alt="Bell" className="w-10 h-10 object-contain" />
+                            <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Recurring Dāna</h3>
+                          </div>
+                          <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                            Enable monthly commitments to honor supporters who dedicate long-term
+                          </p>
+                          <ul className="space-y-2 text-xs">
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Monthly, quarterly, annually</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Easy management & pausing</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Recognition for sustained support</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* QR Codes & Multiple Methods */}
+                        <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300">
+                          <div className="flex items-center gap-3 mb-4">
+                            <img src={buddhaIcon} alt="Buddha" className="w-10 h-10 object-contain" />
+                            <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">QR Codes & Multiple Methods</h3>
+                          </div>
+                          <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                            Seamlessly accept donations through modern and traditional payment methods
+                          </p>
+                          <ul className="space-y-2 text-xs">
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">QR codes for instant giving</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Credit/debit cards, bank transfers</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Cash App, Apple Pay, Venmo</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Merit Dedication & Anonymous Giving */}
+                        <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-6 hover:shadow-xl transition-all duration-300">
+                          <div className="flex items-center gap-3 mb-4">
+                            <img src={sutraIcon} alt="Sutra" className="w-10 h-10 object-contain" />
+                            <h3 className="font-serif text-lg font-bold text-[#2c2c2c]">Merit Dedication & Anonymous Giving</h3>
+                          </div>
+                          <p className="font-serif text-sm text-[#2c2c2c]/70 mb-4">
+                            Enable donors to dedicate merit and practice selfless giving
+                          </p>
+                          <ul className="space-y-2 text-xs">
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Dedicate merit to loved ones</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Anonymous donations supported</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <img src={lotusIcon} alt="Lotus" className="w-4 h-4 object-contain flex-shrink-0 mt-0.5" />
+                              <span className="font-serif text-[#2c2c2c]">Public or private recognition</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      {/* Hồi Hướng Công Đức - Merit Dedication Section */}
+                      <div className="bg-gradient-to-br from-[#EFE0BD] to-[#EFE0BD]/80 rounded-2xl border-2 border-[#8B4513]/30 p-8">
+                        <div className="text-center mb-8">
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <img src={lotusIcon} alt="Lotus" className="w-10 h-10 object-contain" />
+                            <h3 className="font-serif text-3xl font-bold text-[#991b1b]">Hồi Hướng Công Đức</h3>
+                          </div>
+                          <p className="font-serif text-lg text-[#8B4513] italic">The Act of Returning: Dedicating Merit to All Beings</p>
+                        </div>
+
+                        {/* An Offering of Merit */}
+                        <div className="mb-8">
+                          <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-4 flex items-center gap-2">
+                            <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain" />
+                            An Offering of Merit (Công Đức)
+                          </h4>
+                          <p className="font-serif text-base text-[#2c2c2c]/80 mb-6 italic">
+                            This is more than a donation. It is a practice of selfless offering.
+                          </p>
+
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-[#8B4513]/20">
+                              <div className="flex items-start gap-3 mb-3">
+                                <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-1" />
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b]">Your Action</h5>
+                              </div>
+                              <p className="font-serif text-sm text-[#2c2c2c]/70 leading-relaxed">
+                                By giving without expectation of personal reward, you are performing the act of <span className="font-semibold text-[#991b1b]">Hồi Hướng Công Đức</span>—the selfless dedication of intrinsic merit.
+                              </p>
+                            </div>
+
+                            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-[#8B4513]/20">
+                              <div className="flex items-start gap-3 mb-3">
+                                <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-1" />
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b]">The Intention</h5>
+                              </div>
+                              <p className="font-serif text-sm text-[#2c2c2c]/70 leading-relaxed">
+                                This merit is not for one, but for all. It is dedicated to the liberation and awakening of all beings.
+                              </p>
+                            </div>
+
+                            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-[#8B4513]/20">
+                              <div className="flex items-start gap-3 mb-3">
+                                <img src={lotusIcon} alt="Lotus" className="w-5 h-5 object-contain flex-shrink-0 mt-1" />
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b]">The Result</h5>
+                              </div>
+                              <p className="font-serif text-sm text-[#2c2c2c]/70 leading-relaxed">
+                                You are planting a seed of awakening, free from the bonds of cause and effect that govern worldly blessings.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Supporting the Work of Awakening */}
+                        <div>
+                          <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-4 flex items-center gap-2">
+                            <img src={buddhaIcon} alt="Buddha" className="w-6 h-6 object-contain" />
+                            Supporting the Work of Awakening (Phật Sự)
+                          </h4>
+                          <p className="font-serif text-base text-[#2c2c2c]/80 mb-6">
+                            100% of your offering directly supports the continuation of the Dharma in this world. Your contribution is used exclusively for:
+                          </p>
+
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-[#8B4513]/20">
+                              <img src={lotusIcon} alt="Lotus" className="w-8 h-8 object-contain flex-shrink-0" />
+                              <div>
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b] mb-2">Sustaining the Sangha</h5>
+                                <p className="font-serif text-xs text-[#2c2c2c]/70 leading-relaxed">
+                                  Providing for masters and practitioners who dedicate their lives to holding and transmitting the teachings.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-[#8B4513]/20">
+                              <img src={sutraIcon} alt="Sutra" className="w-8 h-8 object-contain flex-shrink-0" />
+                              <div>
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b] mb-2">Spreading the Dharma</h5>
+                                <p className="font-serif text-xs text-[#2c2c2c]/70 leading-relaxed">
+                                  Funding the creation and sharing of teachings, texts, and digital resources to reach all who are searching.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-[#8B4513]/20">
+                              <img src={buddhaIcon} alt="Buddha" className="w-8 h-8 object-contain flex-shrink-0" />
+                              <div>
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b] mb-2">Maintaining Sacred Space</h5>
+                                <p className="font-serif text-xs text-[#2c2c2c]/70 leading-relaxed">
+                                  Ensuring our physical and digital sanctuaries remain pure, accessible, and conducive to practice.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex items-start gap-4 bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-[#8B4513]/20">
+                              <Heart className="w-8 h-8 text-[#991b1b] flex-shrink-0" />
+                              <div>
+                                <h5 className="font-serif text-sm font-bold text-[#991b1b] mb-2">Acts of True Compassion</h5>
+                                <p className="font-serif text-xs text-[#2c2c2c]/70 leading-relaxed">
+                                  Enabling projects that alleviate suffering and guide others toward the path of liberation.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Interactive Donation Interface Demo */}
+                      <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8">
+                        <div className="flex items-center gap-3 mb-6">
+                          <Heart className="w-10 h-10 text-[#991b1b]" />
+                          <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Make a Donation</h3>
+                        </div>
+                        
+                        <p className="font-serif text-sm text-[#8B4513]/70 mb-6">
+                          Select an amount and payment method to support {center.name}.
+                        </p>
+
+                        {/* Donation Amount Selection */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                          <button
+                            onClick={() => { setDonationAmount(100000); setCustomAmount(""); }}
+                            className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                              donationAmount === 100000 
+                                ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                                : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                            }`}
+                            data-testid="button-donate-100k"
+                          >
+                            <div className="flex items-center gap-3">
+                              <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                              <div className="text-left flex-1">
+                                <div className="font-serif text-lg font-bold text-[#991b1b]">100.000đ</div>
+                                <div className="font-serif text-xs text-[#8B4513]/60">Basic support</div>
+                              </div>
+                            </div>
+                          </button>
+
+                          <button
+                            onClick={() => { setDonationAmount(500000); setCustomAmount(""); }}
+                            className={`relative p-4 rounded-xl border-2 transition-all duration-300 ${
+                              donationAmount === 500000 
+                                ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                                : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                            }`}
+                            data-testid="button-donate-500k"
+                          >
+                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-[#991b1b] text-white rounded-full text-xs font-semibold whitespace-nowrap">
+                              Popular
+                            </div>
+                            <div className="flex items-center gap-3">
+                              <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                              <div className="text-left flex-1">
+                                <div className="font-serif text-lg font-bold text-[#991b1b]">500.000đ</div>
+                                <div className="font-serif text-xs text-[#8B4513]/60">Medium support</div>
+                              </div>
+                            </div>
+                          </button>
+
+                          <button
+                            onClick={() => { setDonationAmount(1000000); setCustomAmount(""); }}
+                            className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                              donationAmount === 1000000 
+                                ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                                : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                            }`}
+                            data-testid="button-donate-1m"
+                          >
+                            <div className="flex items-center gap-3">
+                              <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                              <div className="text-left flex-1">
+                                <div className="font-serif text-lg font-bold text-[#991b1b]">1.000.000đ</div>
+                                <div className="font-serif text-xs text-[#8B4513]/60">Major support</div>
+                              </div>
+                            </div>
+                          </button>
+                        </div>
+
+                        {/* Custom Amount */}
+                        <div className="mb-6">
+                          <label className="font-serif text-sm text-[#8B4513]/70 block mb-2">
+                            Or enter custom amount
+                          </label>
+                          <input
+                            type="text"
+                            value={customAmount}
+                            onChange={(e) => {
+                              const value = e.target.value.replace(/\D/g, '');
+                              setCustomAmount(value);
+                              if (value) {
+                                setDonationAmount(parseInt(value));
+                              }
+                            }}
+                            placeholder="Enter amount (VNĐ)"
+                            className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                            data-testid="input-custom-amount"
+                          />
+                        </div>
+
+                        {/* Payment Method Selector */}
+                        <div className="mb-6">
+                          <h4 className="font-serif text-sm font-semibold text-[#2c2c2c] mb-3">Payment Method</h4>
+                          <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
+                            <button
+                              onClick={() => setPaymentMethod('card')}
+                              className={`p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
+                                paymentMethod === 'card'
+                                  ? 'border-[#991b1b] bg-[#991b1b]/5'
+                                  : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                              }`}
+                              data-testid="button-payment-card"
+                            >
+                              <CreditCard className="w-6 h-6 text-[#4285F4]" />
+                              <div className="font-serif text-sm font-semibold text-[#2c2c2c]">Card</div>
+                            </button>
+
+                            <button
+                              onClick={() => setPaymentMethod('cashapp')}
+                              className={`p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
+                                paymentMethod === 'cashapp'
+                                  ? 'border-[#991b1b] bg-[#991b1b]/5'
+                                  : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                              }`}
+                              data-testid="button-payment-cashapp"
+                            >
+                              <SiCashapp className="w-6 h-6 text-[#00D632]" />
+                              <div className="font-serif text-sm font-semibold text-[#2c2c2c]">Cash App</div>
+                            </button>
+
+                            <button
+                              onClick={() => setPaymentMethod('applepay')}
+                              className={`p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
+                                paymentMethod === 'applepay'
+                                  ? 'border-[#991b1b] bg-[#991b1b]/5'
+                                  : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                              }`}
+                              data-testid="button-payment-applepay"
+                            >
+                              <SiApplepay className="w-6 h-6 text-[#000000]" />
+                              <div className="font-serif text-sm font-semibold text-[#2c2c2c]">Apple Pay</div>
+                            </button>
+
+                            <button
+                              onClick={() => setPaymentMethod('venmo')}
+                              className={`p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
+                                paymentMethod === 'venmo'
+                                  ? 'border-[#991b1b] bg-[#991b1b]/5'
+                                  : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                              }`}
+                              data-testid="button-payment-venmo"
+                            >
+                              <div className="w-6 h-6 flex items-center justify-center font-bold text-[#008CFF] text-xl">V</div>
+                              <div className="font-serif text-sm font-semibold text-[#2c2c2c]">Venmo</div>
+                            </button>
+
+                            <button
+                              onClick={() => setPaymentMethod('bank')}
+                              className={`p-3 rounded-xl border-2 transition-all duration-300 flex flex-col items-center gap-2 ${
+                                paymentMethod === 'bank'
+                                  ? 'border-[#991b1b] bg-[#991b1b]/5'
+                                  : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                              }`}
+                              data-testid="button-payment-bank"
+                            >
+                              <Landmark className="w-6 h-6 text-[#5C6AC4]" />
+                              <div className="font-serif text-sm font-semibold text-[#2c2c2c]">US Bank</div>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Card Information */}
+                        {paymentMethod === 'card' && (
+                          <div className="mb-6 space-y-4">
+                            <h4 className="font-serif text-sm font-semibold text-[#2c2c2c]">Card Information</h4>
+                          
+                          {/* Card Number */}
+                          <div>
+                            <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Card number</label>
+                            <input
+                              type="text"
+                              placeholder="1234 1234 1234 1234"
+                              className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                              data-testid="input-card-number"
+                            />
+                          </div>
+
+                          {/* Expiration and CVC */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Expiration</label>
+                              <input
+                                type="text"
+                                placeholder="MM / YY"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                                data-testid="input-expiration"
+                              />
+                            </div>
+                            <div>
+                              <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">CVC</label>
+                              <input
+                                type="text"
+                                placeholder="CVC"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                                data-testid="input-cvc"
+                              />
+                            </div>
+                          </div>
+
+                          {/* Country and ZIP */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Country</label>
+                              <select
+                                className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] focus:outline-none focus:border-[#991b1b] transition-colors"
+                                data-testid="select-country"
+                              >
+                                <option>Vietnam</option>
+                                <option>United States</option>
+                                <option>Singapore</option>
+                                <option>Thailand</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">ZIP</label>
+                              <input
+                                type="text"
+                                placeholder="12345"
+                                className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                                data-testid="input-zip"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Submit Button */}
+                      <button 
+                        onClick={handleDonationSubmit}
+                        disabled={isCreatingPayment || !donationAmount}
+                        className="w-full px-6 py-3 bg-gradient-to-r from-[#991b1b] to-[#7a1515] text-white font-serif font-semibold rounded-xl hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
+                        data-testid="button-submit-donation"
+                      >
+                        {isCreatingPayment ? "Processing..." : "Complete Donation"}
                       </button>
+
+                      <p className="font-serif text-xs text-center text-[#8B4513]/60 mt-4 italic">
+                        This is a demo. No actual payment will be processed.
+                      </p>
+                      </div>
                     </motion.div>
                   )}
                 </div>
