@@ -1352,6 +1352,69 @@ export default function Platform() {
                   />
                 </div>
 
+                {/* Card Information */}
+                <div className="mb-6 space-y-4">
+                  <h4 className="font-serif text-sm font-semibold text-[#2c2c2c]">Card Information</h4>
+                  
+                  {/* Card Number */}
+                  <div>
+                    <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Card number</label>
+                    <input
+                      type="text"
+                      placeholder="1234 1234 1234 1234"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                      data-testid="input-card-number"
+                    />
+                  </div>
+
+                  {/* Expiration and CVC */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Expiration</label>
+                      <input
+                        type="text"
+                        placeholder="MM / YY"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                        data-testid="input-expiration"
+                      />
+                    </div>
+                    <div>
+                      <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">CVC</label>
+                      <input
+                        type="text"
+                        placeholder="CVC"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                        data-testid="input-cvc"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Country and ZIP */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">Country</label>
+                      <select
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] focus:outline-none focus:border-[#991b1b] transition-colors"
+                        data-testid="select-country"
+                      >
+                        <option>Vietnam</option>
+                        <option>United States</option>
+                        <option>Singapore</option>
+                        <option>Thailand</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="font-serif text-xs text-[#8B4513]/70 block mb-1">ZIP</label>
+                      <input
+                        type="text"
+                        placeholder="12345"
+                        className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                        data-testid="input-zip"
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 {/* Submit Button */}
                 <button 
                   onClick={handleDonationSubmit}
