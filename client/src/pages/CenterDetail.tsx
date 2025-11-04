@@ -196,13 +196,14 @@ export default function CenterDetail() {
         <TracingBeam className="pt-24">
           <div className="px-4 py-8">
             {/* Header with Cover */}
-            <div
-              className="relative h-64 rounded-3xl overflow-hidden mb-8 shadow-lg"
-              style={{
-                background: `linear-gradient(135deg, ${center.accentColor}60 0%, ${center.accentColor}90 100%)`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2c2c2c]/60 to-transparent z-10" />
+            <div className="relative h-64 rounded-3xl overflow-hidden mb-8 shadow-lg">
+              {/* Background Image */}
+              <img
+                src={center.image}
+                alt={center.name}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2c2c2c]/70 to-[#2c2c2c]/20 z-10" />
 
               <Link href="/discovery">
                 <a className="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-md text-[#2c2c2c] rounded-xl
