@@ -1261,211 +1261,110 @@ export default function Platform() {
               </div>
 
               {/* Interactive Donation Interface Demo */}
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-8">
-                  <p className="font-serif text-sm text-[#8B4513]/60 italic">
-                    Below is an interactive example of what your donors will experience—a deeply spiritual giving interface
-                  </p>
+              <div className="bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 p-8" data-testid="card-donation-interface">
+                <div className="flex items-center gap-3 mb-6">
+                  <Heart className="w-10 h-10 text-[#991b1b]" />
+                  <h3 className="font-serif text-2xl font-bold text-[#2c2c2c]">Interactive Donation Demo</h3>
+                </div>
+                
+                <p className="font-serif text-sm text-[#8B4513]/70 mb-6">
+                  Experience how your donors will interact with your donation page. Select an amount and try the interface.
+                </p>
+
+                {/* Donation Amount Selection */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <button
+                    onClick={() => { setDonationAmount(100000); setCustomAmount(""); }}
+                    className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                      donationAmount === 100000 
+                        ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                        : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                    }`}
+                    data-testid="button-donate-100k"
+                  >
+                    <div className="flex items-center gap-3">
+                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                      <div className="text-left flex-1">
+                        <div className="font-serif text-lg font-bold text-[#991b1b]">100.000đ</div>
+                        <div className="font-serif text-xs text-[#8B4513]/60">Basic support</div>
+                      </div>
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => { setDonationAmount(500000); setCustomAmount(""); }}
+                    className={`relative p-4 rounded-xl border-2 transition-all duration-300 ${
+                      donationAmount === 500000 
+                        ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                        : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                    }`}
+                    data-testid="button-donate-500k"
+                  >
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-[#991b1b] text-white rounded-full text-xs font-semibold whitespace-nowrap">
+                      Popular
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                      <div className="text-left flex-1">
+                        <div className="font-serif text-lg font-bold text-[#991b1b]">500.000đ</div>
+                        <div className="font-serif text-xs text-[#8B4513]/60">Medium support</div>
+                      </div>
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => { setDonationAmount(1000000); setCustomAmount(""); }}
+                    className={`p-4 rounded-xl border-2 transition-all duration-300 ${
+                      donationAmount === 1000000 
+                        ? 'border-[#991b1b] bg-[#991b1b]/5' 
+                        : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50'
+                    }`}
+                    data-testid="button-donate-1m"
+                  >
+                    <div className="flex items-center gap-3">
+                      <img src={lotusIcon} alt="Lotus" className="w-6 h-6 object-contain flex-shrink-0" />
+                      <div className="text-left flex-1">
+                        <div className="font-serif text-lg font-bold text-[#991b1b]">1.000.000đ</div>
+                        <div className="font-serif text-xs text-[#8B4513]/60">Major support</div>
+                      </div>
+                    </div>
+                  </button>
                 </div>
 
-                <div className="bg-white/70 backdrop-blur-xl rounded-3xl border-2 border-[#991b1b]/30 p-8 md:p-12 shadow-2xl" data-testid="card-donation-interface">
-                  {/* Title Section */}
-                  <div className="text-center mb-8">
-                    <h3 className="font-serif text-3xl md:text-4xl font-bold text-[#991b1b] mb-3">
-                      Hồi Hướng Công Đức
-                    </h3>
-                    <p className="font-serif text-lg text-[#8B4513]/80 italic mb-6">
-                      The Act of Returning: Dedicating Merit to All Beings
-                    </p>
-                    <div className="w-16 h-1 bg-gradient-to-r from-transparent via-[#991b1b] to-transparent mx-auto mb-6"></div>
-                  </div>
-
-                  {/* An Offering of Merit Section */}
-                  <div className="mb-10">
-                    <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-4">
-                      An Offering of Merit (Công Đức)
-                    </h4>
-                    <p className="font-serif text-sm text-[#8B4513]/80 mb-4 italic">
-                      This is more than a donation. It is a practice of selfless offering.
-                    </p>
-                    
-                    <div className="space-y-3 text-sm">
-                      <div className="flex gap-3">
-                        <span className="text-[#991b1b] font-bold flex-shrink-0">•</span>
-                        <p className="font-serif text-[#2c2c2c]">
-                          <span className="font-semibold">Your Action:</span> By giving without expectation of personal reward, you are performing the act of Hồi Hướng Công Đức—the selfless dedication of intrinsic merit.
-                        </p>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="text-[#991b1b] font-bold flex-shrink-0">•</span>
-                        <p className="font-serif text-[#2c2c2c]">
-                          <span className="font-semibold">The Intention:</span> This merit is not for one, but for all. It is dedicated to the liberation and awakening of all beings.
-                        </p>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="text-[#991b1b] font-bold flex-shrink-0">•</span>
-                        <p className="font-serif text-[#2c2c2c]">
-                          <span className="font-semibold">The Result:</span> You are planting a seed of awakening, free from the bonds of cause and effect that govern worldly blessings.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Supporting the Work Section */}
-                  <div className="mb-10 bg-gradient-to-br from-[#EFE0BD]/50 to-[#E5D5B7]/30 rounded-2xl p-6 border border-[#8B4513]/20">
-                    <h4 className="font-serif text-xl font-bold text-[#2c2c2c] mb-4">
-                      Supporting the Work of Awakening (Phật Sự)
-                    </h4>
-                    <p className="font-serif text-sm text-[#8B4513]/80 mb-5">
-                      100% of your offering directly supports the continuation of the Dharma in this world. Your contribution is used exclusively for:
-                    </p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                      <div className="flex gap-3">
-                        <span className="text-xl flex-shrink-0">🙏</span>
-                        <div>
-                          <p className="font-serif font-semibold text-[#2c2c2c] mb-1">Sustaining the Sangha</p>
-                          <p className="font-serif text-[#8B4513]/70 text-xs">Providing for masters and practitioners who dedicate their lives to holding and transmitting the teachings.</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="text-xl flex-shrink-0">📖</span>
-                        <div>
-                          <p className="font-serif font-semibold text-[#2c2c2c] mb-1">Spreading the Dharma</p>
-                          <p className="font-serif text-[#8B4513]/70 text-xs">Funding the creation and sharing of teachings, texts, and digital resources to reach all who are searching.</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="text-xl flex-shrink-0">🏛️</span>
-                        <div>
-                          <p className="font-serif font-semibold text-[#2c2c2c] mb-1">Maintaining Sacred Space</p>
-                          <p className="font-serif text-[#8B4513]/70 text-xs">Ensuring our physical and digital sanctuaries remain pure, accessible, and conducive to practice.</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-3">
-                        <span className="text-xl flex-shrink-0">🪷</span>
-                        <div>
-                          <p className="font-serif font-semibold text-[#2c2c2c] mb-1">Acts of True Compassion</p>
-                          <p className="font-serif text-[#8B4513]/70 text-xs">Enabling projects that alleviate suffering and guide others toward the path of liberation.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Choose Your Offering */}
-                  <div className="mb-8">
-                    <h4 className="font-serif text-2xl font-bold text-[#2c2c2c] text-center mb-6">
-                      Choose Your Offering
-                    </h4>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                      {/* Option 1: 100,000đ */}
-                      <button
-                        onClick={() => { setDonationAmount(100000); setCustomAmount(""); }}
-                        className={`relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                          donationAmount === 100000 
-                            ? 'border-[#991b1b] bg-[#991b1b]/5 shadow-lg' 
-                            : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50 hover:shadow-md'
-                        }`}
-                        data-testid="button-donate-100k"
-                      >
-                        <div className="text-center">
-                          <div className="text-2xl mb-2">🙏</div>
-                          <div className="font-serif text-2xl font-bold text-[#991b1b] mb-2">100.000đ</div>
-                          <div className="font-serif text-sm font-semibold text-[#2c2c2c] mb-1">Hỗ trợ cơ bản</div>
-                          <div className="font-serif text-xs text-[#8B4513]/60">Giúp duy trì hoạt động hàng ngày</div>
-                        </div>
-                      </button>
-
-                      {/* Option 2: 500,000đ - Most Popular */}
-                      <button
-                        onClick={() => { setDonationAmount(500000); setCustomAmount(""); }}
-                        className={`relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                          donationAmount === 500000 
-                            ? 'border-[#991b1b] bg-[#991b1b]/5 shadow-lg' 
-                            : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50 hover:shadow-md'
-                        }`}
-                        data-testid="button-donate-500k"
-                      >
-                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#991b1b] text-white rounded-full text-xs font-semibold whitespace-nowrap">
-                          Phổ biến nhất
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl mb-2">🌸</div>
-                          <div className="font-serif text-2xl font-bold text-[#991b1b] mb-2">500.000đ</div>
-                          <div className="font-serif text-sm font-semibold text-[#2c2c2c] mb-1">Hỗ trợ trung bình</div>
-                          <div className="font-serif text-xs text-[#8B4513]/60">Hỗ trợ các khóa tu và pháp thoại</div>
-                        </div>
-                      </button>
-
-                      {/* Option 3: 1,000,000đ */}
-                      <button
-                        onClick={() => { setDonationAmount(1000000); setCustomAmount(""); }}
-                        className={`relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                          donationAmount === 1000000 
-                            ? 'border-[#991b1b] bg-[#991b1b]/5 shadow-lg' 
-                            : 'border-[#8B4513]/20 bg-white/50 hover:border-[#991b1b]/50 hover:shadow-md'
-                        }`}
-                        data-testid="button-donate-1m"
-                      >
-                        <div className="text-center">
-                          <div className="text-2xl mb-2">🪷</div>
-                          <div className="font-serif text-2xl font-bold text-[#991b1b] mb-2">1.000.000đ</div>
-                          <div className="font-serif text-sm font-semibold text-[#2c2c2c] mb-1">Hỗ trợ lớn</div>
-                          <div className="font-serif text-xs text-[#8B4513]/60">Đóng góp vào các dự án phát triển</div>
-                        </div>
-                      </button>
-                    </div>
-
-                    {/* Custom Amount */}
-                    <div className="mb-6">
-                      <label className="font-serif text-sm text-[#8B4513]/80 block mb-3 text-center italic">
-                        Hoặc cúng dường số tiền tùy ý
-                      </label>
-                      <p className="font-serif text-xs text-[#8B4513]/60 text-center mb-3">
-                        Your offering arises from the non-seeking Mind, a pure expression of generosity that is boundless and unconditioned.
-                      </p>
-                      <div className="flex gap-3 max-w-md mx-auto">
-                        <input
-                          type="text"
-                          value={customAmount}
-                          onChange={(e) => {
-                            const value = e.target.value.replace(/\D/g, '');
-                            setCustomAmount(value);
-                            if (value) {
-                              setDonationAmount(parseInt(value));
-                            }
-                          }}
-                          placeholder="Nhập số tiền (VNĐ)"
-                          className="flex-1 px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
-                          data-testid="input-custom-amount"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="text-center">
-                      <button 
-                        onClick={handleDonationSubmit}
-                        disabled={isCreatingPayment || !donationAmount}
-                        className="px-12 py-4 bg-gradient-to-r from-[#991b1b] to-[#7a1515] text-white font-serif font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed" 
-                        data-testid="button-submit-donation"
-                      >
-                        {isCreatingPayment ? "Đang xử lý..." : "Cúng dường"}
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Quote Section */}
-                  <div className="border-t-2 border-[#8B4513]/20 pt-8">
-                    <blockquote className="font-serif italic text-center text-[#8B4513]/80 text-sm leading-relaxed mb-6">
-                      "To give is to let go. To offer is to return to the source. This act is dedicated entirely to the awakening of all sentient beings, creating ripples of liberation that extend far beyond this single moment."
-                    </blockquote>
-                    <p className="font-serif text-center text-[#991b1b] font-semibold text-lg">
-                      🙏 Namo Amitabha Buddha 🙏
-                    </p>
-                  </div>
+                {/* Custom Amount */}
+                <div className="mb-6">
+                  <label className="font-serif text-sm text-[#8B4513]/70 block mb-2">
+                    Or enter custom amount
+                  </label>
+                  <input
+                    type="text"
+                    value={customAmount}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, '');
+                      setCustomAmount(value);
+                      if (value) {
+                        setDonationAmount(parseInt(value));
+                      }
+                    }}
+                    placeholder="Enter amount (VNĐ)"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-[#8B4513]/20 bg-white/70 font-serif text-[#2c2c2c] placeholder-[#8B4513]/40 focus:outline-none focus:border-[#991b1b] transition-colors"
+                    data-testid="input-custom-amount"
+                  />
                 </div>
+
+                {/* Submit Button */}
+                <button 
+                  onClick={handleDonationSubmit}
+                  disabled={isCreatingPayment || !donationAmount}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-[#991b1b] to-[#7a1515] text-white font-serif font-semibold rounded-xl hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" 
+                  data-testid="button-submit-donation"
+                >
+                  {isCreatingPayment ? "Processing..." : "Complete Donation"}
+                </button>
+
+                <p className="font-serif text-xs text-center text-[#8B4513]/60 mt-4 italic">
+                  This is a demo. No actual payment will be processed.
+                </p>
               </div>
             </div>
           </section>
