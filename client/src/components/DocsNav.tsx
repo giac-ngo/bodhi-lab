@@ -84,8 +84,8 @@ export function DocsNav({ navigation }: DocsNavProps) {
                         <div
                           className={`w-full text-left px-3 py-1.5 rounded-lg font-serif text-sm transition-all cursor-pointer ${
                             location === child.href
-                              ? "bg-primary text-primary-foreground font-medium"
-                              : "text-foreground hover-elevate"
+                              ? "bg-[#991b1b] text-white font-medium"
+                              : "text-foreground hover:bg-[#991b1b]/10 hover:text-[#991b1b] active:bg-[#991b1b]/20"
                           }`}
                           data-testid={`link-nav-${child.id}`}
                         >
