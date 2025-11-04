@@ -248,7 +248,7 @@ export const landingTranslations = {
     hero: {
       title: "Bodhi Technology Lab",
       subtitle: "Thức Tỉnh Công Nghệ Cho Thời Mạt Pháp",
-      description: "Nơi thợ đời kết đạo cùng thợ pháp, Đồng xây chùa số, giữ sạch không gian. Công nghệ nơi đây, không vì lợi danh, Chỉ một lòng thành, hộ trì Chánh Pháp.",
+      description: "Nơi thợ đời kết đạo cùng thợ pháp, đồng xây chùa số, giữ sạch không gian. Công nghệ nơi đây, không vì lợi danh - Chỉ một lòng thành, hộ trì Chánh Pháp.",
       cta: {
         startSprint: "Bắt Đầu Sprint",
         explorePlatform: "Khám Phá Nền Tảng"
