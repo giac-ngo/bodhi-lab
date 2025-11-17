@@ -1016,27 +1016,22 @@ export default function Platform() {
             <div className="flex items-center gap-4">
               <Link href="/">
                 <a className="font-serif text-[#991b1b] px-4 py-2 rounded-full bg-[#8B4513]/10 transition-colors" data-testid="link-platform">
-                  Platform
+                  {t.header.platform}
                 </a>
               </Link>
               <Link href="/">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-services">
-                  Services
+                  {t.header.services}
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/platform#pricing">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-pricing">
-                  Pricing
-                </a>
-              </Link>
-              <Link href="/discovery">
-                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-discovery">
-                  Discovery
+                  {t.header.pricing}
                 </a>
               </Link>
               <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
-                  Docs
+                  {t.header.docs}
                 </a>
               </Link>
               <LanguageSwitcher />
@@ -2070,9 +2065,9 @@ export default function Platform() {
               </div>
 
               <div className="text-center mb-12">
-                <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-4">Community Agent Marketplace</h3>
+                <h3 className="font-serif text-2xl font-bold text-[#2c2c2c] mb-4">{t.ai.marketplace.title}</h3>
                 <p className="font-serif text-sm text-[#8B4513]/70 max-w-2xl mx-auto">
-                  Explore pre-trained agents developed by temples worldwide, or share your custom agents with the broader Buddhist tech community
+                  {t.ai.marketplace.subtitle}
                 </p>
               </div>
 
@@ -2143,7 +2138,7 @@ export default function Platform() {
                           data-testid={`button-explore-${agent.id}`}
                         >
                           <img src={buddhaIcon} alt="Buddha" className="w-4 h-4 object-contain" />
-                          Khám phá Agent
+                          {t.ai.marketplace.exploreButton}
                         </a>
                       </Link>
                     </div>
@@ -2157,7 +2152,7 @@ export default function Platform() {
                     className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 backdrop-blur-md border-2 border-[#991b1b] rounded-full text-[#991b1b] font-serif font-semibold text-lg hover:bg-[#991b1b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
                     data-testid="button-view-all-agents"
                   >
-                    Xem tất cả {buddhistAgents.length} Agents
+                    {t.ai.marketplace.viewAll.replace('{count}', buddhistAgents.length.toString())}
                     <ArrowRight className="w-5 h-5" />
                   </a>
                 </Link>
@@ -2546,24 +2541,19 @@ export default function Platform() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <span className="font-serif font-bold text-[#991b1b]">Bodhi Technology Lab</span>
               <div className="flex gap-6">
-                <Link href="/">
+                <Link href="/platform">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Platform
+                    {t.footer.platform}
                   </a>
                 </Link>
-                <Link href="/">
+                <Link href="/about">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Services
-                  </a>
-                </Link>
-                <Link href="/discovery">
-                  <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Discovery
+                    {t.footer.about}
                   </a>
                 </Link>
                 <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    Docs
+                    {t.footer.docs}
                   </a>
                 </Link>
               </div>

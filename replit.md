@@ -116,6 +116,9 @@ Preferred communication style: Simple, everyday language.
 - **November 17, 2025**: 
   - Added comprehensive Pricing section with three subscription tiers (Start $79/mo, Scale $199/mo, Enterprise $499+/mo) featuring detailed feature breakdowns for donation fees, AI agents, user limits, admin seats, mobile apps, branding, API access, support levels, and backup/logs.
   - Added Premium Package section showcasing hands-on product training (5 video sessions), personalized setup support (60 days 1-on-1), effortless data migration, and proven launch resources with Dharma-aligned onboarding guides.
+  - Removed Discovery section and all links to /discovery to prevent misunderstanding about Buddhist centers being clients/partners.
+  - Fixed language consistency issues - all text now properly uses translation system (no more hardcoded English/Vietnamese).
+  - Fixed Vercel deployment configuration to properly handle SPA routing with rewrites to index.html.
 - **November 3, 2025**: Transformed the Platform page from a basic social network demo into a comprehensive B2B showcase with six in-depth capability sections targeting Buddhist organizations (temples, monasteries, meditation centers).
 
 **Platform Page Structure**: Located at `/platform`, the page showcases white-label technology solutions with detailed feature cards designed to convert B2B customers. Each section follows a consistent pattern: Icon + Title + Description + Feature Cards (3-column responsive grid) + Interactive Demo/Examples.

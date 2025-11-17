@@ -1,5 +1,12 @@
 export const platformTranslations = {
   en: {
+    header: {
+      platform: "Platform",
+      services: "Services",
+      pricing: "Pricing",
+      docs: "Docs"
+    },
+    
     hero: {
       title: "Platform Features",
       subtitle: "Transform your temple's digital presence with our comprehensive platform"
@@ -192,6 +199,12 @@ export const platformTranslations = {
           "Redirect sensitive questions to ordained monastics",
           "Cite sources from your uploaded texts"
         ]
+      },
+      marketplace: {
+        title: "Community Agent Marketplace",
+        subtitle: "Explore pre-trained agents developed by temples worldwide, or share your custom agents with the broader Buddhist tech community",
+        exploreButton: "Explore Agent",
+        viewAll: "View all {count} Agents"
       }
     },
     
@@ -287,11 +300,20 @@ export const platformTranslations = {
       about: "About",
       career: "Career",
       terms: "Terms",
-      privacy: "Privacy"
+      privacy: "Privacy",
+      docs: "Docs",
+      platform: "Platform"
     }
   },
   
   vi: {
+    header: {
+      platform: "Nền Tảng",
+      services: "Dịch Vụ",
+      pricing: "Giá Cả",
+      docs: "Tài Liệu"
+    },
+    
     hero: {
       title: "Tính Năng Nền Tảng",
       subtitle: "Chuyển đổi sự hiện diện kỹ thuật số của chùa của bạn với nền tảng toàn diện "
@@ -484,6 +506,12 @@ export const platformTranslations = {
           "Chuyển hướng câu hỏi nhạy cảm cho tu sĩ",
           "Trích dẫn nguồn từ các văn bản bạn đã tải lên"
         ]
+      },
+      marketplace: {
+        title: "Chợ Agent Cộng Đồng",
+        subtitle: "khám phá các agent được đào tạo trước do các ngôi chùa trên thế giới phát triển, hoặc chia sẻ các agent tùy chỉnh của bạn với cộng đồng công nghệ Phật giáo rộng lớn hơn",
+        exploreButton: "Khám Phá Agent",
+        viewAll: "Xem tất cả {count} Agents"
       }
     },
     
@@ -579,7 +607,9 @@ export const platformTranslations = {
       about: "Về Chúng Tôi",
       career: "Nghề Nghiệp",
       terms: "Điều Khoản",
-      privacy: "Bảo Mật"
+      privacy: "Bảo Mật",
+      docs: "Tài Liệu",
+      platform: "Nền Tảng"
     }
   }
 };

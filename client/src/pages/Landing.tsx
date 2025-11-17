@@ -197,11 +197,6 @@ export default function Landing() {
                   {t.header.nav.platform}
                 </a>
               </Link>
-              <Link href="/discovery">
-                <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-discovery">
-                  {t.header.nav.discovery}
-                </a>
-              </Link>
               <Link href="/docs/overview">
                 <a className="font-serif text-[#8B4513]/70 hover:text-[#991b1b] px-4 py-2 rounded-full hover:bg-[#8B4513]/5 transition-colors" data-testid="link-docs">
                   {t.header.nav.docs}
@@ -799,11 +794,6 @@ export default function Landing() {
                 >
                   {t.footer.services}
                 </a>
-                <Link href="/discovery">
-                  <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
-                    {t.footer.discovery}
-                  </a>
-                </Link>
                 <Link href="/docs/overview">
                   <a className="font-serif text-[#8B4513]/50 hover:text-[#991b1b] transition-colors">
                     {t.footer.docs}
