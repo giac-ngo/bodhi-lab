@@ -89,6 +89,31 @@ export const landingTranslations = {
         title: "Community Forum",
         description: "Optional moderated discussion area for members to ask questions, share reflections, and form study groups. Pre-built Right Speech guidelines and anonymous posting options.",
         tags: ["Moderated", "Study Groups", "Anonymous"]
+      },
+      aiAutomationBuilder: {
+        title: "AI Automation Builder",
+        description: "Build custom AI workflows for temple operations without coding. Automate donor acknowledgments, event reminders, content distribution, and member engagement campaigns—all from a visual workflow builder.",
+        tags: ["No Code", "Visual Builder", "Custom Workflows"]
+      },
+      multiChannelAI: {
+        title: "Multi-Channel AI Assistant",
+        description: "Deploy AI dharma assistants across your website, social media, and messaging apps. Trained on your lineage's teachings, they provide 24/7 guidance on sutras, meditation practices, and temple events.",
+        tags: ["24/7 Support", "Multi-Platform", "Custom Training"]
+      },
+      marketingAutomation: {
+        title: "Marketing Automation System",
+        description: "Create automated email campaigns for donor engagement, member retention, and event promotion. Track performance with built-in analytics and optimize your outreach with data-driven insights.",
+        tags: ["Email Campaigns", "Analytics", "Event Promotion"]
+      },
+      whiteLabel: {
+        title: "White-Label Platform",
+        description: "Rebrand the entire platform with your temple's identity—custom domain, logo, colors, and styling. Perfect for monastery networks wanting to offer technology to their sub-temples.",
+        tags: ["Custom Branding", "Your Domain", "Multi-Tenant"]
+      },
+      crmSystem: {
+        title: "CRM & Member Management",
+        description: "Centralized database for members, donors, and volunteers. Track engagement, donations, event attendance, and segment your sangha by tradition, language, or practice level for targeted outreach.",
+        tags: ["Member Tracking", "Donor CRM", "Segmentation"]
       }
     },
 
@@ -327,6 +352,31 @@ export const landingTranslations = {
         title: "Diễn Đàn Cộng Đồng",
         description: "Khu vực thảo luận kiểm duyệt tùy chọn cho các thành viên đặt câu hỏi, chia sẻ suy ngẫm và thành lập nhóm học tập. Hướng dẫn Chánh Ngữ được xây dựng sẵn và tùy chọn đăng ẩn danh.",
         tags: ["Kiểm Duyệt", "Nhóm Học Tập", "Ẩn Danh"]
+      },
+      aiAutomationBuilder: {
+        title: "Công Cụ Xây Dựng AI Automation",
+        description: "Xây dựng quy trình AI tùy chỉnh cho hoạt động chùa mà không cần lập trình. Tự động hóa xác nhận người quyên góp, nhắc nhở sự kiện, phân phối nội dung và chiến dịch thu hút thành viên—tất cả từ trình xây dựng trực quan.",
+        tags: ["Không Cần Code", "Trình Xây Dựng Trực Quan", "Quy Trình Tùy Chỉnh"]
+      },
+      multiChannelAI: {
+        title: "Trợ Lý AI Đa Kênh",
+        description: "Triển khai trợ lý AI Phật pháp trên trang web, mạng xã hội và ứng dụng nhắn tin của bạn. Được đào tạo về giáo lý dòng truyền thừa, họ cung cấp hướng dẫn 24/7 về kinh sách, thiền định và sự kiện chùa.",
+        tags: ["Hỗ Trợ 24/7", "Đa Nền Tảng", "Đào Tạo Tùy Chỉnh"]
+      },
+      marketingAutomation: {
+        title: "Hệ Thống Marketing Tự Động",
+        description: "Tạo chiến dịch email tự động để thu hút người quyên góp, giữ chân thành viên và quảng bá sự kiện. Theo dõi hiệu suất với phân tích tích hợp và tối ưu hóa tiếp cận bằng thông tin chi tiết dựa trên dữ liệu.",
+        tags: ["Chiến Dịch Email", "Phân Tích", "Quảng Bá Sự Kiện"]
+      },
+      whiteLabel: {
+        title: "Nền Tảng White-Label",
+        description: "Đổi thương hiệu toàn bộ nền tảng với bản sắc chùa của bạn—tên miền tùy chỉnh, logo, màu sắc và kiểu dáng. Hoàn hảo cho mạng lưới tu viện muốn cung cấp công nghệ cho các chùa chi nhánh.",
+        tags: ["Thương Hiệu Tùy Chỉnh", "Tên Miền Riêng", "Đa Khách Hàng"]
+      },
+      crmSystem: {
+        title: "CRM & Quản Lý Thành Viên",
+        description: "Cơ sở dữ liệu tập trung cho thành viên, người quyên góp và tình nguyện viên. Theo dõi sự tham gia, quyên góp, tham dự sự kiện và phân đoạn tăng đoàn theo truyền thống, ngôn ngữ hoặc cấp độ tu tập để tiếp cận mục tiêu.",
+        tags: ["Theo Dõi Thành Viên", "CRM Người Quyên Góp", "Phân Đoạn"]
       }
     },
 

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart, Check } from "lucide-react";
+import { Search, ArrowRight, Sparkles, Users, Heart, Briefcase, FileText, Shield, BookOpen, MessageCircle, Calendar, HandHeart, Check, Workflow, Bot, Target, Award, Database } from "lucide-react";
 import { Link } from "wouter";
 import { buddhistAgents } from "@shared/buddhistAgents";
 import { TracingBeam } from "@/components/TracingBeam";
@@ -392,18 +392,110 @@ export default function Landing() {
                   ))}
                 </div>
               </div>
+
+              {/* AI Automation Builder */}
+              <div className="group bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl p-6 space-y-4" data-testid="card-capability-ai-automation">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                    <Workflow className="w-6 h-6 text-[#991b1b]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.aiAutomationBuilder.title}</h3>
+                </div>
+                <p className="font-serif text-sm text-[#2c2c2c]/70">
+                  {t.capabilities.aiAutomationBuilder.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.capabilities.aiAutomationBuilder.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Multi-Channel AI Assistant */}
+              <div className="group bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl p-6 space-y-4" data-testid="card-capability-multi-channel-ai">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                    <Bot className="w-6 h-6 text-[#991b1b]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.multiChannelAI.title}</h3>
+                </div>
+                <p className="font-serif text-sm text-[#2c2c2c]/70">
+                  {t.capabilities.multiChannelAI.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.capabilities.multiChannelAI.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Marketing Automation System */}
+              <div className="group bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl p-6 space-y-4" data-testid="card-capability-marketing-automation">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                    <Target className="w-6 h-6 text-[#991b1b]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.marketingAutomation.title}</h3>
+                </div>
+                <p className="font-serif text-sm text-[#2c2c2c]/70">
+                  {t.capabilities.marketingAutomation.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.capabilities.marketingAutomation.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* White-Label Platform */}
+              <div className="group bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl p-6 space-y-4" data-testid="card-capability-white-label">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                    <Award className="w-6 h-6 text-[#991b1b]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.whiteLabel.title}</h3>
+                </div>
+                <p className="font-serif text-sm text-[#2c2c2c]/70">
+                  {t.capabilities.whiteLabel.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.capabilities.whiteLabel.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CRM & Member Management */}
+              <div className="group bg-white/50 backdrop-blur-md rounded-2xl border-2 border-[#8B4513]/20 hover:border-[#991b1b]/40 transition-all duration-300 hover:shadow-xl p-6 space-y-4" data-testid="card-capability-crm-system">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#991b1b]/10 flex items-center justify-center">
+                    <Database className="w-6 h-6 text-[#991b1b]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#2c2c2c]">{t.capabilities.crmSystem.title}</h3>
+                </div>
+                <p className="font-serif text-sm text-[#2c2c2c]/70">
+                  {t.capabilities.crmSystem.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {t.capabilities.crmSystem.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-lg text-xs font-sans bg-[#991b1b]/10 text-[#991b1b]">{tag}</span>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="text-center">
-              <a href="#services">
-                <button
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 backdrop-blur-md border-2 border-[#991b1b] rounded-full text-[#991b1b] font-serif font-semibold text-lg hover:bg-[#991b1b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-                  data-testid="button-view-services"
-                >
-                  {t.capabilities.cta}
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </a>
+              <Link href="/platform">
+                <a>
+                  <button
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/50 backdrop-blur-md border-2 border-[#991b1b] rounded-full text-[#991b1b] font-serif font-semibold text-lg hover:bg-[#991b1b] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+                    data-testid="button-view-services"
+                  >
+                    {t.capabilities.cta}
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -614,16 +706,17 @@ export default function Landing() {
 
                 {/* Tally Inline Embed */}
                 <iframe
-                  data-tally-src="https://tally.so/embed/aQQvOv?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+                  data-tally-src="https://tally.so/embed/aQQvOv?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                   loading="lazy"
                   width="100%"
-                  height="600"
+                  height="0"
                   frameBorder="0"
                   marginHeight={0}
                   marginWidth={0}
                   title="Contact our team"
                   className="w-full rounded-lg"
                 />
+                <script dangerouslySetInnerHTML={{__html: `var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`}} />
               </div>
             </div>
           </div>
